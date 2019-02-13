@@ -1,22 +1,26 @@
-#Markdown
+# Markdown
 
 **Markdown is a way to style text on the web**    
 Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com    
 
-* **Text**
+## **Text**
 
 *This text will be italic*
 > start, end *   
+
 _This will also be italic_
 > start, end _   
+
 **This text will be bold**
 > start, end two **    
+
 __This will also be bold__
 > start, end two __   
+
 _You **can** combine them_
 > _ * text * _    
 
-* **List**
+## **List**
 
 Numbered lists:
 
@@ -36,13 +40,15 @@ Alternatively,
   - Sub point 1
   - Sub point 2
 
-* **Headers & Quotes**    
+## **Headers & Quotes**    
 
 # Structured documents
+> one # example
 
 Different levels starts lines with a `#` to create headings. Multiple `##` in a row denote smaller heading sizes.
 
 ### This is a third-tier heading
+> Three # example
 
 You can use one `#` all the way up to `######` six for different heading sizes.
 
@@ -51,13 +57,33 @@ To quote use the > character before the line:
 > Coffee. The finest organic suspension ever devised... I beat the Borg with it.
 > - Captain Janeway
 
-* **Code**    
+## **Code**  
 
+Code fencing, which allows for multiple lines without indentation:
 
-* **Extras**    
+```
+if (isAwesome){
+  return true
+}
+```  
 
+Syntax highlighting, include the language:
 
+```javascript
+if (isAwesome){
+  return true
+}
+```
 
-**References:**
+## **Extras**    
+
+Tasks lists:
+
+- [x] This is a complete item
+- [ ] This is an incomplete item
+
+Emojis insertion :sparkles: :camel: :boom:
+
+## **References:**
 [Mastering markdown](https://guides.github.com/features/mastering-markdown/)
 [Writing on GitHub](https://help.github.com/categories/writing-on-github/)
