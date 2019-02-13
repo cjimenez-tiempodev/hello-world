@@ -23,12 +23,14 @@ _You **can** combine them_
 ## **List**
 
 Numbered lists:
+>number point space
 
 1. One
 2. Two
 3. Three
 
 Bullet points:
+>one * and space
 
 * Start a line with a star
 * Profit!
@@ -60,6 +62,7 @@ To quote use the > character before the line:
 ## **Code**  
 
 Code fencing, which allows for multiple lines without indentation:
+> ```code```
 
 ```
 if (isAwesome){
@@ -68,6 +71,7 @@ if (isAwesome){
 ```  
 
 Syntax highlighting, include the language:
+>```language code ```
 
 ```javascript
 if (isAwesome){
@@ -86,4 +90,5 @@ Emojis insertion :sparkles: :camel: :boom:
 
 ## **References:**
 [Mastering markdown](https://guides.github.com/features/mastering-markdown/)
+
 [Writing on GitHub](https://help.github.com/categories/writing-on-github/)
