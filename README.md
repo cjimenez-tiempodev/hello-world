@@ -1,3 +1,5 @@
-# hello-world
-Hello world - Git Hub Guides
-Front-End Software Engineer
+# FRONT-END-REVIEW
+JavaScript: Quick review focused on ES6 for React
+CSS3
+HTML5
+React
