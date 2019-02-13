@@ -62,7 +62,6 @@ To quote use the > character before the line:
 ## **Code**  
 
 Code fencing, which allows for multiple lines without indentation:
-> ```code```
 
 ```
 if (isAwesome){
@@ -71,7 +70,6 @@ if (isAwesome){
 ```  
 
 Syntax highlighting, include the language:
->```language code ```
 
 ```javascript
 if (isAwesome){
