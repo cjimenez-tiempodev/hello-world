@@ -84,4 +84,18 @@ When ... is used in front of an array it acts to "spread" it out into its indivi
 ```
 
 ## Default parameters values
+
+```
+//setting a default value for a function parameter
+{
+  function foo (n = 0, a = [0], o = {'value': '0'}) {
+    console.log(n, a, o);
+  }
+
+  foo();    //expected output: 0 [0] {value:0}
+  foo(1);   //expected output: 0 [0] {value:0}
+  foo(1, [1,2]);    //expected output: 1 [1,2] {value:0}
+}
+```
+
 ## Default value expressions
