@@ -121,3 +121,38 @@ Default values can be also a function call.
   test(10, {'language': 'JavaScript'}); //expected output: 10 {language: JavaScript}
 }
 ```
+
+## Destructuring
+
+ES6 introduces a new syntactic feature called destructuring
+
+```
+//Destructuring array
+const array = [1,2,3];
+{
+  //before to ES6
+  let a = array[0];
+  let b = array[1];
+  let c = array[2];
+  console.log(a,b,c);   //expected output: 1,2,3
+}
+{
+  //ES6
+  let [a, b, c] = array;
+  console.log(a,b,c);   //expected output: 1,2,3
+}
+
+//Destructuring object
+const obj = {'languaje': 'JavaScript', 'version': 'ES6'};
+{
+  //before to ES6
+  let languaje = obj.languaje;
+  let version = obj.version;
+  console.log(languaje, version);   //expected output: JavaScript ES6
+}
+{
+  //ES6
+  let {languaje, version} = obj;
+  console.log(languaje, version);
+}
+```
