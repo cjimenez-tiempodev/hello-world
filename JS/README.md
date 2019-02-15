@@ -99,3 +99,25 @@ When ... is used in front of an array it acts to "spread" it out into its indivi
 ```
 
 ## Default value expressions
+
+Default values can be also a function call.
+
+```
+{
+  //function used as parameters
+  function missedData(){
+    return 'there is no data to show';
+  }
+
+  //function with default values, b is equal to function
+  function test (a=1, b = missedData() ) {
+    console.log(a, b);
+  }
+
+  test();   //expected output: 1 "there is no data to show"
+  test(10);   //expected output: 10 "there is no data to show"
+  test(10, undefined);    //expected output: 10 "there is no data to show"
+  test(10, null);   //expected output: 10 "there is no data to show"
+  test(10, {'language': 'JavaScript'}); //expected output: 10 {language: JavaScript}
+}
+```
