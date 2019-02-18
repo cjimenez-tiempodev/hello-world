@@ -157,7 +157,7 @@ const obj = {'languaje': 'JavaScript', 'version': 'ES6'};
 }
 ```
 
-#Object Property Assignment Pattern
+## Object Property Assignment Pattern (renaming)
 
 ```
 allows you to assign a property to a different variable name
