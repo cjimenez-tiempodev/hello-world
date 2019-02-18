@@ -34,28 +34,31 @@ function createItems() {
 }
 
 //mappings/transformation
-  var o1 = { a: 1, b: 2, c: 3 };
+//will create an object equal to: x = a, y = b, z = c
+let o1 = { a: 1, b: 2, c: 3 };
 {
 	o2 = {};
   //source:target
   ( { a: o2.x, b: o2.y, c: o2.z } = o1 );
-  console.log( o2.x, o2.y, o2.z );	// 1 2 3
+  console.log( o2.x, o2.y, o2.z );	// expected output 1 2 3
+
 }
 
 //object to array
 {
 	a2 = [];
   ( { a: a2[0], b: a2[1], c: a2[2] } = o1 );
-  console.log( a2 );	// [1,2,3]
+  console.log( a2 );	// expected output: [1,2,3]
 }
 
 //Direct asignation
 {
-  var a1 = [ 1, 2, 3 ],
+  let a1 = [ 1, 2, 3 ],
 	o2 = {};
 
   [ o2.a, o2.b, o2.c ] = a1;
-  console.log( o2.a, o2.b, o2.c );	// 1 2 3
+  // will asign the array element to the object name specified o2.a = 1, o2.b = 2, o2.c = 3
+  console.log( o2.a, o2.b, o2.c );	//expected output: 1 2 3
 }
 
 //swap variables
@@ -63,14 +66,28 @@ function createItems() {
   var x = 10, y = 20;
   [ y, x ] = [ x, y ];
 
-  console.log( x, y );				// 20 10
+  console.log( x, y );				//expected output:  20 10
 }
 
-const rgb = [200, 255, 100];
 //skip Variables
+const rgb = [200, 255, 100];
 {
   // Skip the first two items
   // Assign the only third item to the blue variable
   const [,, blue] = rgb;
   console.log(blue);    //expected output 100
+
+  //spread operator
+  let [ red, ...gb ] = rgb;   //gb creates an array with [255, 100]
+  console.log(red, gb );    //expected output: 200 [255, 100]
+}
+
+//Asignment expression
+{
+  let o = { a:1, b:2, c:3 },
+	a, b, c, p;
+  p = { a, b, c } = o;
+  console.log( a, b, c );			//expected output: 1 2 3
+  //p is assigned the o object reference
+  p === o;    //expected output: { a:1, b:2, c:3 }
 }
