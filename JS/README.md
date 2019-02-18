@@ -156,3 +156,16 @@ const obj = {'languaje': 'JavaScript', 'version': 'ES6'};
   console.log(languaje, version);
 }
 ```
+
+#Object Property Assignment Pattern
+
+```
+allows you to assign a property to a different variable name
+
+const obj = {'x': 'JavaScript', 'y': 'ES6'};
+{
+  //source: target
+  let {x: languaje, y: version} = obj;
+  console.log(languaje, version);   //expected output JavaScript ES6
+}
+```
