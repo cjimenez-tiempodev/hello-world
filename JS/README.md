@@ -169,3 +169,26 @@ const obj = {'x': 'JavaScript', 'y': 'ES6'};
   console.log(languaje, version);   //expected output JavaScript ES6
 }
 ```
+
+## Object Literal Extensions
+Define a property that is the same name as a lexical identifier, you can shorten it from x: x to x
+```
+{
+  const x = 1, y = 2, f1 = function () {return 'f1'}, f2 = function () {return 'f2'};
+
+  //Properties
+  let obj = {
+    x,
+    y
+  };
+  console.log(x, y);    //expected output 1 2
+
+  //Methods
+  let func = {
+    f1,
+    f2
+  };
+  console.log(func.f1());   //expected output f1
+  console.log(func.f2());   //expected output f2
+}
+```

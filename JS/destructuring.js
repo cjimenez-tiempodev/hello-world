@@ -91,3 +91,17 @@ const rgb = [200, 255, 100];
   //p is assigned the o object reference
   p === o;    //expected output: { a:1, b:2, c:3 }
 }
+
+//destructuring parameters & default value
+{
+  const data = {
+    name: 'JavaScript',
+    version: 'ES6'
+  }
+
+  function createMessage({name, version}, message = 'Hello world this is') {
+    return `${message} ${name} ${version}`;
+  }
+
+  console.log(createMessage(data));   //expected output: Hello world this is JavaScript ES6
+}
