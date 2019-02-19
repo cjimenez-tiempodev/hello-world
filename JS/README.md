@@ -192,3 +192,28 @@ Define a property that is the same name as a lexical identifier, you can shorten
   console.log(func.f2());   //expected output f2
 }
 ```
+
+## Template literals
+
+As you can see, we used the `..` around a series of characters, which are interpreted as a string literal, but any expressions of the form ${..} are parsed and evaluated inline immediately
+
+```
+//general scope
+let name = "JavaScript";
+//pre-ES6
+{
+  //blocked scope
+  let greeting = "Hello world, this is " + name + "!";
+  console.log(greeting);    //expected output: Hello world, this is JavaScript!
+}
+//ES6
+{
+  //blocked scope
+  let greeting = `Hello world
+this is ${name}!`;  //works as line-break
+  console.log(greeting);    //expected output: Hello world,
+                            //                 this is JavaScript!
+}
+```
+
+##
