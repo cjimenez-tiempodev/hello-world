@@ -238,4 +238,23 @@ Any valid expression is allowed to appear inside ${..} in an interpolated string
 ```
 Warning: As a word of caution, be very careful about the readability of your code
 
+##Tagged Template Literals
+
+```
+//global scope
+{
+  //blocked scope
+  function foo(strings, ...values) {
+    console.log( strings );   // is an array of all the plain strings
+    console.log( values );    //array of the results of the already-evaluated interpolation expressions found in the string literal.
+  }
+
+  var language = "javaScript";
+
+  foo`This is ${language} ES6`;   //expected output
+                                // [ "Everything is ", " ES6"]
+                                // [ "JavaScript" ]
+}
+```
+
 ##
