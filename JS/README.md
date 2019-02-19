@@ -312,3 +312,20 @@ Let's compare for..of to for..in to illustrate the difference:
 ```
 
 for..in loops over the keys/indexes in the a array, while for..of loops over the values in a.
+
+## Symbols
+
+ New primitive type has been added to JavaScript: the symbol.
+ This is how to create a Symbol
+
+ ```
+ //global scope
+{
+  //block scope
+  let sym = Symbol( "symbol description" );
+  console.log(typeof sym);		//expected output:  "symbol"
+
+  //The description, if provided, is solely used for the stringification representation of the symbo
+  console.log(sym.toString());    //expected output: Symbol(symbol description)
+}
+```
