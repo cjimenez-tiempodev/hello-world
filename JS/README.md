@@ -216,4 +216,26 @@ this is ${name}!`;  //works as line-break
 }
 ```
 
+## Interpolated Expressions
+
+Any valid expression is allowed to appear inside ${..} in an interpolated string literal, including function calls
+
+```
+//global scope
+{
+  //blocked scope
+  function upper(s) {
+	  return s.toUpperCase();
+  }
+
+  let who = "reader";
+  let language = 'JavaScript';
+
+  let message = `${upper( `${who}s` )} welcome to ${upper( `${language}` )}!`;
+
+  console.log( message );    //expected output: READERS welcome to JAVASCRIPT!
+}
+```
+Warning: As a word of caution, be very careful about the readability of your code
+
 ##
