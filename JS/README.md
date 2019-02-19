@@ -238,7 +238,7 @@ Any valid expression is allowed to appear inside ${..} in an interpolated string
 ```
 Warning: As a word of caution, be very careful about the readability of your code
 
-##Tagged Template Literals
+## Tagged Template Literals
 
 ```
 //global scope
@@ -257,4 +257,58 @@ Warning: As a word of caution, be very careful about the readability of your cod
 }
 ```
 
-##
+## Arrow functions
+
+The arrow function definition consists of a parameter list (of zero or more parameters, and surrounding ( .. ) if there's not exactly one parameter), followed by the => marker, followed by a function body.
+
+```
+//global scope
+//PRE-ES6
+{
+  //blocked scope
+ function foo(x,y) {
+	return x + y;
+ }
+}
+
+//ES6
+{
+  //blocked scope
+ let foo = (x,y) => x + y;    // If there's only one expression, and you omit the surrounding { .. }, there's an implied return in front of the expression
+}
+
+//Arrow functions are always function expressions; there is no arrow function declaration. It also should be clear that they are anonymous function expressions
+
+//Note: All the capabilities of normal function parameters are available to arrow functions, including default values, destructuring, rest parameters, and so on.
+
+
+//it is easeier to add function as parameter
+{
+  let a = [1,2,3,4,5];
+  a = a.map( v => v * 2 );
+  console.log( a );   //expected output: [2,4,6,8,10]
+}
+```
+
+## for..of loops
+
+Let's compare for..of to for..in to illustrate the difference:
+
+```
+//global scope
+{
+  //block scope
+  var a = ["a","b","c","d","e"];
+
+  for (var idx in a) {
+	  console.log( idx );    //expected output: 0 1 2 3 4
+  }
+
+  for (var val of a) {
+    console.log( val );   //expected output: // "a" "b" "c" "d" "e"
+  }
+
+}
+```
+
+for..in loops over the keys/indexes in the a array, while for..of loops over the values in a.
