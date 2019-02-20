@@ -1,7 +1,7 @@
 # FRONT-END-REVIEW
-* JavaScript: Quick review focused on ES6 for React
 
 ### JS Documentation
+JavaScript: Quick review focused on ES6 for React
 * let
 * const
 * Block scope functions
@@ -18,12 +18,12 @@
 * for..of loops
 * Symbols
 
-* CSS3
+### CSS3
 
-* HTML5
+### HTML5
 
-* React
+### React
 
-* Git
+### Git
 
-* Others: Extra useful information
+### Others: Extra useful information
