@@ -17,6 +17,7 @@ JavaScript: Quick review focused on ES6 for React
 * Arrow functions
 * for..of loops
 * Symbols
+* Classes
 
 ### CSS3
 
