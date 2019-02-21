@@ -329,3 +329,42 @@ for..in loops over the keys/indexes in the a array, while for..of loops over the
   console.log(sym.toString());    //expected output: Symbol(symbol description)
 }
 ```
+
+## Promises
+
+Let's clear up some misconceptions: Promises are not about replacing callbacks. Promises provide a trustable intermediary -- that is, between your calling code and the async code that will perform the task -- to manage callbacks.
+
+A Promise can only have one of two possible resolution outcomes: fulfilled or rejected, with an optional single value
+Promises can only be resolved (fulfillment or rejection) once.
+
+To construct a promise instance, use the Promise(..) constructor:
+
+* Constructor
+```
+// do something asynchronous which eventually calls either:
+{
+  let promise = new Promise( function pr(resolve,reject){
+	//  resolve('success message'); // fulfilled
+  //  or
+  //  reject("failure reason"); // rejected
+  } );
+}
+```
+
+* How to use it
+
+```
+promise.then(function(result) {
+  console.log(result); // "success message!"
+}, function(err) {
+  console.log(err); // failure reason"
+});
+```
+
+The Promise(..) constructor takes a single function (pr(..)), which is called immediately and receives two control functions as arguments, usually named resolve(..) and reject(..). They are used as:
+
+* If you call reject(..), the promise is rejected, and if any value is passed to reject(..), it is set as the reason for rejection.
+
+* If you call resolve(..) with no value, or any non-promise value, the promise is fulfilled.
+
+* If you call resolve(..) and pass another promise, this promise simply adopts the state -- whether immediate or eventual -- of the passed promise (either fulfillment or rejection)
