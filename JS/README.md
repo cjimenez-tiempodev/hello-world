@@ -325,8 +325,30 @@ for..in loops over the keys/indexes in the a array, while for..of loops over the
   let sym = Symbol( "symbol description" );
   console.log(typeof sym);		//expected output:  "symbol"
 
-  //The description, if provided, is solely used for the stringification representation of the symbo
+  //The description, if provided, is solely used for the stringification representation of the symbol
   console.log(sym.toString());    //expected output: Symbol(symbol description)
+}
+```
+
+## Classes
+
+Classes are in fact "special functions"
+
+```
+{
+  class foo {   //lass Foo implies creating a (special) function of the name Foo
+    constructor (a, b){   //identifies the signature of that Foo(..) function, as well as its body contents.
+      this.x = a;
+      this.y = b;
+    }
+    addition(){
+      return this.x + this.y;
+    }
+  }
+
+  let f = new foo(1,2);
+  console.log(f.addition());    //expected output: 3
+  console.log(f.x);   //expected output: 1
 }
 ```
 
