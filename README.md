@@ -18,6 +18,7 @@ JavaScript: Quick review focused on ES6 for React
 * for..of loops
 * Symbols
 * Classes
+* Promises
 
 ### CSS3
 
