@@ -19,6 +19,11 @@ JavaScript: Quick review focused on ES6 for React
 * Symbols
 * Classes
 * Promises
+* Import
+* Export
+* Prototype inheritance
+* Mutability/Immutability
+* Datatypes
 
 ### CSS3
 

@@ -325,16 +325,16 @@ for..in loops over the keys/indexes in the a array, while for..of loops over the
   let sym = Symbol( "symbol description" );
   console.log(typeof sym);		//expected output:  "symbol"
 
-  //The description, if provided, is solely used for the stringification representation of the symbol
+  //The description, if provided, is solely used for the stringification representation of the symbo
   console.log(sym.toString());    //expected output: Symbol(symbol description)
 }
 ```
 
 ## Classes
 
+```
 Classes are in fact "special functions"
 
-```
 {
   class foo {   //lass Foo implies creating a (special) function of the name Foo
     constructor (a, b){   //identifies the signature of that Foo(..) function, as well as its body contents.
@@ -390,3 +390,118 @@ The Promise(..) constructor takes a single function (pr(..)), which is called im
 * If you call resolve(..) with no value, or any non-promise value, the promise is fulfilled.
 
 * If you call resolve(..) and pass another promise, this promise simply adopts the state -- whether immediate or eventual -- of the passed promise (either fulfillment or rejection)
+
+## Import & Export
+
+Import:
+The static import statement is used to import bindings which are exported by another module.
+
+* Syntax
+import defaultExport from "module-name";
+
+Export:
+The export statement is used when creating JavaScript modules to export functions, objects, or primitive values from the module so they can be used by other programs with the import statement.
+
+export { name1, name2, …, nameN };
+
+## Prototype inheritance
+
+JavaScript objects have a link to a prototype object
+When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
+
+```
+//Prototype inheritance
+{
+  let parent = function (){
+    this.property1 = 'property1';
+    this.property2 = 'property2';
+  }
+
+  let child = new parent();
+  console.log(child); // expected output: {property1: 'property1', property2: 'property2'}
+
+  //Parent updated
+  parent.prototype.property3 = 'property3'; // __proto__ = {property3: 'property3'}
+  console.log(parent);
+
+  //Property3 inherited to child
+  console.log(child.property3);   //Expected output: property3
+}
+```
+
+## Mutable/Immutable
+
+Mutable is a type of variable that can be changed.
+In JavaScript, only objects and arrays are mutable, not primitive values.
+
+* Mutable
+A mutable object is an object whose state can be modified after it is created.
+
+* Immutable
+Immutable are the objects whose state cannot be changed once the object is created.
+
+## Datatypes
+
+JavaScript is a loosely typed or a dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+
+The latest ECMAScript standard defines seven data types:
+
+### Six data types that are primitives:
+*  Boolean:
+    Boolean represents a logical entity and can have two values: true, and false.
+    ```
+    {
+      let boolean = true;
+      console.log(boolean);   //expected output: true
+      console.log(typeof(boolean));   //expected output: boolean
+    }
+    ```
+*  Null
+    The Null type has exactly one value: null
+    ```
+    {
+      let n = null;
+      console.log(n);   //expected output: null
+      console.log(typeof(n));   //expected output: object
+    }
+    ```
+*  Undefined:
+    A variable that has not been assigned a value has the value undefined
+    ```
+    {
+      let u;
+      console.log(n);   //expected output: undefined
+      console.log(typeof(u));   //expected output: undefined
+    }
+    ```
+*  Number:
+    According to the ECMAScript standard, there is only one number type: the double-precision 64-bit binary format IEEE 754 value (numbers between -(253 -1) and 253 -1).
+    ```
+    {
+      let number = 10;
+      console.log(n);   //expected output: 10
+      console.log(typeof(number));   //expected output: number
+    }
+    ```
+
+*  String:
+    JavaScript's String type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values
+    ```
+    {
+      let s = 'text';
+      console.log(n);   //expected output: text
+      console.log(typeof(s));   //expected output: string
+    }
+    ```
+*  Symbol (new in ECMAScript 6):
+    A Symbol is a unique and immutable primitive value and may be used as the key of an Object property
+
+### and Object
+    Objects can be seen as a collection of properties.
+    ```
+    {
+      let o = {'null': null, 'number': 10, 'string':'text'};
+      console.log(o);   //expected output: {'null': null, 'number': 10, 'string':'text'}
+      console.log(typeof(o));   //expected output: object
+    }
+    ```
