@@ -505,3 +505,75 @@ The latest ECMAScript standard defines seven data types:
       console.log(typeof(o));   //expected output: object
     }
     ```
+
+## Closure
+
+A closure is the combination of a function and the lexical environment within which that function was declared.
+JavaScript variables can belong to the local or global scope.
+Global variables can be made local (private) with closures.
+
+```
+{
+  //Global counter
+  let counter = 0;
+
+  // Function to increment counter
+  function add() {
+    counter += 1;
+  }
+
+  // Call to add 1
+  add();
+  // The counter should now be 1
+}
+
+```
+
+The problem is any code on the page can change the counter, without calling add().
+
+```
+{
+  //block scope
+  let add = (function () {
+    let counter = 0;
+    return function () {
+      counter += 1;
+      return counter;
+    }
+  })();   //self-invoking function
+
+  console.log(add());   //Expected output: 1
+  console.log(add());   //Expected output: 2
+  //counter is not defined
+  console.log(counter);
+}
+```
+
+Now counter is private, the scope belongs to add() function
+Counter can't be used from outside of the add scope
+
+## Hoisting
+
+A strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the compile phase, but stay exactly where you typed them in your code.
+
+One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code
+
+```
+{
+  //the function is called before is the function is written
+  console.log(print());   //Expected output: Hello world
+  function print(){
+    return `Hello world`;
+  }
+}
+```
+
+JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined.
+```
+{
+  //the function is called before is the function is written
+  console.log(a);   //Expected output: a is not defined
+  let a;
+  a = 'variable declaration';
+}
+```

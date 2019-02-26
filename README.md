@@ -24,6 +24,8 @@ JavaScript: Quick review focused on ES6 for React
 * Prototype inheritance
 * Mutability/Immutability
 * Datatypes
+* Closure
+* Hoisting
 
 ### CSS3
 
