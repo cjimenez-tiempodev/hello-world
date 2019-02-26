@@ -26,6 +26,8 @@ JavaScript: Quick review focused on ES6 for React
 * Datatypes
 * Closure
 * Hoisting
+* this
+* try...catch
 
 ### CSS3
 

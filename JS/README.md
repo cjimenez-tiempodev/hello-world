@@ -354,7 +354,7 @@ Classes are in fact "special functions"
 
 ## Promises
 
-Let's clear up some misconceptions: Promises are not about replacing callbacks. Promises provide a trustable intermediary -- that is, between your calling code and the async code that will perform the task -- to manage callbacks.
+Promises are not about replacing callbacks. Promises provide a trustable intermediary -- that is, between your calling code and the async code that will perform the task -- to manage callbacks.
 
 A Promise can only have one of two possible resolution outcomes: fulfilled or rejected, with an optional single value
 Promises can only be resolved (fulfillment or rejection) once.
@@ -575,5 +575,51 @@ JavaScript only hoists declarations, not initializations. If a variable is decla
   console.log(a);   //Expected output: a is not defined
   let a;
   a = 'variable declaration';
+}
+```
+
+## this
+
+The JavaScript context object in which the current code is executing.
+
+In most cases, the value of this is determined by how a function is called.
+ES5 introduced the bind() method to set the value of a function's this regardless of how it's called, and ES2015 introduced arrow functions which don't provide their own this binding.
+
+```
+{
+  //block scope
+  let prop = 0;
+
+  let test = {
+    prop: 42,
+    func: function() {
+      return this.prop;
+    },
+  };
+
+  console.log(test.func());   // expected output: 42
+}
+```
+
+## try...catch
+
+The try...catch statement marks a block of statements to try, and specifies a response, should an exception be thrown.
+
+```
+{
+  //block scope
+  try {
+    //this could brake the application flow
+    let x = notDefined();   //this cause a... is not defined error
+  }
+  catch(error){
+    //the application flow continue and throw the error message
+    console.log(`error message: ${error}`);   //Expected output: error message: ReferenceError: notDefined is not defined
+  }
+  finally {
+    //You can use the finally clause to make your script fail gracefully when an exception occurs; for example, to do general cleanup
+    console.log(`this alway executes`);
+  }
+  console.log(`continuing`);    //expected output: continuing
 }
 ```
