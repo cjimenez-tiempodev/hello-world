@@ -623,3 +623,13 @@ The try...catch statement marks a block of statements to try, and specifies a re
   console.log(`continuing`);    //expected output: continuing
 }
 ```
+
+## suggestion
+
+* Syntax validation
+
+  Add jshint
+  Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).
+  add .jshintrc file at the root project with { "esversion": 6 }
+  for more configuration options check
+  [jshint](https://jshint.com/docs/options/)
