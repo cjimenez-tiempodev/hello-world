@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DocumentStructure from './html/common/documentStructure';
+import {DocumentStructure, TextFormat} from './html/common/index';
 import './App.css';
 
 class App extends Component {
@@ -7,6 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <DocumentStructure />
+        <TextFormat />
       </div>
     );
   }
