@@ -6,13 +6,21 @@ const html5 = {
   hr : 'Create a horizonatal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.',
 };
 
-const lorem = {
-  l1 : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat congue velit. Ut maximus diam at nunc auctor, id rutrum nisl tincidunt.',
-  l2 : 'Cras sed erat sed risus fringilla sagittis. Maecenas quis arcu turpis. In pellentesque eget augue nec lacinia. Phasellus vel justo volutpat, sollicitudin purus et, volutpat felis.',
-  l3 : 'Phasellus gravida ornare nisi, ac viverra eros eleifend vitae. Nunc scelerisque semper ante, non sollicitudin turpis luctus vitae.',
-  l4 : 'Quisque malesuada ligula ut dolor molestie volutpat. Fusce nunc odio, commodo quis tortor eget, fringilla pellentesque massa.',
-  l5 : ' Duis fringilla est sit amet pharetra porttitor. Suspendisse eu malesuada elit, vehicula vehicula tortor. Praesent libero nisl, ornare at auctor id, euismod tempor lectus.',
-};
+const docStructure = `
+<div>
+  <h3> Lorem ipsum </h3>
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+  Pellentesque volutpat congue velit. <br />
+  Ut maximus diam at nunc auctor, id rutrum nisl tincidunt. <br />
+  <hr />
+  Cras sed erat sed risus fringilla sagittis. <br />
+  Maecenas <span>quis arcu turpis.</span> <br />
+  In pellentesque eget augue nec lacinia. <br />
+  Phasellus vel justo volutpat, sollicitudin purus et, volutpat felis. <br />
+  </p>
+</div>
+`;
 
 export default html5;
-export {lorem};
+export { docStructure};

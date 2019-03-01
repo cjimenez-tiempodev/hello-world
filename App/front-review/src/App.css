@@ -3,3 +3,32 @@
   background-color: #282c34;
   color: white;
 }
+
+p {
+  text-align: left;
+}
+
+.example {
+  display: flex;
+}
+
+span {
+  color: red;
+}
+
+div {
+  border: solid 1px white;
+}
+
+.result {
+  width: 35%;
+}
+
+.code {
+  width: 65%;
+  margin: 20px 10px;
+}
+
+img {
+  width: inherit;
+}
