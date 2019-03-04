@@ -45,7 +45,8 @@
   </body>
 </html>
 ```
-(see App folder)
+
+(see App for live examples)
 * Document structure
 
 h1 to h6 : 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'
@@ -141,7 +142,7 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 * <code>&#60, &lt </code> Less than sign - <
 * <code>&#62, &gt </code> Greater than sign - >
 * <code>&#160, &nbsp </code> Non-breaking space
-* <code>&#169, &copy Copyright simbol - ©
+* <code>&#169, &copy </code> Copyright simbol - ©
 * <code>&#64, &Uuml </code> @ Symbol - @
 * <code>&#149, &ouml </code> Small bullet - •
 * <code>&#153, &ucirc </code> Trademark symbol - ™
