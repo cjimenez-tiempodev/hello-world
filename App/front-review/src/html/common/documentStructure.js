@@ -1,5 +1,5 @@
 import React from 'react';
-import html5, {docStructure} from './constDefinitions';
+import html5 from './constDefinitions';
 import codeImage from './assets/docStructure.png';
 
 function DocumentStructure(props) {

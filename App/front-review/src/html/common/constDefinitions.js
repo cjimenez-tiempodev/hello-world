@@ -24,21 +24,4 @@ const html5 = {
   bdo : 'The bi-directional override tag will identify wich should text sould be read opposite from the preceeding text',
 };
 
-const docStructure = `
-<div>
-  <h3> Lorem ipsum </h3>
-  <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-  Pellentesque volutpat congue velit. <br />
-  Ut maximus diam at nunc auctor, id rutrum nisl tincidunt. <br />
-  <hr />
-  Cras sed erat sed risus fringilla sagittis. <br />
-  Maecenas <span>quis arcu turpis.</span> <br />
-  In pellentesque eget augue nec lacinia. <br />
-  Phasellus vel justo volutpat, sollicitudin purus et, volutpat felis. <br />
-  </p>
-</div>
-`;
-
 export default html5;
-export { docStructure};

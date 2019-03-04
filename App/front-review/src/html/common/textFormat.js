@@ -1,6 +1,6 @@
 import React from 'react';
 import html5, {docStructure} from './constDefinitions';
-import codeImage from './assets/docStructure.png';
+import codeImage from './assets/textFormat.png';
 
 function TextFormat(props) {
   return (
@@ -17,17 +17,17 @@ function TextFormat(props) {
       <div className="result">
         <p>
         <strong>Aenean tempus finibus tristique.</strong>
-        Duis lorem urna, <em>tincidunt et posuere nec</em>, euismod pellentesque tortor.
+        Duis lorem urna, <em>tincidunt et posuere nec</em>, <i>euismod pellentesque tortor</i>.
         <blockquote>
-        Curabitur pulvinar, elit sit amet interdum sagittis, tellus nibh dictum turpis, a rutrum tellus massa et dolor.
-        <cite>Fusce aliquam tortor eget ex pharetra, ac malesuada lorem luctus.</cite>
+        Curabitur pulvinar, elit sit amet interdum sagittis, tellus nibh dictum turpis, a <b>rutrum tellus massa et dolor</b>.
         </blockquote>
+        <cite>- Fusce aliquam tortor eget ex pharetra, ac malesuada lorem luctus.</cite>
         <br />
         <pre>Vivamus sit amet tempor nisl, sit amet dapibus nulla.</pre>
-        Morbi fermentum eleifend odio, ut pulvinar massa interdum in.
-        Etiam vel augue cursus, porta ipsum sit amet, tristique erat.
+        <q>Morbi fermentum eleifend odio</q>,<address>ut pulvinar massa interdum in.</address>
+        <ins>Etiam vel augue cursus</ins>, <small>porta ipsum sit amet, tristique erat.</small>
         <code>Ut vitae molestie arcu.</code>
-        In hac habitasse platea dictumst.
+        <del>In hac habitasse platea dictumst.</del>
         </p>
       </div>
 
@@ -39,11 +39,17 @@ function TextFormat(props) {
 
     <div>
       <p>
-        <span>h1...h6: </span>{html5.h1h6}<br />
-        <span>span: </span>{html5.span}<br />
-        <span>p: </span>{html5.p}<br />
-        <span>br: </span>{html5.br}<br />
-        <span>hr: </span>{html5.hr}<br />
+        <span>strong: </span>{html5.strong}<br />
+        <span>b: </span>{html5.b}<br />
+        <span>em: </span>{html5.em}<br />
+        <span>i: </span>{html5.i}<br />
+        <span>cite: </span>{html5.cite}<br />
+        <span>pre: </span>{html5.pre}<br />
+        <span>del: </span>{html5.del}<br />
+        <span>ins: </span>{html5.ins}<br />
+        <span>blockquote: </span>{html5.blockquote}<br />
+        <span>q: </span>{html5.q}<br />
+        <span>code: </span>{html5.code}<br />
       </p>
     </div>
 
