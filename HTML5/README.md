@@ -48,11 +48,11 @@
 (see App folder)
 * Document structure
 
-<h1>...</h6> : 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'
-<span>...</span> : 'An inline section or block container, typically used for grouping styling elements'
-<p></p> : 'This foundational tag is used to organize paragraphs of text'
-<br /> : 'Crates a line break useful to for writing blocks of text that need to be on different lines.'
-<hr /> : 'Create a horizontal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.'
+h1 to h6 : 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'
+span : 'An inline section or block container, typically used for grouping styling elements'
+p : 'This foundational tag is used to organize paragraphs of text'
+br : 'Crates a line break useful to for writing blocks of text that need to be on different lines.'
+hr : 'Create a horizontal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.'
 
 ```
 <div className="result">
@@ -71,22 +71,22 @@
 ```
 * Text + formatting
 
-<strong>...</strong> : 'Indicates STROG emphasis, displayed bold in most browsers'
-<b>...</b>: 'Another way to create bold text, it is more for drawing attention'
-<em>...</em>: 'The emphasis tags also are like they sound, emphasizing text'
-<i>...</i> : 'add italics to text, used to denote things like thoughts or names'
-<cite>...</cite> : 'Tags used to cite or reference information, useful for quotes and statements in a document'
-<pre>...</pre> : 'pre.formatted, monospace text laid out with whitespace'
-<del>...</del> : 'Helps denote a previously deleted section of text'
-<ins>...</ins> : 'Represents a section of text thats been inserted into the document'
-<blockquote>...</blockquote> : 'Reserved for long paragraphs of quotations often cited'
-<q>...</q> : 'These are used for shorter quotations'
-<abbr>...</abbr> : 'Abbreviation these help denote abbreviations, while also making the full form available'
-<address>...</address> : 'Displays the author's contact information'
-<dfn>...</dfn> : 'Definition used to create an inline definition in the body text'
-<code>...</code> : 'Code text displays code snippets'
-<sub>...</sub> : 'Subscript text a helpful way to subscript text'
-<small>...</small> : 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid'
+strong : 'Indicates STROG emphasis, displayed bold in most browsers'
+b 'Another way to create bold text, it is more for drawing attention'
+em 'The emphasis tags also are like they sound, emphasizing text'
+i : 'add italics to text, used to denote things like thoughts or names'
+cite : 'Tags used to cite or reference information, useful for quotes and statements in a document'
+pre : 'pre.formatted, monospace text laid out with whitespace'
+del : 'Helps denote a previously deleted section of text'
+ins : 'Represents a section of text thats been inserted into the document'
+blockquote : 'Reserved for long paragraphs of quotations often cited'
+q : 'These are used for shorter quotations'
+abbr : 'Abbreviation these help denote abbreviations, while also making the full form available'
+address : 'Displays the author's contact information'
+dfn : 'Definition used to create an inline definition in the body text'
+code : 'Code text displays code snippets'
+sub : 'Subscript text a helpful way to subscript text'
+small : 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid'
 
 ```
 <div className="result">
@@ -136,12 +136,12 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 * Collective Characters Objects
 
 ### Extra symbols
-* &#34; &quot; Quotation Marks - "
-* &#38; &amp; Ampersand - &
-* &#60; &lt; Less than sign - <
-* &#62; &gt; Greater than sign - >
-* &#160; &nbsp; Non-breaking space
-* &#169; &copy; Copyright simbol - ©
-* &#64; &Uuml; @ Symbol - @
-* &#149; &ouml; Small bullet - •
-* &#153; &ucirc; Trademark symbol - ™
+* <code> &#34, &quot </code> Quotation Marks - "
+* <code>&#38, &amp </code> Ampersand - &
+* <code>&#60, &lt </code> Less than sign - <
+* <code>&#62, &gt </code> Greater than sign - >
+* <code>&#160, &nbsp </code> Non-breaking space
+* <code>&#169, &copy Copyright simbol - ©
+* <code>&#64, &Uuml </code> @ Symbol - @
+* <code>&#149, &ouml </code> Small bullet - •
+* <code>&#153, &ucirc </code> Trademark symbol - ™
