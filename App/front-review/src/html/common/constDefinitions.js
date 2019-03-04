@@ -14,9 +14,15 @@ const html5 = {
   del : 'Helps denote a previously deleted section of text',
   ins : 'Represents a section of text thats been inserted into the document',
   blockquote : 'Reserved for long paragraphs of quotations often cited',
+<<<<<<< Updated upstream
   q : 'These are used for shorter quptations',
   abbr : 'Abbreviation these help denote abbreviations, while algo making the full form available',
   address : 'Displays the author´s contact information',
+=======
+  q : 'These are used for shorter quotations',
+  abbr : 'Abbreviation these help denote abbreviations, while also making the full form available',
+  address : 'Displays the authors contact information',
+>>>>>>> Stashed changes
   dfn : 'Definition used to create an inline definition in the body text',
   code : 'Code text displays code snippets',
   sub : 'Subscript text a helpful wat subscript text',
@@ -28,6 +34,18 @@ const html5 = {
   tel: 'A link to make phone numbers clickable, especially useful for mobiles users',
   name: 'An anchor that´s useful for bringing users to specific document elements',
   tagname: 'An anchor link that brings users specifically to a div element',
+
+  img: 'An image tag to include and display image files',
+  map: 'Helps you tell users that is an interactive image with clickable areas',
+  area: 'Specify the area of image map',
+  src: "Exactly like it sounds. The URL of file of the image to display",
+  alt: 'Alternative text that helps explain the image content to both search engines and users',
+  height: 'Specify image height in pixels or percentages',
+  width: 'Specify width in pixels or percentage',
+  align: 'The alignment of the image (relative to other text elements on the page)',
+  border: 'Explains the border thickness',
+  vspace: 'Denote spacing on top or the bottom of image',
+  hspace: 'Denote spacing on top or the bottom of image',
 };
 
 export default html5;

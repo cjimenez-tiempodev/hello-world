@@ -48,8 +48,69 @@
 (see App folder)
 * Document structure
 * Text + formatting
+<<<<<<< Updated upstream
 * Links
 * Images
+=======
+
+strong : 'Indicates STROG emphasis, displayed bold in most browsers'
+b 'Another way to create bold text, it is more for drawing attention'
+em 'The emphasis tags also are like they sound, emphasizing text'
+i : 'add italics to text, used to denote things like thoughts or names'
+cite : 'Tags used to cite or reference information, useful for quotes and statements in a document'
+pre : 'pre.formatted, monospace text laid out with whitespace'
+del : 'Helps denote a previously deleted section of text'
+ins : 'Represents a section of text thats been inserted into the document'
+blockquote : 'Reserved for long paragraphs of quotations often cited'
+q : 'These are used for shorter quotations'
+abbr : 'Abbreviation these help denote abbreviations, while also making the full form available'
+address : 'Displays the author's contact information'
+dfn : 'Definition used to create an inline definition in the body text'
+code : 'Code text displays code snippets'
+sub : 'Subscript text a helpful way to subscript text'
+small : 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid'
+
+```
+<div className="result">
+  <p>
+  <strong>Aenean tempus finibus tristique.</strong>
+  Duis lorem urna, <em>tincidunt et posuere nec</em>, <i>euismod pellentesque tortor</i>.
+  <blockquote>
+  Curabitur pulvinar, elit sit amet interdum sagittis, tellus nibh dictum turpis, a <b>rutrum tellus massa et dolor</b>.
+  </blockquote>
+  <cite>- Fusce aliquam tortor eget ex pharetra, ac malesuada lorem luctus.</cite>
+  <br />
+  <pre>Vivamus sit amet tempor nisl, sit amet dapibus nulla.</pre>
+  <q>Morbi fermentum eleifend odio</q>,<address>ut pulvinar massa interdum in.</address>
+  <ins>Etiam vel augue cursus</ins>, <small>porta ipsum sit amet, tristique erat.</small>
+  <code>Ut vitae molestie arcu.</code>
+  <del>In hac habitasse platea dictumst.</del>
+  </p>
+</div>
+```
+
+* Links + formatting
+
+href: 'anchor text for hyperlink'
+mailto: 'A link used to pull up an outgoing message to a specific email addresses'
+tel: 'A link to make phone numbers clickable, especially useful for mobiles users'
+name: 'An anchor thats useful for bringing users to specific document elements'
+#name: 'An anchor link that brings users specifically to a div element'
+
+```
+<div className="result">
+
+  <a href="example">hyperlink </a> {html5.href} <br/>
+  <a href="mailto:">mailto</a> {html5.mailto} <br/>
+  <a href="tel://###-###">tel</a> {html5.tel} <br/>
+  <a href="name">name</a> {html5.name} <br/>
+  <a href="#structure">Document structure</a> {html5.tagname} <br/>
+
+</div>
+```
+
+* Images + formatting
+>>>>>>> Stashed changes
 * Lists + formatting
 * Forms
 * Tables
