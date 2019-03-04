@@ -36,8 +36,9 @@ JavaScript: Quick review focused on ES6 for React
 * Document summary
 * Document information
 * Document structure
-* Text * formatting
+* Text + formatting
 * Links + formatting
+* Images + formatting
 
 ### React
 

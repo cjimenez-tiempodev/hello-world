@@ -28,6 +28,18 @@ const html5 = {
   tel: 'A link to make phone numbers clickable, especially useful for mobiles users',
   name: 'An anchor that´s useful for bringing users to specific document elements',
   tagname: 'An anchor link that brings users specifically to a div element',
+
+  img: 'An image tag to include and display image files',
+  map: 'Helps you tell users that is an interactive image with clickable areas',
+  area: 'Specify the area of image map',
+  src: "Exactly like it sounds. The URL of file of the image to display",
+  alt: 'Alternative text that helps explain the image content to both search engines and users',
+  height: 'Specify image height in pixels or percentages',
+  width: 'Specify width in pixels or percentage',
+  align: 'The alignment of the image (relative to other text elements on the page)',
+  border: 'Explains the border thickness',
+  vspace: 'Denote spacing on top or the bottom of image',
+  hspace: 'Denote spacing on top or the bottom of image',
 };
 
 export default html5;

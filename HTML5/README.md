@@ -108,7 +108,7 @@ small : 'Small size text Historically used to simply reduce text size, in HTML5 
 </div>
 ```
 
-* Links
+* Links + formatting
 
 href: 'anchor text for hyperlink'
 mailto: 'A link used to pull up an outgoing message to a specific email addresses'
@@ -128,7 +128,7 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 </div>
 ```
 
-* Images
+* Images + formatting
 * Lists + formatting
 * Forms
 * Tables
