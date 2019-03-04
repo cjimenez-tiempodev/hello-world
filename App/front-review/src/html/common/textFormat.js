@@ -1,15 +1,11 @@
 import React from 'react';
-import html5, {docStructure} from './constDefinitions';
+import html5 from './constDefinitions';
 import codeImage from './assets/textFormat.png';
 
 function TextFormat(props) {
   return (
-    /*
-    <div> ... </div>
-    A generic container used to denote a page section
-    */
     <div className = "document">
-    <h1>Text + formating</h1>
+    <h1>Text + formatting</h1>
     <hr />
 
     <div className="example">
