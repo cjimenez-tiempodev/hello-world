@@ -28,7 +28,7 @@ function TextFormat(props) {
       </div>
 
       <div className="code">
-        <img src={codeImage} />
+        <img src={codeImage} alt="code"/>
       </div>
 
     </div>

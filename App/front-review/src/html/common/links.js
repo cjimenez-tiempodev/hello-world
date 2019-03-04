@@ -12,7 +12,7 @@ function Links(props) {
 
       <div className="result">
 
-        <a href="">hyperlink </a> {html5.href} <br/>
+        <a href="example">hyperlink </a> {html5.href} <br/>
 
         <a href="mailto:">mailto</a> {html5.mailto} <br/>
 
@@ -25,7 +25,7 @@ function Links(props) {
       </div>
 
       <div className="code">
-        <img src={codeImage} />
+        <img src={codeImage} alt="code"/>
       </div>
 
     </div>

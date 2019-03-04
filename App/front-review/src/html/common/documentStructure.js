@@ -29,7 +29,7 @@ function DocumentStructure(props) {
       </div>
 
       <div className="code">
-        <img src={codeImage} />
+        <img src={codeImage} alt="alt"/>
       </div>
 
     </div>
