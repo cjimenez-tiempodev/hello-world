@@ -8,7 +8,7 @@ function DocumentStructure(props) {
     <div> ... </div>
     A generic container used to denote a page section
     */
-    <div className = "document">
+    <div className = "document" id="structure">
     <h1>Document Structure</h1>
     <hr />
 

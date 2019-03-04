@@ -32,3 +32,11 @@ div {
 img {
   width: inherit;
 }
+
+a:active, a:hover, a:link {
+  color: white;
+}
+
+a:visited {
+  color: gray;
+}

@@ -22,6 +22,12 @@ const html5 = {
   sub : 'Subscript text a helpful wat subscript text',
   small : 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to informatio taht may no longer be valid',
   bdo : 'The bi-directional override tag will identify wich should text sould be read opposite from the preceeding text',
+
+  href: 'anchor text for hyperlink',
+  mailto: 'A link used to pull up an outgoing message to a specific email addresses',
+  tel: 'A link to make phone numbers clickable, especially useful for mobiles users',
+  name: 'An anchor that´s useful for bringing users to specific document elements',
+  tagname: 'An anchor link that brings users specifically to a div element',
 };
 
 export default html5;
