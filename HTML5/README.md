@@ -45,13 +45,32 @@
   </body>
 </html>
 ```
-(see App folder)
+
+(see App for live examples)
 * Document structure
+
+h1 to h6 : 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'
+span : 'An inline section or block container, typically used for grouping styling elements'
+p : 'This foundational tag is used to organize paragraphs of text'
+br : 'Crates a line break useful to for writing blocks of text that need to be on different lines.'
+hr : 'Create a horizontal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.'
+
+```
+<div className="result">
+  <h3> Lorem ipsum </h3>
+  <p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+  Pellentesque volutpat congue velit. <br />
+  Ut maximus diam at nunc auctor, id rutrum nisl tincidunt. <br />
+  <hr />
+  Cras sed erat sed risus fringilla sagittis. <br />
+  Maecenas <span>quis arcu turpis.</span> <br />
+  In pellentesque eget augue nec lacinia. <br />
+  Phasellus vel justo volutpat, sollicitudin purus et, volutpat felis. <br />
+  </p>
+</div>
+```
 * Text + formatting
-<<<<<<< Updated upstream
-* Links
-* Images
-=======
 
 strong : 'Indicates STROG emphasis, displayed bold in most browsers'
 b 'Another way to create bold text, it is more for drawing attention'
@@ -110,7 +129,6 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 ```
 
 * Images + formatting
->>>>>>> Stashed changes
 * Lists + formatting
 * Forms
 * Tables
@@ -118,12 +136,13 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 * HTML5 New Tags
 * Collective Characters Objects
 
-&#34; &quot; Quotation Marks - "
-&#38; &amp; Ampersand - &
-&#60; &lt; Less than sign - <
-&#62; &gt; Greater than sign - >
-&#160; &nbsp; Non-breaking space
-&#169; &copy; Copyright simbol - ©
-&#64; &Uuml; @ Symbol - @
-&#149; &ouml; Small bullet - •
-&#153; &ucirc; Trademark symbol - ™
+### Extra symbols
+* <code> &#34, &quot </code> Quotation Marks - "
+* <code>&#38, &amp </code> Ampersand - &
+* <code>&#60, &lt </code> Less than sign - <
+* <code>&#62, &gt </code> Greater than sign - >
+* <code>&#160, &nbsp </code> Non-breaking space
+* <code>&#169, &copy </code> Copyright simbol - ©
+* <code>&#64, &Uuml </code> @ Symbol - @
+* <code>&#149, &ouml </code> Small bullet - •
+* <code>&#153, &ucirc </code> Trademark symbol - ™

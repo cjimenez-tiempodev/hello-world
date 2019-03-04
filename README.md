@@ -33,8 +33,6 @@ JavaScript: Quick review focused on ES6 for React
 
 ### HTML5
 
-<<<<<<< Updated upstream
-=======
 * Document summary
 * Document information
 * Document structure
@@ -42,7 +40,6 @@ JavaScript: Quick review focused on ES6 for React
 * Links + formatting
 * Images + formatting
 
->>>>>>> Stashed changes
 ### React
 
 ### Git
