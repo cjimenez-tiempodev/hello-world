@@ -33,6 +33,12 @@ JavaScript: Quick review focused on ES6 for React
 
 ### HTML5
 
+* Document summary
+* Document information
+* Document structure
+* Text * formatting
+* Links + formatting
+
 ### React
 
 ### Git
