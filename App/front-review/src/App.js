@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {DocumentStructure, TextFormat, Links, ImagesFormat} from './html/common/index';
+import {DocumentStructure, TextFormat, Links, ImagesFormat, NewHTML5} from './html/common/index';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
         <TextFormat />
         <Links />
         <ImagesFormat />
+        <NewHTML5 />
       </div>
     );
   }

@@ -39,6 +39,7 @@ JavaScript: Quick review focused on ES6 for React
 * Text + formatting
 * Links + formatting
 * Images + formatting
+* HTML5 New Tags
 
 ### React
 

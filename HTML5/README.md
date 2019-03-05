@@ -1,6 +1,6 @@
 # HTML5 - Review
 
-## HTML5 is the latest evolution of the standard that defines HTML
+## HTML5 is the latest evolution of the standard that defines HTML. The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications.
 
 * Document summary
 
@@ -134,6 +134,64 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 * Tables
 * Objects & iFrames
 * HTML5 New Tags
+
+#### Semantic elements:
+A semantic element clearly describes its meaning to both the browser and the developer.
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+
+header: 'Defines the header block for a document (or individual section)'
+footer: 'Identifies the footer block for the document (or and individual section)'
+article: 'Identifies and article inside a document'
+section: 'Specifies a section block in the document'
+aside: 'Specifies a section block in the document'
+details: 'Describes additional fact or information that the user can view or hide'
+figcaption: 'The <figure> element caption that helps describes the figure'
+figure: 'An independent content block featuring diagrams, photos, illustrations or more'
+main: 'Describes the main content of a document'
+mark: 'Displays a portion of highlighted text within the page content'
+nav: 'Navigation links for the user in a document'
+summary: 'Contains a visible heading for a <details> element'
+time: 'Identifies the time and date'
+
+#### attributes of form elements
+number:
+date:
+time:
+calendar:
+range:
+
+#### form elements
+datalist:
+output:
+
+#### graphic elements
+svg:
+canvas:
+
+#### multimedia elements
+audio:
+video:
+
+#### HTML5 API (Application Programming Interfaces)
+Geolocation:
+Drag and Drop:
+Local Storage:
+Application Cache:
+Web Workers:
+SSE
+
+#### others
+
+dialog: 'A dialog box or window'
+menuitem: 'The specific menu item that a user can raise from a popup'
+meter: 'Describes the scalar measurement within a known array'
+progress: 'Displays the progress of a task, usually used for progress bar'
+rp: 'Displays text within browsers that do not support ruby annotations'
+rt: 'Displays East Asian typography character detail'
+ruby: 'Describes a Ruby annotation for East Asian typography'
+bdi: 'Helps you format part of the text in a different direction from other text'
+wbr: 'A line-break within the content'
+
 * Collective Characters Objects
 
 ### Extra symbols
