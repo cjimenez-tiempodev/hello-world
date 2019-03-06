@@ -1,13 +1,14 @@
 # HTML5 - Review
 
-## HTML5 is the latest evolution of the standard that defines HTML. The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications.
+## HTML5 is the latest evolution of the standard that defines HTML.
+The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications.
 
 * Document summary
 
-<html> ... </html> : Beginning and end of and HTML document.
-<head> ... </head> : Contains information that specific the page(tags, meta data, links to scripts and styles).
-<title> ... </title> : Title for the page.
-<body> ... </body> : The body includes all the content that will be shown to users.
+html : Beginning and end of and HTML document.  
+head : Contains information that specific the page(tags, meta data, links to scripts and styles).  
+title : Title for the page.  
+body : The body includes all the content that will be shown to users.  
 
 ```
 <html>
@@ -22,11 +23,11 @@
 
 * Document information
 
-<base /> : The base URL is useful for specifying all relative links in a document.
-<meta /> : Meta data spells out additional information about the page () description, author, published date, keyword).
-<link /> : Can be used to create relationships with external pages or documents, including style sheets.
-<style> ... </style> : This element includes document style information, typically to css.
-<script> ... </script>  : This element includes all scripting information, or links to external scripts.
+base : The base URL is useful for specifying all relative links in a document.  
+meta : Meta data spells out additional information about the page () description, author, published date, keyword).  
+link : Can be used to create relationships with external pages or documents, including style sheets.  
+style : This element includes document style information, typically to css.  
+script  : This element includes all scripting information, or links to external scripts.  
 
 ```
 <html>
@@ -49,10 +50,10 @@
 (see App for live examples)
 * Document structure
 
-h1 to h6 : 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'
-span : 'An inline section or block container, typically used for grouping styling elements'
-p : 'This foundational tag is used to organize paragraphs of text'
-br : 'Crates a line break useful to for writing blocks of text that need to be on different lines.'
+h1 to h6 : 'All six leaves of Headings, with 1 being the most important on a page and 6 being the least. These elements are used to describe content sections on a page.'  
+span : 'An inline section or block container, typically used for grouping styling elements'  
+p : 'This foundational tag is used to organize paragraphs of text'.  
+br : 'Crates a line break useful to for writing blocks of text that need to be on different lines.'  
 hr : 'Create a horizontal rule, a sectional break in an HTML page. Typically used to denote a change in topic or section of a page.'
 
 ```
@@ -72,22 +73,22 @@ hr : 'Create a horizontal rule, a sectional break in an HTML page. Typically use
 ```
 * Text + formatting
 
-strong : 'Indicates STROG emphasis, displayed bold in most browsers'
-b 'Another way to create bold text, it is more for drawing attention'
-em 'The emphasis tags also are like they sound, emphasizing text'
-i : 'add italics to text, used to denote things like thoughts or names'
-cite : 'Tags used to cite or reference information, useful for quotes and statements in a document'
-pre : 'pre.formatted, monospace text laid out with whitespace'
-del : 'Helps denote a previously deleted section of text'
-ins : 'Represents a section of text thats been inserted into the document'
-blockquote : 'Reserved for long paragraphs of quotations often cited'
-q : 'These are used for shorter quotations'
-abbr : 'Abbreviation these help denote abbreviations, while also making the full form available'
-address : 'Displays the author's contact information'
-dfn : 'Definition used to create an inline definition in the body text'
-code : 'Code text displays code snippets'
-sub : 'Subscript text a helpful way to subscript text'
-small : 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid'
+strong : 'Indicates STROG emphasis, displayed bold in most browsers'  
+b 'Another way to create bold text, it is more for drawing attention'  
+em 'The emphasis tags also are like they sound, emphasizing text'  
+i : 'add italics to text, used to denote things like thoughts or names'  
+cite : 'Tags used to cite or reference information, useful for quotes and statements in a document'  
+pre : 'pre.formatted, monospace text laid out with whitespace'  
+del : 'Helps denote a previously deleted section of text'  
+ins : 'Represents a section of text thats been inserted into the document'  
+blockquote : 'Reserved for long paragraphs of quotations often cited'  
+q : 'These are used for shorter quotations'  
+abbr : 'Abbreviation these help denote abbreviations, while also making the full form available'  
+address : 'Displays the author's contact information'  
+dfn : 'Definition used to create an inline definition in the body text'  
+code : 'Code text displays code snippets'  
+sub : 'Subscript text a helpful way to subscript text'  
+small : 'Small size text Historically used to simply reduce text size, in HTML5 it also refers to information that may no longer be valid'  
 
 ```
 <div className="result">
@@ -110,11 +111,11 @@ small : 'Small size text Historically used to simply reduce text size, in HTML5 
 
 * Links + formatting
 
-href: 'anchor text for hyperlink'
-mailto: 'A link used to pull up an outgoing message to a specific email addresses'
-tel: 'A link to make phone numbers clickable, especially useful for mobiles users'
-name: 'An anchor thats useful for bringing users to specific document elements'
-#name: 'An anchor link that brings users specifically to a div element'
+href: 'anchor text for hyperlink'  
+mailto: 'A link used to pull up an outgoing message to a specific email addresses'  
+tel: 'A link to make phone numbers clickable, especially useful for mobiles users'  
+name: 'An anchor thats useful for bringing users to specific document elements'  
+#name: 'An anchor link that brings users specifically to a div element'  
 
 ```
 <div className="result">
@@ -136,61 +137,61 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 * HTML5 New Tags
 
 #### Semantic elements:
-A semantic element clearly describes its meaning to both the browser and the developer.
-Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+A semantic element clearly describes its meaning to both the browser and the developer.  
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.  
 
-header: 'Defines the header block for a document (or individual section)'
-footer: 'Identifies the footer block for the document (or and individual section)'
-article: 'Identifies and article inside a document'
-section: 'Specifies a section block in the document'
-aside: 'Specifies a section block in the document'
-details: 'Describes additional fact or information that the user can view or hide'
-figcaption: 'The <figure> element caption that helps describes the figure'
-figure: 'An independent content block featuring diagrams, photos, illustrations or more'
-main: 'Describes the main content of a document'
-mark: 'Displays a portion of highlighted text within the page content'
-nav: 'Navigation links for the user in a document'
-summary: 'Contains a visible heading for a <details> element'
-time: 'Identifies the time and date'
+header: 'Defines the header block for a document (or individual section)'  
+footer: 'Identifies the footer block for the document (or and individual section)'  
+article: 'Identifies and article inside a document'  
+section: 'Specifies a section block in the document'  
+aside: 'Specifies a section block in the document'  
+details: 'Describes additional fact or information that the user can view or hide'  
+figcaption: 'The <figure> element caption that helps describes the figure'  
+figure: 'An independent content block featuring diagrams, photos, illustrations or more'  
+main: 'Describes the main content of a document'  
+mark: 'Displays a portion of highlighted text within the page content'  
+nav: 'Navigation links for the user in a document'  
+summary: 'Contains a visible heading for a <details> element'  
+time: 'Identifies the time and date'  
 
 #### attributes of form elements
-number:
-date:
-time:
-calendar:
-range:
+number:  
+date:  
+time:  
+calendar:  
+range:  
 
 #### form elements
-datalist:
-output:
+datalist:  
+output:  
 
 #### graphic elements
-svg:
-canvas:
+svg:  
+canvas:  
 
 #### multimedia elements
-audio:
-video:
+audio:  
+video:  
 
 #### HTML5 API (Application Programming Interfaces)
-Geolocation:
-Drag and Drop:
-Local Storage:
-Application Cache:
-Web Workers:
-SSE
+Geolocation:  
+Drag and Drop:  
+Local Storage:  
+Application Cache:  
+Web Workers:  
+SSE  
 
 #### others
 
-dialog: 'A dialog box or window'
-menuitem: 'The specific menu item that a user can raise from a popup'
-meter: 'Describes the scalar measurement within a known array'
-progress: 'Displays the progress of a task, usually used for progress bar'
-rp: 'Displays text within browsers that do not support ruby annotations'
-rt: 'Displays East Asian typography character detail'
-ruby: 'Describes a Ruby annotation for East Asian typography'
-bdi: 'Helps you format part of the text in a different direction from other text'
-wbr: 'A line-break within the content'
+dialog: 'A dialog box or window'  
+menuitem: 'The specific menu item that a user can raise from a popup'  
+meter: 'Describes the scalar measurement within a known array'  
+progress: 'Displays the progress of a task, usually used for progress bar'  
+rp: 'Displays text within browsers that do not support ruby annotations'  
+rt: 'Displays East Asian typography character detail'  
+ruby: 'Describes a Ruby annotation for East Asian typography'  
+bdi: 'Helps you format part of the text in a different direction from other text'  
+wbr: 'A line-break within the content'  
 
 * Collective Characters Objects
 
