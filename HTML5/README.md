@@ -138,7 +138,7 @@ name: 'An anchor thats useful for bringing users to specific document elements'
 
 #### Semantic elements:
 A semantic element clearly describes its meaning to both the browser and the developer.  
-Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.  
+Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its content.  
 
 header: 'Defines the header block for a document (or individual section)'  
 footer: 'Identifies the footer block for the document (or and individual section)'  
@@ -146,12 +146,12 @@ article: 'Identifies and article inside a document'
 section: 'Specifies a section block in the document'  
 aside: 'Specifies a section block in the document'  
 details: 'Describes additional fact or information that the user can view or hide'  
-figcaption: 'The <figure> element caption that helps describes the figure'  
+figcaption: 'The 'figure' element caption that helps describes the figure'  
 figure: 'An independent content block featuring diagrams, photos, illustrations or more'  
 main: 'Describes the main content of a document'  
 mark: 'Displays a portion of highlighted text within the page content'  
 nav: 'Navigation links for the user in a document'  
-summary: 'Contains a visible heading for a <details> element'  
+summary: 'Contains a visible heading for a 'details' element'  
 time: 'Identifies the time and date'  
 
 #### attributes of form elements

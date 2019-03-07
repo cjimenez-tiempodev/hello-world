@@ -2,7 +2,7 @@ import DocumentStructure from './documentStructure';
 import TextFormat from './textFormat';
 import Links from './links';
 import ImagesFormat from './images';
-import NewHTML5 from './newHTML5';
+import HTML5Semantic from './HTML5Semantic';
 
 export default DocumentStructure;
-export {DocumentStructure, TextFormat, Links, ImagesFormat, NewHTML5};
+export {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic};
