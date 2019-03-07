@@ -40,7 +40,7 @@ JavaScript: Quick review focused on ES6 for React
 * Links + formatting
 * Images + formatting
 * HTML5 Semantic elements
-* HTML5 attributes of form elements
+* HTML5 Input Types
 * HTML5 form elements
 * HTML5 graphic elements
 * HTML5 multimedia elements
