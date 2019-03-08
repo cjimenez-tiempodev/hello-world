@@ -11,7 +11,6 @@
 * HTML5 New Tags
 - Semantic elements
 - Input Types
-- Form elements
 - Graphic elements
 - Multimedia elements
 - API (Application Programming Interfaces)

@@ -167,10 +167,6 @@ tel: 'is used for input fields that should contain a telephone number. Note: The
 url: 'the url field can be automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input',
 week: 'allows the user to select a week and year',  
 
-#### form elements
-datalist:  
-output:  
-
 #### graphic elements
 svg:  
 canvas:  
