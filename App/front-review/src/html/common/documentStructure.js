@@ -1,6 +1,7 @@
 import React from 'react';
 import html5 from './constDefinitions';
 import codeImage from './assets/docStructure.png';
+import DisplayDefinition from './general/displayDef';
 
 function DocumentStructure(props) {
   return (
@@ -35,13 +36,9 @@ function DocumentStructure(props) {
     </div>
 
     <div>
-      <p>
-        <span>h1...h6: </span>{html5.h1h6}<br />
-        <span>span: </span>{html5.span}<br />
-        <span>p: </span>{html5.p}<br />
-        <span>br: </span>{html5.br}<br />
-        <span>hr: </span>{html5.hr}<br />
-      </p>
+      <table>
+        <DisplayDefinition data={html5.structure}/>
+      </table>
     </div>
 
     </div>
