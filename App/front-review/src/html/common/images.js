@@ -2,6 +2,7 @@ import React from 'react';
 import html5 from './constDefinitions';
 import codeImage from './assets/imageFormat.png';
 import htmlImage from './assets/html5.png';
+import DisplayDefinition from './general/displayDef';
 
 function ImagesFormat(props) {
   return (
@@ -22,18 +23,10 @@ function ImagesFormat(props) {
     </div>
 
     <div>
-      <p>
-        <h3>Tag - img</h3>
-        <h3>Attributes</h3>
-        <span> src </span>{html5.src}<br />
-        <span> alt </span>{html5.alt}<br />
-        <span> height </span>{html5.height}<br />
-        <span> width </span>{html5.width}<br />
-        <span> align </span>{html5.align}<br />
-        <span> border </span>{html5.border}<br />
-        <span> vspace </span>{html5.vspace}<br />
-        <span> hspace </span>{html5.hspace}<br />
-      </p>
+      <table>
+        <caption>Attributes</caption>
+        <DisplayDefinition data={html5.images}/>
+      </table>
     </div>
 
     </div>

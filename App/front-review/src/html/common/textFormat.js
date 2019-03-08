@@ -1,6 +1,7 @@
 import React from 'react';
 import html5 from './constDefinitions';
 import codeImage from './assets/textFormat.png';
+import DisplayDefinition from './general/displayDef';
 
 function TextFormat(props) {
   return (
@@ -34,19 +35,9 @@ function TextFormat(props) {
     </div>
 
     <div>
-      <p>
-        <span>strong: </span>{html5.strong}<br />
-        <span>b: </span>{html5.b}<br />
-        <span>em: </span>{html5.em}<br />
-        <span>i: </span>{html5.i}<br />
-        <span>cite: </span>{html5.cite}<br />
-        <span>pre: </span>{html5.pre}<br />
-        <span>del: </span>{html5.del}<br />
-        <span>ins: </span>{html5.ins}<br />
-        <span>blockquote: </span>{html5.blockquote}<br />
-        <span>q: </span>{html5.q}<br />
-        <span>code: </span>{html5.code}<br />
-      </p>
+      <table>
+        <DisplayDefinition data={html5.text} />
+      </table>
     </div>
 
     </div>
