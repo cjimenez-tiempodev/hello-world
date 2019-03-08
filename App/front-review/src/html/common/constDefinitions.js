@@ -63,6 +63,21 @@ const html5 = {
   bdi: 'Helps you format part of the text in a different direction from other text',
   time: 'Identifies the time and date',
   wbr: 'A line-break within the content',
+
+  input : {
+    number: 'defines a numeric input field. You can also set restrictions on what numbers are accepted',
+    date: 'is used for input fields that should contain a date',
+    time: 'allows the user to select a time (no time zone)',
+    range: 'defines a control for entering a number whose exact value is not important. Default range is 0 to 100. You can set restrictions on what numbers are accepted with the min, max, and step attributes:',
+    color: 'is used for input fields that should contain a color. Depending on browser support, a color picker can show up in the input field.',
+    email: 'the e-mail address can be automatically validated when submitted. Some smartphones recognize the email type, and add ".com" to the keyboard to match email input',
+    month: 'allows the user to select a month and year',
+    search: 's used for search fields (a search field behaves like a regular text field)',
+    tel: 'is used for input fields that should contain a telephone number. Note: The tel type is currently only supported in Safari 8.',
+    url: 'the url field can be automatically validated when submitted. Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input',
+    week: 'allows the user to select a week and year',
+  },
+  
 };
 
 export default html5;

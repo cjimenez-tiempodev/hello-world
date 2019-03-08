@@ -154,12 +154,19 @@ nav: 'Navigation links for the user in a document'
 summary: 'Contains a visible heading for a 'details' element'  
 time: 'Identifies the time and date'  
 
-#### attributes of form elements
+#### HTML5 Input Types
 number:  
 date:  
 time:  
 calendar:  
 range:  
+color:  
+email:  
+month:  
+search:  
+tel:  
+url:  
+week:  
 
 #### form elements
 datalist:  
