@@ -41,7 +41,6 @@ JavaScript: Quick review focused on ES6 for React
 * Images + formatting
 * HTML5 Semantic elements
 * HTML5 Input Types
-* HTML5 form elements
 * HTML5 graphic elements
 * HTML5 multimedia elements
 * HTML5 API

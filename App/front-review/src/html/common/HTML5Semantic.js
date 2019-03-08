@@ -1,11 +1,12 @@
 import React from 'react';
 import html5 from './constDefinitions';
 import './styles/semantic.css';
+import DisplayDefinition from './general/displayDef';
 
 function HTML5Semantic(props) {
   return (
     <div className = "document">
-
+    <h1>HTML5 Semantic tags</h1>
     <div className="body">
     <header class="header-menu">
       <nav>
@@ -45,15 +46,9 @@ function HTML5Semantic(props) {
     </div>
 
       <div>
-        <p>
-          <span>header: </span>{html5.header}<br/>
-          <span>nav: </span>{html5.nav}<br/>
-          <span>section: </span>{html5.section}<br/>
-          <span>article: </span>{html5.article}<br/>
-          <span>time: </span>{html5.time}<br/>
-          <span>aside: </span>{html5.aside}<br/>
-          <span>footer: </span>{html5.footer}
-        </p>
+        <table>
+          <DisplayDefinition data={html5.semantic}/>
+        </table>
       </div>
 
     </div>
