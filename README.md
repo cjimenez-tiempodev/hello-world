@@ -17,10 +17,35 @@ JavaScript: Quick review focused on ES6 for React
 * Arrow functions
 * for..of loops
 * Symbols
+* Classes
+* Promises
+* Import
+* Export
+* Prototype inheritance
+* Mutability/Immutability
+* Datatypes
+* Closure
+* Hoisting
+* this
+* try...catch
 
 ### CSS3
 
 ### HTML5
+
+* Document summary
+* Document information
+* Document structure
+* Text + formatting
+* Links + formatting
+* Images + formatting
+* HTML5 Semantic elements
+* HTML5 Input Types
+* HTML5 graphic elements
+* HTML5 multimedia elements
+* HTML5 API
+* HTML5 others
+* Extra symbols
 
 ### React
 

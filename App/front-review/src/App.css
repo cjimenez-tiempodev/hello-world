@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+}
+
+p, table {
+  text-align: left;
+}
+
+.example {
+  display: flex;
+}
+
+span {
+  color: red;
+}
+
+div {
+  border: solid 1px white;
+}
+
+.result {
+  width: 35%;
+}
+
+.code {
+  width: 65%;
+  margin: 20px 10px;
+}
+
+.semantic {
+  width: 100%;
+}
+
+img {
+  width: inherit;
+}
+
+a:active, a:hover, a:link {
+  color: white;
+}
+
+a:visited {
+  color: gray;
+}
+
+/*To secure correct behavior in older browsers*/
+article, aside, footer, header, nav, section {
+  display:block;
+}

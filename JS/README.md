@@ -329,3 +329,307 @@ for..in loops over the keys/indexes in the a array, while for..of loops over the
   console.log(sym.toString());    //expected output: Symbol(symbol description)
 }
 ```
+
+## Classes
+
+```
+Classes are in fact "special functions"
+
+{
+  class foo {   //lass Foo implies creating a (special) function of the name Foo
+    constructor (a, b){   //identifies the signature of that Foo(..) function, as well as its body contents.
+      this.x = a;
+      this.y = b;
+    }
+    addition(){
+      return this.x + this.y;
+    }
+  }
+
+  let f = new foo(1,2);
+  console.log(f.addition());    //expected output: 3
+  console.log(f.x);   //expected output: 1
+}
+```
+
+## Promises
+
+Promises are not about replacing callbacks. Promises provide a trustable intermediary -- that is, between your calling code and the async code that will perform the task -- to manage callbacks.
+
+A Promise can only have one of two possible resolution outcomes: fulfilled or rejected, with an optional single value
+Promises can only be resolved (fulfillment or rejection) once.
+
+To construct a promise instance, use the Promise(..) constructor:
+
+* Constructor
+```
+// do something asynchronous which eventually calls either:
+{
+  let promise = new Promise( function pr(resolve,reject){
+	//  resolve('success message'); // fulfilled
+  //  or
+  //  reject("failure reason"); // rejected
+  } );
+}
+```
+
+* How to use it
+
+```
+promise.then(function(result) {
+  console.log(result); // "success message!"
+}, function(err) {
+  console.log(err); // failure reason"
+});
+```
+
+The Promise(..) constructor takes a single function (pr(..)), which is called immediately and receives two control functions as arguments, usually named resolve(..) and reject(..). They are used as:
+
+* If you call reject(..), the promise is rejected, and if any value is passed to reject(..), it is set as the reason for rejection.
+
+* If you call resolve(..) with no value, or any non-promise value, the promise is fulfilled.
+
+* If you call resolve(..) and pass another promise, this promise simply adopts the state -- whether immediate or eventual -- of the passed promise (either fulfillment or rejection)
+
+## Import & Export
+
+Import:
+The static import statement is used to import bindings which are exported by another module.
+
+* Syntax
+import defaultExport from "module-name";
+
+Export:
+The export statement is used when creating JavaScript modules to export functions, objects, or primitive values from the module so they can be used by other programs with the import statement.
+
+export { name1, name2, …, nameN };
+
+## Prototype inheritance
+
+JavaScript objects have a link to a prototype object
+When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
+
+```
+//Prototype inheritance
+{
+  let parent = function (){
+    this.property1 = 'property1';
+    this.property2 = 'property2';
+  }
+
+  let child = new parent();
+  console.log(child); // expected output: {property1: 'property1', property2: 'property2'}
+
+  //Parent updated
+  parent.prototype.property3 = 'property3'; // __proto__ = {property3: 'property3'}
+  console.log(parent);
+
+  //Property3 inherited to child
+  console.log(child.property3);   //Expected output: property3
+}
+```
+
+## Mutable/Immutable
+
+Mutable is a type of variable that can be changed.
+In JavaScript, only objects and arrays are mutable, not primitive values.
+
+* Mutable
+A mutable object is an object whose state can be modified after it is created.
+
+* Immutable
+Immutable are the objects whose state cannot be changed once the object is created.
+
+## Datatypes
+
+JavaScript is a loosely typed or a dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+
+The latest ECMAScript standard defines seven data types:
+
+### Six data types that are primitives:
+*  Boolean:
+    Boolean represents a logical entity and can have two values: true, and false.
+    ```
+    {
+      let boolean = true;
+      console.log(boolean);   //expected output: true
+      console.log(typeof(boolean));   //expected output: boolean
+    }
+    ```
+*  Null
+    The Null type has exactly one value: null
+    ```
+    {
+      let n = null;
+      console.log(n);   //expected output: null
+      console.log(typeof(n));   //expected output: object
+    }
+    ```
+*  Undefined:
+    A variable that has not been assigned a value has the value undefined
+    ```
+    {
+      let u;
+      console.log(n);   //expected output: undefined
+      console.log(typeof(u));   //expected output: undefined
+    }
+    ```
+*  Number:
+    According to the ECMAScript standard, there is only one number type: the double-precision 64-bit binary format IEEE 754 value (numbers between -(253 -1) and 253 -1).
+    ```
+    {
+      let number = 10;
+      console.log(n);   //expected output: 10
+      console.log(typeof(number));   //expected output: number
+    }
+    ```
+
+*  String:
+    JavaScript's String type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values
+    ```
+    {
+      let s = 'text';
+      console.log(n);   //expected output: text
+      console.log(typeof(s));   //expected output: string
+    }
+    ```
+*  Symbol (new in ECMAScript 6):
+    A Symbol is a unique and immutable primitive value and may be used as the key of an Object property
+
+### and Object
+    Objects can be seen as a collection of properties.
+    ```
+    {
+      let o = {'null': null, 'number': 10, 'string':'text'};
+      console.log(o);   //expected output: {'null': null, 'number': 10, 'string':'text'}
+      console.log(typeof(o));   //expected output: object
+    }
+    ```
+
+## Closure
+
+A closure is the combination of a function and the lexical environment within which that function was declared.
+JavaScript variables can belong to the local or global scope.
+Global variables can be made local (private) with closures.
+
+```
+{
+  //Global counter
+  let counter = 0;
+
+  // Function to increment counter
+  function add() {
+    counter += 1;
+  }
+
+  // Call to add 1
+  add();
+  // The counter should now be 1
+}
+
+```
+
+The problem is any code on the page can change the counter, without calling add().
+
+```
+{
+  //block scope
+  let add = (function () {
+    let counter = 0;
+    return function () {
+      counter += 1;
+      return counter;
+    }
+  })();   //self-invoking function
+
+  console.log(add());   //Expected output: 1
+  console.log(add());   //Expected output: 2
+  //counter is not defined
+  console.log(counter);
+}
+```
+
+Now counter is private, the scope belongs to add() function
+Counter can't be used from outside of the add scope
+
+## Hoisting
+
+A strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the compile phase, but stay exactly where you typed them in your code.
+
+One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code
+
+```
+{
+  //the function is called before is the function is written
+  console.log(print());   //Expected output: Hello world
+  function print(){
+    return `Hello world`;
+  }
+}
+```
+
+JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined.
+```
+{
+  //the function is called before is the function is written
+  console.log(a);   //Expected output: a is not defined
+  let a;
+  a = 'variable declaration';
+}
+```
+
+## this
+
+The JavaScript context object in which the current code is executing.
+
+In most cases, the value of this is determined by how a function is called.
+ES5 introduced the bind() method to set the value of a function's this regardless of how it's called, and ES2015 introduced arrow functions which don't provide their own this binding.
+
+```
+{
+  //block scope
+  let prop = 0;
+
+  let test = {
+    prop: 42,
+    func: function() {
+      return this.prop;
+    },
+  };
+
+  console.log(test.func());   // expected output: 42
+}
+```
+
+## try...catch
+
+The try...catch statement marks a block of statements to try, and specifies a response, should an exception be thrown.
+
+```
+{
+  //block scope
+  try {
+    //this could brake the application flow
+    let x = notDefined();   //this cause a... is not defined error
+  }
+  catch(error){
+    //the application flow continue and throw the error message
+    console.log(`error message: ${error}`);   //Expected output: error message: ReferenceError: notDefined is not defined
+  }
+  finally {
+    //You can use the finally clause to make your script fail gracefully when an exception occurs; for example, to do general cleanup
+    console.log(`this alway executes`);
+  }
+  console.log(`continuing`);    //expected output: continuing
+}
+```
+
+## suggestion
+
+* Syntax validation
+
+  Add jshint
+  Validate JavaScript with JSHint. In realtime or on save. Supports JSX (React).
+  add .jshintrc file at the root project with { "esversion": 6 }
+  for more configuration options check
+  [jshint](https://jshint.com/docs/options/)
