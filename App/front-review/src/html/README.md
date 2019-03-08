@@ -9,4 +9,11 @@
 * Tables
 * Objects & iFrames
 * HTML5 New Tags
-* Collective Characters Objects
+- Semantic elements
+- Input Types
+- Form elements
+- Graphic elements
+- Multimedia elements
+- API (Application Programming Interfaces)
+- others
+* Extra symbols
