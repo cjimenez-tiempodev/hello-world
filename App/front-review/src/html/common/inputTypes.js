@@ -10,7 +10,9 @@ function InputTypes(props) {
 
       <section className="example">
         <table>
+        <tbody>
           <CreateRows data={html5.input}/>
+        </tbody>
         </table>
       </section>
 

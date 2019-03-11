@@ -8,7 +8,7 @@ function HTML5Semantic(props) {
     <div className = "document">
     <h1>HTML5 Semantic tags</h1>
     <div className="body">
-    <header class="header-menu">
+    <header className="header-menu">
       <nav>
         <ul>
           <li>Menu item</li>
@@ -47,7 +47,9 @@ function HTML5Semantic(props) {
 
       <div>
         <table>
+        <tbody>
           <DisplayDefinition data={html5.semantic}/>
+        </tbody>
         </table>
       </div>
 

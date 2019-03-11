@@ -24,8 +24,10 @@ function ImagesFormat(props) {
 
     <div>
       <table>
-        <caption>Attributes</caption>
+      <caption>Attributes</caption>
+        <tbody>
         <DisplayDefinition data={html5.images}/>
+        </tbody>
       </table>
     </div>
 
