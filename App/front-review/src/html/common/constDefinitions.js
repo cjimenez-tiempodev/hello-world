@@ -86,6 +86,12 @@ const html5 = {
     week: 'allows the user to select a week and year',
   },
 
+  graphics: {
+    svg: 'is a container for SVG graphics.',
+    canvas: 'is used to draw graphics, on the fly, via JavaScript.',
+    diferences: 'SVG is a language for describing 2D graphics in XML & Canvas draws 2D graphics, on the fly (with a JavaScript)',
+  },
+
 };
 
 export default html5;
