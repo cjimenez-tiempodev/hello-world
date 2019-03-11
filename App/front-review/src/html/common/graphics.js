@@ -27,8 +27,8 @@ class Graphics extends Component {
               <h3>SVG</h3>
               <svg width="200" height="200" xmlns="http://www.w3.org.2000/svg">
                 <circle cx="100" cy="100" r="100" style={{'fill': '#adafb2'}}/>
-                <rect x="30" y="30" width="140" height="140" style={{'fill': '#5489a5', 'stroke': "#fff", 'stroke-width':"2"}}/>
-                <polygon points="100,10 40,185 190,65 10,65 160,185" style={{'fill': '#000', 'stroke': "#fff", 'stroke-width':"2"}} />
+                <rect x="30" y="30" width="140" height="140" style={{'fill': '#5489a5', 'stroke': "#fff", 'strokeWidth':"2"}}/>
+                <polygon points="100,10 40,185 190,65 10,65 160,185" style={{'fill': '#000', 'stroke': "#fff", 'strokeWidth':"2"}} />
               </svg>
             </article>
           </section>
@@ -61,7 +61,9 @@ class Graphics extends Component {
 
       <div>
         <table>
+        <tbody>
           <DisplayDefinition data={html5.graphics} />
+        </tbody>
         </table>
       </div>
 

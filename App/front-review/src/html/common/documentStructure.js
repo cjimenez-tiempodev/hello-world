@@ -17,7 +17,7 @@ function DocumentStructure(props) {
 
       <div className="result">
         <h3> Lorem ipsum </h3>
-        <p>
+        <section>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
         Pellentesque volutpat congue velit. <br />
         Ut maximus diam at nunc auctor, id rutrum nisl tincidunt. <br />
@@ -26,7 +26,7 @@ function DocumentStructure(props) {
         Maecenas <span>quis arcu turpis.</span> <br />
         In pellentesque eget augue nec lacinia. <br />
         Phasellus vel justo volutpat, sollicitudin purus et, volutpat felis. <br />
-        </p>
+        </section>
       </div>
 
       <div className="code">
@@ -37,7 +37,9 @@ function DocumentStructure(props) {
 
     <div>
       <table>
+      <tbody>
         <DisplayDefinition data={html5.structure}/>
+      </tbody>
       </table>
     </div>
 

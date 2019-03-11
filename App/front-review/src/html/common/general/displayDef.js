@@ -6,7 +6,7 @@ function DisplayDefinition(props) {
     let result = [];
     for (let element in props.data) {
       result.push(
-          <tr>
+          <tr key = {element}>
             <td><span>{`${element}:`}</span></td>
             <td>{`${props.data[element]}`}</td>
           </tr>
