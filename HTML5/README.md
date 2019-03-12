@@ -173,7 +173,7 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
-```
+```  
 **canvas:** 'is used to draw graphics, on the fly, via JavaScript. A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.',
 ```
 <canvas id="myCanvas" width="200" height="100"></canvas>
@@ -181,8 +181,25 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 **diferences:** 'SVG is a language for describing 2D graphics in XML & Canvas draws 2D graphics, on the fly (with a JavaScript)',
 
 #### multimedia elements
-**audio:**
-**video:**
+**audio:**  specifies a standard way to embed audio in a web page.
+* controls: attribute adds audio controls, like play, pause, and volume.
+* source: element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+* note:
+  - The text between the 'audio' tags will only be displayed in browsers that do not support the <audio> element.
+  - In HTML5, there are 3 supported audio formats: MP3, WAV, and OGG.
+
+  ```
+  <audio controls>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+  ```
+
+**video:** specifies a standard way to embed a video in a web page.
+* controls: attribute adds video controls, like play, pause, and volume.
+* The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+* note:
+  - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
 
 #### HTML5 API (Application Programming Interfaces)
 **Geolocation:**  

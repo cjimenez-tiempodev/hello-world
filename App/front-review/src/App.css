@@ -24,6 +24,10 @@ div {
   width: 35%;
 }
 
+.audio {
+  padding-top: 40px;
+}
+
 .code {
   width: 65%;
   margin: 20px 10px;

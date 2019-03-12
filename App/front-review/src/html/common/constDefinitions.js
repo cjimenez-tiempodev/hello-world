@@ -92,6 +92,11 @@ const html5 = {
     diferences: 'SVG is a language for describing 2D graphics in XML & Canvas draws 2D graphics, on the fly (with a JavaScript)',
   },
 
+  multimedia: {
+    audio: 'specifies a standard way to embed audio in a web page,',
+    video: 'specifies a standard way to embed a video in a web page.',
+  },
+
 };
 
 export default html5;

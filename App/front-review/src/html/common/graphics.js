@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import html5 from './constDefinitions';
 import DisplayDefinition from './general/displayDef';
-import codeImage from './assets/svgCode.png';
+import codeImage from './assets/canvasCode.png';
 
 class Graphics extends Component {
 
