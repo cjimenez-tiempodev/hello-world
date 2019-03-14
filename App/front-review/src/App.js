@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics, Multimedia} from './html/common/index';
+import {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics, Multimedia, HTML5API} from './html/common/index';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +14,7 @@ class App extends Component {
         <InputTypes />
         <Graphics />
         <Multimedia />
+        <HTML5API />
       </div>
     );
   }

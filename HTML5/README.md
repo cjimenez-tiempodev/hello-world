@@ -202,7 +202,46 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
   - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
 
 #### HTML5 API (Application Programming Interfaces)
-**Geolocation:**  
+**Geolocation:**  geolocation: 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.'.
+
+The getCurrentPosition() method is used to return the user's position.
+```
+function getLocation(){
+  navigator.geolocation.getCurrentPosition(resultCallBack, errorCallBack, options);
+}
+
+//The position object specifies the current geographic location of the device
+function resultCallBack(position){
+  /*
+  position: {
+    latitude:
+    longitude:
+    altitude:
+    accuracy:
+    altitudeAccuracy:
+    heading:
+    speed:
+  }
+  */
+}
+
+function errorCallBack(error){
+  /*
+  error:{
+    message:
+    code: {
+      0: 'unknown error',
+      1: 'permission denied',
+      2: 'position unavailable',
+      3: 'timeout',
+    }
+  }
+  */
+}
+
+```
+
+
 **Drag and Drop:**  
 **Local Storage:**  
 **Application Cache:**

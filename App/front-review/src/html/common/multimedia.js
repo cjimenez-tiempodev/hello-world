@@ -30,7 +30,7 @@ function Multimedia(props) {
 
       <div className="result">
         <section>
-        <video controls="true">
+        <video controls={true}>
           <source src="https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4" />
         </video>
         </section>

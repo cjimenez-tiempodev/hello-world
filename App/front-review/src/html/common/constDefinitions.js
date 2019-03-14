@@ -97,6 +97,10 @@ const html5 = {
     video: 'specifies a standard way to embed a video in a web page.',
   },
 
+  api: {
+    geolocation: 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.',
+  }
+
 };
 
 export default html5;
