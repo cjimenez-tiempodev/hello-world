@@ -1,0 +1,9 @@
+.dropContainer {
+  widows: 100px;
+  height: 100px;
+  margin-left: 10px
+}
+
+.dropContainer span{
+  color: white;
+}

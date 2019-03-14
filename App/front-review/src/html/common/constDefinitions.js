@@ -98,7 +98,20 @@ const html5 = {
   },
 
   api: {
-    geolocation: 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.',
+    geolocation: {
+      geolocation: 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.',
+    },
+    dragndrop: {
+      DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.',
+      events: 'There are number of events which are fired during various stages of the drag and drop operation.',
+      dragstart: 'Fires when the user starts dragging of the object.',
+      dragenter: 'Fired when the mouse is first moved over the target element while a drag is occurring.',
+      dragover: 'This event is fired as the mouse is moved over an element when a drag is occurring',
+      dragleave: 'This event is fired when the mouse leaves an element while a drag is occurring. ',
+      drag: 'Fires every time the mouse is moved while the object is being dragged.',
+      drop: 'The drop event is fired on the element where the drop was occurred at the end of the drag operation.',
+      dragend: 'Fires when the user releases the mouse button while dragging an object.',
+    }
   }
 
 };

@@ -182,9 +182,9 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 
 #### multimedia elements
 **audio:**  specifies a standard way to embed audio in a web page.
-* controls: attribute adds audio controls, like play, pause, and volume.
-* source: element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
-* note:
+**controls:** attribute adds audio controls, like play, pause, and volume.
+**source:** element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+**note:**
   - The text between the 'audio' tags will only be displayed in browsers that do not support the <audio> element.
   - In HTML5, there are 3 supported audio formats: MP3, WAV, and OGG.
 
@@ -196,15 +196,15 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
   ```
 
 **video:** specifies a standard way to embed a video in a web page.
-* controls: attribute adds video controls, like play, pause, and volume.
-* The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
-* note:
+**controls:** attribute adds video controls, like play, pause, and volume.
+The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+**note:**
   - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
 
 #### HTML5 API (Application Programming Interfaces)
-**Geolocation:**  geolocation: 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.'.
+**Geolocation:** 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.'.
 
-The getCurrentPosition() method is used to return the user's position.
+The **getCurrentPosition()** method is used to return the user's position.
 ```
 function getLocation(){
   navigator.geolocation.getCurrentPosition(resultCallBack, errorCallBack, options);
@@ -241,8 +241,32 @@ function errorCallBack(error){
 
 ```
 
-
 **Drag and Drop:**  
+DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.',
+
+* First of all: To make an element draggable, set the draggable attribute to true:
+```
+<img draggable="true">
+```
+
+* Then, specify what should happen when the element is dragged (onDragStart).
+The dataTransfer.setData() method sets the data type and the value of the dragged data
+```
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+```
+
+* The ondragover event specifies where the dragged data can be dropped.
+By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element.
+```
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+```
+
 **Local Storage:**  
 **Application Cache:**
 **Web Workers:**  
