@@ -7,7 +7,7 @@ import './style/style.css';
 
 class DnD extends Component {
 
-  allowDrop = (ev)=>{
+  allowDrop = (ev) =>{
     ev.preventDefault();
   }
 

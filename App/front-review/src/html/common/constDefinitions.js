@@ -111,7 +111,13 @@ const html5 = {
       drag: 'Fires every time the mouse is moved while the object is being dragged.',
       drop: 'The drop event is fired on the element where the drop was occurred at the end of the drag operation.',
       dragend: 'Fires when the user releases the mouse button while dragging an object.',
-    }
+    },
+    web_Storage: {
+      localStorage: 'stores data with no expiration date',
+      remove: 'localStorage.removeItem(key) where key is the key of the value you want to remove',
+      clear: 'If you want to clear all settings, you need to call localStorage.clear() method',
+      sessionStorage: 'stores data for one session (data is lost when the browser tab is closed)',
+    },
   }
 
 };

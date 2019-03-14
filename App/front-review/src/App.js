@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics, Multimedia, HTML5Geolocation, DnD} from './html/common/index';
+import {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics, Multimedia, HTML5Geolocation, DnD, WebStorage} from './html/common/index';
 import './App.css';
 
 class App extends Component {
@@ -16,6 +16,7 @@ class App extends Component {
         <Multimedia />
         <HTML5Geolocation />
         <DnD />
+        <WebStorage />
       </div>
     );
   }

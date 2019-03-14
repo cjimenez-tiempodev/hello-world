@@ -37,7 +37,7 @@ class HTML5Geolocation extends Component {
   render(){
     return (
       <div className = "document">
-      <h1>API - HTML5 Application Programming Interfaces</h1>
+      <h1> HTML5 - Geolocation</h1>
       <hr />
 
       <div className="example">

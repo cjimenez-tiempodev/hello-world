@@ -268,6 +268,23 @@ function drop(ev) {
 ```
 
 **Local Storage:**  
+
+The Session Storage is designed for scenarios where the user is carrying out a single transaction, but could be carrying out multiple transactions in different windows at the same time.
+
+HTML web storage provides two objects for storing data on the client:
+
+* window.localStorage - stores data with no expiration date
+* window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+
+To check for web storage supported
+```
+if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support..
+}
+```
+
 **Application Cache:**
 **Web Workers:**  
 SSE  
