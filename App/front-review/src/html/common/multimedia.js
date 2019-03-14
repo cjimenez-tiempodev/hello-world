@@ -11,7 +11,7 @@ function Multimedia(props) {
 
     <div className="example">
 
-      <div className="result audio">
+      <div className="result center">
         <section>
         <audio controls>
           <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />

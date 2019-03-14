@@ -6,7 +6,7 @@ import HTML5Semantic from './HTML5Semantic';
 import InputTypes from './inputTypes';
 import Graphics from './graphics';
 import Multimedia from './multimedia';
-import HTML5API from './api';
+import HTML5Geolocation from './APIGeolocation';
 
 export default DocumentStructure;
-export {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics, Multimedia, HTML5API};
+export {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics, Multimedia, HTML5Geolocation};

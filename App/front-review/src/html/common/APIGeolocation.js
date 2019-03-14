@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import html5 from './constDefinitions';
-import codeImage from './assets/videoCode.png';
+import codeImage from './assets/geolocationCode.png';
 import DisplayDefinition from './general/displayDef';
 
-class HTML5API extends Component {
+class HTML5Geolocation extends Component {
 
   constructor(props){
     super(props);
@@ -21,11 +21,9 @@ class HTML5API extends Component {
     }else{
       console.log('Geolocation is not supported by this browser');
     }
-    console.log(this.state.location);
   }
 
   showLocation = position => {
-    console.log(position);
     this.setState({location:{
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
@@ -44,7 +42,7 @@ class HTML5API extends Component {
 
       <div className="example">
 
-        <div className="result">
+        <div className="result center">
           <section>
           <button onClick={this.getLocation}>Get Location</button><br/>
           <span>latitude: {this.state.location.latitude}</span><br />
@@ -72,4 +70,4 @@ class HTML5API extends Component {
 
 }
 
-export default HTML5API;
+export default HTML5Geolocation;
