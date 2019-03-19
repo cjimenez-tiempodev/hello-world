@@ -54,14 +54,14 @@ class WebStorage extends Component {
         <div className="result center">
           <h5>Click on the button to encrease the counter</h5>
           <section>
-            <label for="local">local storage</label>
+            <label htmlFor="local">local storage</label>
             <button onClick={this.setLocal} id="local">Increase One</button><br/>
-            <label for="local">reset counter</label>
+            <label htmlFor="local">reset counter</label>
             <button onClick={this.clearLocal} id="local">Reset</button><br/>
             <span>{this.state.local}</span>
           </section>
           <section>
-            <label for="local">session storage</label>
+            <label htmlFor="local">session storage</label>
             <button onClick={this.setSession} id="session">Increase One</button><br/>
             <span>{this.state.session}</span>
           </section>

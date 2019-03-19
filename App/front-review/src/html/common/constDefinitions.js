@@ -118,6 +118,11 @@ const html5 = {
       clear: 'If you want to clear all settings, you need to call localStorage.clear() method',
       sessionStorage: 'stores data for one session (data is lost when the browser tab is closed)',
     },
+    web_workers: {
+      webWorkers: 'Web Workers are a way of running web scripts in background threads without blocking the main thread.',
+      Worker: 'Represents a running worker thread, allowing you to pass messages to the running worker code.',
+      Buttons: 'fetch users with web workers will display the data without stoping the counter, meanwhile fetch users directly will stop the counter for a moment'
+    }
   }
 
 };

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import html5 from '../constDefinitions';
-import codeImage from '../assets/geolocationCode.png';
+import codeImage from './assets/dragDropCode.png';
 import dragImage from './assets/dragImage.png';
 import DisplayDefinition from '../general/displayDef';
 import './style/style.css';

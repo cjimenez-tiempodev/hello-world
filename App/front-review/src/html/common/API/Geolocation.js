@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import html5 from '../constDefinitions';
-import codeImage from '../assets/geolocationCode.png';
+import codeImage from './assets/geolocationCode.png';
 import DisplayDefinition from '../general/displayDef';
 
 class HTML5Geolocation extends Component {

@@ -7,3 +7,7 @@
 .dropContainer span{
   color: white;
 }
+
+.react-countdown-clock {
+  border-color: transparent;
+}

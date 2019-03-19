@@ -285,8 +285,38 @@ if (typeof(Storage) !== "undefined") {
 }
 ```
 
-**Application Cache:**
 **Web Workers:**  
+Web Workers allow for long-running scripts that are not interrupted by scripts that respond to clicks or other user interactions.
+When a script is executing inside a Web Worker it cannot access the web page's window object (window.document), which means that Web Workers don't have direct access to the web page and the DOM API.
+
+Web Workers run in an isolated thread. As a result, the code that they execute needs to be contained in a separate file.
+```
+const worker = new Worker("workerfile.js");
+```
+
+How do we communicate with a worker? By calling the postMessage() method.
+```
+worker.postMessage("Hello World");
+```
+
+send a message back to the main thread with a postMessage() function.
+```
+self.addEventListener(
+  "message",
+  function(e) {
+    self.postMessage(e.data);
+  },
+  false
+);
+```
+
+Finally, we will also need a message event listener in the main file to receive the data and act upon it. Something like the code block below.
+```
+worker.addEventListener('message', function(e) {
+      console.log('Message from Worker: ' + e.data);
+    }
+```
+
 SSE  
 
 #### others

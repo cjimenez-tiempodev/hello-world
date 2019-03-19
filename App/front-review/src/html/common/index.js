@@ -9,6 +9,20 @@ import Multimedia from './multimedia';
 import HTML5Geolocation from './API/Geolocation';
 import DnD from './API/DragnDrop';
 import WebStorage from './API/webStorage';
+import WebWorkers from './API/webWorkers';
 
 export default DocumentStructure;
-export {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics, Multimedia, HTML5Geolocation, DnD, WebStorage};
+export {
+  DocumentStructure,
+  TextFormat,
+  Links,
+  ImagesFormat,
+  HTML5Semantic,
+  InputTypes,
+  Graphics,
+  Multimedia,
+  HTML5Geolocation,
+  DnD,
+  WebStorage,
+  WebWorkers
+};
