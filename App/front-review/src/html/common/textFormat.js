@@ -12,7 +12,7 @@ function TextFormat(props) {
     <div className="example">
 
       <div className="result">
-        <p>
+        <section>
         <strong>Aenean tempus finibus tristique.</strong>
         Duis lorem urna, <em>tincidunt et posuere nec</em>, <i>euismod pellentesque tortor</i>.
         <blockquote>
@@ -25,7 +25,7 @@ function TextFormat(props) {
         <ins>Etiam vel augue cursus</ins>, <small>porta ipsum sit amet, tristique erat.</small>
         <code>Ut vitae molestie arcu.</code>
         <del>In hac habitasse platea dictumst.</del>
-        </p>
+        </section>
       </div>
 
       <div className="code">
@@ -36,7 +36,9 @@ function TextFormat(props) {
 
     <div>
       <table>
+        <tbody>
         <DisplayDefinition data={html5.text} />
+        </tbody>
       </table>
     </div>
 
