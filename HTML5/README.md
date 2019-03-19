@@ -173,7 +173,7 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
-```
+```  
 **canvas:** 'is used to draw graphics, on the fly, via JavaScript. A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.',
 ```
 <canvas id="myCanvas" width="200" height="100"></canvas>
@@ -181,15 +181,142 @@ Examples of non-semantic elements: 'div' and 'span' - Tells nothing about its co
 **diferences:** 'SVG is a language for describing 2D graphics in XML & Canvas draws 2D graphics, on the fly (with a JavaScript)',
 
 #### multimedia elements
-**audio:**
-**video:**
+**audio:**  specifies a standard way to embed audio in a web page.
+**controls:** attribute adds audio controls, like play, pause, and volume.
+**source:** element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+**note:**
+  - The text between the 'audio' tags will only be displayed in browsers that do not support the <audio> element.
+  - In HTML5, there are 3 supported audio formats: MP3, WAV, and OGG.
+
+  ```
+  <audio controls>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+  ```
+
+**video:** specifies a standard way to embed a video in a web page.
+**controls:** attribute adds video controls, like play, pause, and volume.
+The source element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+**note:**
+  - The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
 
 #### HTML5 API (Application Programming Interfaces)
-**Geolocation:**  
+**Geolocation:** 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.'.
+
+The **getCurrentPosition()** method is used to return the user's position.
+```
+function getLocation(){
+  navigator.geolocation.getCurrentPosition(resultCallBack, errorCallBack, options);
+}
+
+//The position object specifies the current geographic location of the device
+function resultCallBack(position){
+  /*
+  position: {
+    latitude:
+    longitude:
+    altitude:
+    accuracy:
+    altitudeAccuracy:
+    heading:
+    speed:
+  }
+  */
+}
+
+function errorCallBack(error){
+  /*
+  error:{
+    message:
+    code: {
+      0: 'unknown error',
+      1: 'permission denied',
+      2: 'position unavailable',
+      3: 'timeout',
+    }
+  }
+  */
+}
+
+```
+
 **Drag and Drop:**  
+DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.',
+
+* First of all: To make an element draggable, set the draggable attribute to true:
+```
+<img draggable="true">
+```
+
+* Then, specify what should happen when the element is dragged (onDragStart).
+The dataTransfer.setData() method sets the data type and the value of the dragged data
+```
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+```
+
+* The ondragover event specifies where the dragged data can be dropped.
+By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element.
+```
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+```
+
 **Local Storage:**  
-**Application Cache:**
+
+The Session Storage is designed for scenarios where the user is carrying out a single transaction, but could be carrying out multiple transactions in different windows at the same time.
+
+HTML web storage provides two objects for storing data on the client:
+
+* window.localStorage - stores data with no expiration date
+* window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+
+To check for web storage supported
+```
+if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support..
+}
+```
+
 **Web Workers:**  
+Web Workers allow for long-running scripts that are not interrupted by scripts that respond to clicks or other user interactions.
+When a script is executing inside a Web Worker it cannot access the web page's window object (window.document), which means that Web Workers don't have direct access to the web page and the DOM API.
+
+Web Workers run in an isolated thread. As a result, the code that they execute needs to be contained in a separate file.
+```
+const worker = new Worker("workerfile.js");
+```
+
+How do we communicate with a worker? By calling the postMessage() method.
+```
+worker.postMessage("Hello World");
+```
+
+send a message back to the main thread with a postMessage() function.
+```
+self.addEventListener(
+  "message",
+  function(e) {
+    self.postMessage(e.data);
+  },
+  false
+);
+```
+
+Finally, we will also need a message event listener in the main file to receive the data and act upon it. Something like the code block below.
+```
+worker.addEventListener('message', function(e) {
+      console.log('Message from Worker: ' + e.data);
+    }
+```
+
 SSE  
 
 #### others

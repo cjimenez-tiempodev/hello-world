@@ -92,6 +92,39 @@ const html5 = {
     diferences: 'SVG is a language for describing 2D graphics in XML & Canvas draws 2D graphics, on the fly (with a JavaScript)',
   },
 
+  multimedia: {
+    audio: 'specifies a standard way to embed audio in a web page,',
+    video: 'specifies a standard way to embed a video in a web page.',
+  },
+
+  api: {
+    geolocation: {
+      geolocation: 'is used to get the geographical position of a user. Since this can compromise privacy, the position is not available unless the user approves it.',
+    },
+    dragndrop: {
+      DnD: 'Drag and Drop (DnD) is powerful User Interface concept which makes it easy to copy, reorder and deletion of items with the help of mouse clicks.',
+      events: 'There are number of events which are fired during various stages of the drag and drop operation.',
+      dragstart: 'Fires when the user starts dragging of the object.',
+      dragenter: 'Fired when the mouse is first moved over the target element while a drag is occurring.',
+      dragover: 'This event is fired as the mouse is moved over an element when a drag is occurring',
+      dragleave: 'This event is fired when the mouse leaves an element while a drag is occurring. ',
+      drag: 'Fires every time the mouse is moved while the object is being dragged.',
+      drop: 'The drop event is fired on the element where the drop was occurred at the end of the drag operation.',
+      dragend: 'Fires when the user releases the mouse button while dragging an object.',
+    },
+    web_Storage: {
+      localStorage: 'stores data with no expiration date',
+      remove: 'localStorage.removeItem(key) where key is the key of the value you want to remove',
+      clear: 'If you want to clear all settings, you need to call localStorage.clear() method',
+      sessionStorage: 'stores data for one session (data is lost when the browser tab is closed)',
+    },
+    web_workers: {
+      webWorkers: 'Web Workers are a way of running web scripts in background threads without blocking the main thread.',
+      Worker: 'Represents a running worker thread, allowing you to pass messages to the running worker code.',
+      Buttons: 'fetch users with web workers will display the data without stoping the counter, meanwhile fetch users directly will stop the counter for a moment'
+    }
+  }
+
 };
 
 export default html5;

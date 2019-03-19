@@ -1,5 +1,18 @@
 import React, { Component } from 'react';
-import {DocumentStructure, TextFormat, Links, ImagesFormat, HTML5Semantic, InputTypes, Graphics} from './html/common/index';
+import {
+  DocumentStructure,
+  TextFormat,
+  Links,
+  ImagesFormat,
+  HTML5Semantic,
+  InputTypes,
+  Graphics,
+  Multimedia,
+  HTML5Geolocation,
+  DnD,
+  WebStorage,
+  WebWorkers
+} from './html/common/index';
 import './App.css';
 
 class App extends Component {
@@ -13,6 +26,11 @@ class App extends Component {
         <HTML5Semantic />
         <InputTypes />
         <Graphics />
+        <Multimedia />
+        <HTML5Geolocation />
+        <DnD />
+        <WebStorage />
+        <WebWorkers />
       </div>
     );
   }
