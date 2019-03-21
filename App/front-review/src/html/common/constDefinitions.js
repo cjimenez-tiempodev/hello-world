@@ -122,7 +122,7 @@ const html5 = {
       webWorkers: 'Web Workers are a way of running web scripts in background threads without blocking the main thread.',
       Worker: 'Represents a running worker thread, allowing you to pass messages to the running worker code.',
       Buttons: 'fetch users with web workers will display the data without stoping the counter, meanwhile fetch users directly will stop the counter for a moment'
-    }
+    },
   }
 
 };
