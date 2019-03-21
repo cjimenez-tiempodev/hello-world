@@ -66,7 +66,7 @@ class WebWorkers extends Component {
         <section>
         <ReactCountdownClock
                    seconds={this.state.counter}
-                   color="#000"
+                   color="#FFF"
                    alpha={0.9}
                    size={300}
         />
