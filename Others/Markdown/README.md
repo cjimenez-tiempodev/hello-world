@@ -77,6 +77,28 @@ if (isAwesome){
 }
 ```
 
+## **A collapsible section with markdown**
+<details>
+  <summary>Click to expand!</summary>
+
+  ## Head
+  1. Option 1
+  2. Option 2 
+     * With some
+     * Sub bullets
+</details>
+```
+<details>
+  <summary>Click to expand!</summary>
+
+  ## Head
+  1. Option 1
+  2. Option 2
+     * With some
+     * Sub bullets
+</details>
+```
+
 ## **Extras**    
 
 Tasks lists:
