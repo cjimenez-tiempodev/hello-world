@@ -319,7 +319,27 @@ worker.addEventListener('message', function(e) {
 
 
 **WebSockets**
-bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers.  
+Is a bidirectional communication technology for web applications which operates over a single socket and is exposed via a JavaScript interface in HTML 5 compliant browsers.  
+
+Once you get a Web Socket connection with the web server, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler.
+
+```
+var Socket = new WebSocket(url, [protocal] );
+```
+The url, specifies the URL to which to connect. The second attribute, protocol is optional, and if present, specifies a sub-protocol that the server must support for the connection to be successful.
+
+* Events
+open	   Socket.onopen:  	  This event occurs when socket connection is established.
+message	 Socket.onmessage:	This event occurs when client receives data from server.
+error	   Socket.onerror:  	This event occurs when there is any error in communication.
+close	   Socket.onclose:  	This event occurs when connection is closed.
+
+* Methods
+Socket.send()
+The send(data) method transmits data using the connection.
+
+Socket.close()
+The close() method would be used to terminate any existing connection.
 
 #### others
 
