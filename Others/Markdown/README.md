@@ -83,10 +83,11 @@ if (isAwesome){
 
   ## Head
   1. Option 1
-  2. Option 2 
+  2. Option 2
      * With some
      * Sub bullets
 </details>
+
 ```
 <details>
   <summary>Click to expand!</summary>

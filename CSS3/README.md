@@ -1,10 +1,10 @@
 # CSS3 - Review
 
-## Introduction
+## **Introduction**
 CSS: stands for Cascading Style Sheets.
 Describes how HTML elements are displayed on screen, is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
 
-## syntax
+## **syntax**
 A CSS rule-set consists of a selector and a declaration block:
 ```
 h1        {property: value; property: value}
@@ -22,8 +22,11 @@ p {
 }
 ```
 
-## selectors
+## **selectors**
 CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.
+
+<details>
+  <summary>See more</summary>
 
 * name: selects elements based on the element name.
 All <p> elements on a page will be center-aligned, with a red text color.
@@ -71,7 +74,9 @@ h1, h2, p {
 }
 ```
 
-## Comments
+</details>
+
+## **Comments**
 
 ```
 A CSS comment starts with /* and ends with */. Comments can also span multiple lines:
@@ -82,7 +87,11 @@ a multi-line
 comment */
 ```
 
-## Insert CSS
+## **Insert CSS**
+
+<details>
+  <summary>See more</summary>
+
 * External style sheet: change the look of an entire website by changing just one file
 ```
 <head>
@@ -137,10 +146,15 @@ Result: external color
 2. External and internal style sheets (in the head section)
 3. Browser default
 
-# Colors
+</details>
+
+## **Colors**
 Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
 In HTML, a color can be specified by using a color name:
 Tomato, orange, gray, slateblue, violet, lightgray, mediumseagreen
+
+<details>
+  <summary>See more</summary>
 
 * Background color
 ```
@@ -179,48 +193,53 @@ The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not tra
 transparent
 rgba(255, 99, 71, 0.5)
 
+</details>
 
-## CSS Background
 
-### background-color : specifies the background color of an element.
+## **CSS Background**
+
+<details>
+  <summary>See more</summary>
+
+* background-color : specifies the background color of an element.
 ```
 body {
   background-color: lightblue;
 }
 ```
 
-### background-image: pecifies an image to use as the background of an element
+* background-image: pecifies an image to use as the background of an element
 ```
 body {
   background-image: url("gradient_bg.png");
 }
 ```
-### background-repeat
+* background-repeat
 repeat horizontal: background-repeat: repeat-x;
 repeat vertical: background-repeat: repeat-y;
 no repeat: background-repeat: no-repeat;
 
-### background-position
+* background-position
 position: background-position: right top;
 
-### background-attachment
+* background-attachment
 To specify that the background image should be fixed (will not scroll with the rest of the page)  
 background-attachment: fixed;
 
-### painting-area
+* painting-area
 Specifies the painting area of the background
 background-clip: padding-box;
 
-### origin
+* origin
 Specifies where the background image(s) is/are positioned
 background-origin: content-box;
 
-### size
+* size
 Specifies the size of the background image(s)
 background-size: auto;
 background-size: 300px 100px;
 
-### Short code
+* Short code
 To shorten the code, it is also possible to specify all the background properties in one single property.
 The order is:  
 color, image, repeat, attachment, position
@@ -229,3 +248,5 @@ body {
   background: #ffffff url("img_tree.png") no-repeat right top;
 }
 ```
+
+</details>
