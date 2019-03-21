@@ -22,7 +22,7 @@ p {
 }
 ```
 
-## **selectors**
+## **Selectors**
 CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.
 
 <details>
@@ -88,6 +88,7 @@ comment */
 ```
 
 ## **Insert CSS**
+Three Ways to Insert CSS
 
 <details>
   <summary>See more</summary>
@@ -248,5 +249,271 @@ body {
   background: #ffffff url("img_tree.png") no-repeat right top;
 }
 ```
+
+</details>
+
+## **Borders**
+The CSS border properties allow you to specify the style, width, and color of an element's border.
+
+<details>
+  <summary>See more</summary>
+
+* Border Style
+
+The border-style property specifies what kind of border to display.
+
+The following values are allowed:
+
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+
+The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).
+
+Example:
+```
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+```
+
+* Border width
+
+The border-width property specifies the width of the four borders.
+The width can be set as a specific size (in px, pt, cm, em, etc)
+The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).
+
+```
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+```
+
+* Border Color
+
+The border-color property is used to set the color of the four borders.
+The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border).
+
+```
+p.three {
+  border-style: solid;
+  border-color: red green blue yellow;
+}
+```
+
+* border radius
+
+The border-radius property is used to add rounded borders to an element
+```
+p {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+```
+
+* Shorthand Property
+
+The border property is a shorthand property for the following individual border properties:
+- border-width
+- border-style (required)
+- border-color
+```
+p {
+  border: 5px solid red;
+}
+```
+
+You can also specify all the individual border properties for just one side:
+```
+p {
+  border-left: 6px solid red;
+  background-color: lightgrey;
+}
+```
+
+* All css border properties
+
+border	               Sets all the border properties in one declaration
+border-bottom	         Sets all the bottom border properties in one declaration
+border-bottom-color	   Sets the color of the bottom border
+border-bottom-style	   Sets the style of the bottom border
+border-bottom-width	   Sets the width of the bottom border
+border-color	         Sets the color of the four borders
+border-left	           Sets all the left border properties in one declaration
+border-left-color	     Sets the color of the left border
+border-left-style	     Sets the style of the left border
+border-left-width	     Sets the width of the left border
+border-radius	         Sets all the four border-radius properties for rounded corners
+border-right	         Sets all the right border properties in one declaration
+border-right-color	   Sets the color of the right border
+border-right-style	   Sets the style of the right border
+border-right-width	   Sets the width of the right border
+border-style	         Sets the style of the four borders
+border-top	           Sets all the top border properties in one declaration
+border-top-color	     Sets the color of the top border
+border-top-style	     Sets the style of the top border
+border-top-width	     Sets the width of the top border
+border-width	         Sets the width of the four borders
+
+</details>
+
+## **Margins**
+The CSS margin properties are used to create space around elements, outside of any defined borders.
+
+<details>
+  <summary>See more</summary>
+
+* individual sides
+- margin-top
+- margin-right
+- margin-bottom
+- margin-left
+
+All the margin properties can have the following values:  
+
+auto - the browser calculates the margin  
+length - specifies a margin in px, pt, cm, etc.  
+% - specifies a margin in % of the width of the containing element  
+inherit - specifies that the margin should be inherited from the parent element  
+
+```
+p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+```
+
+* Margin - Shorthand
+
+margin: 25px 50px 75px 100px;  
+- top margin is 25px  
+- right margin is 50px  
+- bottom margin is 75px  
+- left margin is 100px  
+
+```
+p {
+  margin: 25px 50px 75px 100px;
+}
+```
+
+* auto value
+You can set the margin property to auto to horizontally center the element within its container.
+```
+div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+}
+```
+
+* margin collapse
+Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+
+h1 { margin: 0 0 50px 0; }  
+h2 { margin: 20px 0 0 0; }
+
+margin would be a total of 70px (50px + 20px). But due to margin collapse, the actual margin ends up being 50px.
+
+</details>
+
+## **Paddings**
+The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+
+<details>
+  <summary>See more</summary>
+
+* Individual sides
+
+CSS has properties for specifying the padding for each side of an element:
+
+- padding-top
+- padding-right
+- padding-bottom
+- padding-left
+
+```
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+```
+
+* Padding - Shorthand
+
+To shorten the code, it is possible to specify all the padding properties in one property.
+
+If the padding property has four values:
+
+padding: 25px 50px 75px 100px;
+- top padding is 25px
+- right padding is 50px
+- bottom padding is 75px
+- left padding is 100px
+
+```
+div {
+  padding: 25px 50px 75px 100px;
+}
+```
+
+* padding an element with width
+
+To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the element to maintain its width; if you increase the padding, the available content space will decrease. Here is an example:
+```
+div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+```
+
+</details>
+
+## **Height / Width**
+The height and width properties are used to set the height and width of an element.
+
+<details>
+  <summary>See more</summary>
+
+  * Height / Width
+
+  The height and width can be set to auto (this is default. Means that the browser calculates the height and width), or be specified in length values, like px, cm, etc., or in percent (%) of the containing block.
+
+```
+div {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+```
+
+Note: The height and width properties do not include padding, borders, or margins; they set the height/width of the area inside the padding, border, and margin of the element!
+
+* max-width
+The max-width property is used to set the maximum width of an element.
+
+Note: The value of the max-width property overrides width.
+
+* All dimension Properties
+height	     Sets the height of an element
+max-height	 Sets the maximum height of an element
+max-width	   Sets the maximum width of an element
+min-height	 Sets the minimum height of an element
+min-width	   Sets the minimum width of an element
+width	       Sets the width of an element
 
 </details>
