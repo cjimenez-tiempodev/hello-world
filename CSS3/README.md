@@ -746,12 +746,35 @@ p.a {
 </details>
 
 
-## ** **
-
+## **links**
+links can be styled differently depending on what state they are in.
 
 <details>
   <summary>See more</summary>
 
+  The four links states are:  
+
+  a:link - a normal, unvisited link  
+  a:visited - a link the user has visited  
+  a:hover - a link when the user mouses over it  
+  a:active - a link the moment it is clicked  
+
+Advanced link Buttons
+
+```
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+```
 
 </details>
 
