@@ -517,3 +517,290 @@ min-width	   Sets the minimum width of an element
 width	       Sets the width of an element
 
 </details>
+
+## **Box Model**
+In CSS, the term "box model" is used when talking about design and layout.  
+It consists of: margins, borders, padding, and the actual content.  
+The box model allows us to add a border around elements, and to define space between elements.
+
+<details>
+  <summary>See more</summary>
+  Explanation of the different parts:
+
+  Content - The content of the box, where text and images appear
+  Padding - Clears an area around the content. The padding is transparent
+  Border - A border that goes around the padding and content
+  Margin - Clears an area outside the border. The margin is transparent
+
+  ```
+    div {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+    }
+  ```
+
+  **Important** When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.  
+
+  The total width of an element should be calculated like this:  
+  Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+</details>
+
+
+## **Outline**
+An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out"  
+
+<details>
+  <summary>See more</summary>
+
+  CSS has the following outline properties:
+
+  * outline-style: specifies the style of the outline(dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden)
+  * outline-color: is used to set the color of the outline.
+  * outline-width: specifies the width of the outline
+  * outline-offset: adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+  * outline:  is a shorthand property for setting width, style, color
+  ```
+  p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+  outline-offset: 15px;
+  }
+
+  p.ex2 {outline: 5px solid yellow;}
+  ```
+
+</details>
+
+
+## **Text**
+Text formatting
+
+<details>
+  <summary>See more</summary>
+
+* Text color
+The color property is used to set the color of the text.  
+```
+body { color: blue; }
+```
+
+* Text alignment
+used to set the horizontal alignment of a text.  
+A text can be left or right aligned, centered, or justified.  
+```
+h1 { text-align: center; }
+```
+text-align: justify; is stretched so that every line has equal width.
+
+
+* Text decoration
+used to set or remove decorations from text  
+
+text-decoration: none; is often used to remove underlines from links
+
+The other text-decoration values are used to decorate text:
+  text-decoration: overline;
+  text-decoration: line-through;
+  text-decoration: underline;
+
+* Text Transformation
+Used to specify uppercase and lowercase letters in a text  
+It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word
+
+```
+p.uppercase {
+  text-transform: uppercase; //TEXT UPPERCASE
+  text-transform: lowercase; //text lowercase
+  text-transform: capitalize; //Text Capitalize
+}
+```
+
+* Text indentation
+used to specify the indentation of the first line of a text:
+```
+p { text-indent: 50px; }
+```
+
+* Letter spacing
+used to specify the space between the characters in a text.
+```
+h1 { letter-spacing: 3px; }
+```
+
+* Line height
+used to specify the space between lines
+```
+p.small { line-height: 0.8; }
+```
+
+* Word Spacing
+used to specify the space between the words in a text.
+```
+h1 { word-spacing: 10px; }
+```
+
+* Vertical align
+Sets the vertical alignment of an element
+```
+img.a {
+  vertical-align: text-top;
+  vertical-align: text-bottom;
+}
+```
+
+</details>
+
+
+## **Fonts**
+The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on.
+
+Note: If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman".
+
+<details>
+  <summary>See more</summary
+
+* Font family
+
+  More than one font family is specified in a comma-separated list:
+  ```
+    p {
+      font-family: "Times New Roman", Times, serif;
+    }
+  ```
+
+* Font style
+
+This property has three values:
+
+normal - The text is shown normally  
+italic - The text is shown in italics  
+oblique - The text is "leaning" (oblique is very similar to italic, but less supported)  
+
+```
+p.normal { font-style: normal; }
+```
+
+* Font size
+
+The font-size value can be an absolute, or relative size.
+
+Absolute size:
+
+Sets the text to a specified size  
+Does not allow a user to change the text size in all browsers (bad for accessibility reasons)  
+Absolute size is useful when the physical size of the output is known  
+
+Relative size:  
+
+Sets the size relative to surrounding elements  
+Allows a user to change the text size in browsers  
+
+```
+h1 {
+  font-size: 40px; //pixels
+  font-size: 1em; // default size of 1em is 16px
+}
+```
+
+* Font Weight
+specifies the weight of a font
+
+```
+p.weight {
+  font-weight: normal;
+  font-weight: bold;
+}
+```
+
+* Responsive font size
+
+The text size can be set with a vw unit, which means the "viewport width".
+
+That way the text size will follow the size of the browser window
+
+```
+h1 { font-size: 5vw; }
+```
+
+* shorthand declaration
+
+The font property is a shorthand property for:
+
+font-style
+font-variant
+font-weight
+font-size/line-height
+font-family
+
+```
+p.a {
+  font: 15px arial, sans-serif;
+}
+```
+
+</details>
+
+
+## ** **
+
+
+<details>
+  <summary>See more</summary>
+
+
+</details>
+
+
+## ** **
+
+
+<details>
+  <summary>See more</summary>
+
+
+</details>
+
+
+## ** **
+
+
+<details>
+  <summary>See more</summary>
+
+
+</details>
+
+
+## ** **
+
+
+<details>
+  <summary>See more</summary>
+
+
+</details>
+
+
+## ** **
+
+
+<details>
+  <summary>See more</summary>
+
+
+</details>
+
+
+## ** **
+
+
+<details>
+  <summary>See more</summary>
+
+
+</details>
