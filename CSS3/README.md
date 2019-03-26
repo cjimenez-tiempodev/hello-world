@@ -779,37 +779,165 @@ a:hover, a:active {
 </details>
 
 
-## ** **
+## **Lists**
+The CSS list properties allow you to:
 
+Set different list item markers for ordered lists  
+Set different list item markers for unordered lists  
+Set an image as the list item marker  
+Add background colors to lists and list items  
 
 <details>
   <summary>See more</summary>
+* Markers
+The list-style-type property specifies the type of list item marker.
+
+```
+ul.a {
+  list-style-type: circle;
+  list-style-type: square;
+  list-style-type: upper-roman;
+  list-style-type: lower-alpha;
+}
+```
+
+The list-style-image property specifies an image as the list item marker:
+```
+ul { list-style-image: url('sqpurple.gif'); }
+```
+
+* Position
+The list-style-position property specifies the position of the list-item markers (bullet points).
+```
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+```
+
+* Remove defaults
+
+The list-style-type:none property can also be used to remove the markers/bullets.  
+Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>  
+
+* Shorthand
+The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
+```
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+```
+
+</details>
+
+
+## **Tables**
+The look of an HTML table can be greatly improved with CSS
+
+<details>
+  <summary>See more</summary>
+
+* Borders
+To specify table borders in CSS, use the border property.
+```
+table, th, td {
+  border: 1px solid black;
+}
+```
+
+The border-collapse property sets whether the table borders should be collapsed into a single border
+```
+table {
+  border-collapse: collapse;
+}
+```
+
+* Width/Height
+Are defined by the width and height properties  
+```
+table { width: 100%; }
+
+th { height: 50px; }
+```
+
+* Horizontal alignment
+The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.
+```
+th {
+  text-align: left;
+}
+```
+
+* Vertical alignment
+The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.
+```
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+```
+
+* Horizontal dividers
+
+```
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+```
+
+* Hoverable Table
+```
+tr:hover {background-color: #f5f5f5;}
+```
+
+* Striped Tables
+For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows
+```
+tr:nth-child(even) {background-color: #f2f2f2;}
+```
+
+</details>
+
+
+## **Display**
+The display property is the most important CSS property for controlling layout.
+
+<details>
+  <summary>See more</summary>
+  The display property specifies if/how an element is displayed.
+
+  Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+
+  * Block-level Elements
+  A block-level element always starts on a new line and takes up the full width available.
+
+  <div>,<h1> - <h6>,<p>,<form>,<header>,<footer>,<section>
+
+  * Inline Elements
+  An inline element does not start on a new line and only takes up as much width as necessary.
+
+  <span>, <a>, <img>
+
+  * Display none
+  display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them
+
 
 
 </details>
 
 
-## ** **
-
-
-<details>
-  <summary>See more</summary>
-
-
-</details>
-
-
-## ** **
-
-
-<details>
-  <summary>See more</summary>
-
-
-</details>
-
-
-## ** **
+## **Max-Width**
+Using max-width, will improve the browser's handling of small windows. This is important when making a site usable on small devices
+```
+div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+```
 
 
 <details>
