@@ -924,20 +924,215 @@ The display property is the most important CSS property for controlling layout.
   * Display none
   display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them
 
+  ```
+  span {
+    display: block;
+  }
 
+  a {
+    display: block;
+  }
+  ```
 
 </details>
 
 
 ## **Max-Width**
 Using max-width, will improve the browser's handling of small windows. This is important when making a site usable on small devices
+
+<details>
+  <summary>See more</summary>
+  ```
+  div.ex2 {
+    max-width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+  }
+  ```
+
+</details>
+
+
+## **CSS Layout - Property**
+The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+
+<details>
+  <summary>See more</summary>
+
+* static
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page
+
+* relative
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
 ```
-div.ex2 {
-  max-width: 500px;
-  margin: auto;
+div.relative {
+  position: relative;
+  left: 30px;
   border: 3px solid #73AD21;
 }
 ```
+
+* fixed
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+```
+div.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+  background-color: green;
+  color: white;
+}
+```
+
+* absolute
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+```
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+```
+
+* sticky
+
+An element with position: sticky; is positioned based on the user's scroll position.
+```
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+```
+
+* Overlapping
+
+The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).  
+An element with greater stack order is always in front of an element with a lower stack order.
+```
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+```
+
+</details>
+
+## **Overflow**
+The CSS overflow property controls what happens to content that is too big to fit into an area.
+
+<details>
+  <summary>See more</summary>
+The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+visible - Default. The overflow is not clipped. The content renders outside the element's box  
+hidden - The overflow is clipped, and the rest of the content will be invisible  
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content  
+auto - Similar to scroll, but it adds scrollbars only when necessary  
+
+* overflow-x and overflow-y
+The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both)
+
+```
+div {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
+```
+
+
+</details>
+
+## **Float**
+The CSS float property specifies how an element should float.
+
+<details>
+  <summary>See more</summary>
+
+  left - The element floats to the left of its container  
+  right- The element floats to the right of its container  
+  none - The element does not float (will be displayed just where it occurs in the text). This is default  
+  inherit - The element inherits the float value of its parent  
+
+  ```
+  img {
+    float: right;
+  }
+  ```
+
+  * box-sizing
+  The box-sizing property allows us to include the padding and border in the box's total width (and height), making sure that the padding stays inside of the box and that it does not break.
+
+  Float boxes
+  ```
+  * {
+    box-sizing: border-box;
+  }
+
+  .box {
+    float: left;
+    width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+    padding: 50px; /* if you want space between the images */
+  }
+  ```
+
+  * Navigation menu
+
+  Use float with a list of hyperlinks to create a horizontal menu
+  ```
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: red;
+}
+```
+
+</details>
+
+## **Inline Block**
+
+<details>
+  <summary>See Description</summary>
+  display: inline-block allows to set a width and height on the element.
+
+  with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+
+  Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
+
+</details>
+
+## ** **
 
 
 <details>
@@ -945,7 +1140,6 @@ div.ex2 {
 
 
 </details>
-
 
 ## ** **
 
