@@ -942,6 +942,7 @@ Using max-width, will improve the browser's handling of small windows. This is i
 
 <details>
   <summary>See more</summary>
+  Example 
   ```
   div.ex2 {
     max-width: 500px;
@@ -953,7 +954,7 @@ Using max-width, will improve the browser's handling of small windows. This is i
 </details>
 
 
-## **CSS Layout - Property**
+## **CSS Layout - Property (position)**
 The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
 
 <details>
@@ -1440,10 +1441,358 @@ used to select elements whose attribute value contains a specified value.
 
 </details>
 
-## ** **
+## **Rounded Corners**
+The CSS border-radius property defines the radius of an element's corners.
+
+<details>
+  <summary>See more</summary>
+  The border-radius property can have from one to four values
+  top-left, top-right, bottom-right, bottom-left
+  ```
+  #corners {
+    border-radius: 15px 50px 30px 5px;
+  }
+  ```
+
+
+</details>
+
+## **Tooltips**
+A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element:
 
 <details>
   <summary>See more</summary>
 
+  The tooltiptext class holds the actual tooltip text. It is hidden by default, and will be visible on hover.  
+  CSS: The tooltip class use position:relative, which is needed to position the tooltip text (position:absolute).
+
+  ```
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+```
+
+* Right tooltip
+```
+.tooltip .tooltiptext {
+  top: -5px;
+  left: 105%;
+}
+```
+
+* left tooltip
+```.tooltip .tooltiptext {
+  top: -5px;
+  right: 105%;
+}
+```
+
+* Top tooltip
+```
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+```
 
 </details>
+
+## **Responsive Image**
+If you want an image to scale down if it has to, but never scale up to be larger than its original size, add the following:
+
+<details>
+  <summary>See more</summary>
+```
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+</details>
+
+## **Variables**
+Variables in CSS should be declared within a CSS selector that defines its scope. For a global scope you can use either the :root or the body selector.
+
+<details>
+  <summary>See more</summary>
+  * syntax
+  ```
+  var(custom-name, value)
+  ```
+
+  ```
+  :root {
+  --main-bg-color: coral;
+}
+
+#div1 {
+  background-color: var(--main-bg-color);
+}
+
+#div2 {
+  background-color: var(--main-bg-color);
+}
+```
+
+
+</details>
+
+## **Box Sizing**
+The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+
+<details>
+  <summary>See more</summary>
+  By default, the width and height of an element is calculated like this:
+
+  width + padding + border = actual width of an element  
+  height + padding + border = actual height of an element  
+
+  If you set box-sizing: border-box; on an element padding and border are included in the width and height
+
+  ```
+  .div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+```
+
+The code below ensures that all elements are sized in this more intuitive way
+```
+* {
+  box-sizing: border-box;
+}
+```
+
+</details>
+
+## **Flex Box**
+The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+<details>
+  <summary>See more</summary>
+* Elements
+To start using the Flexbox model, you need to first define a flex container.
+```
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+The flex container becomes flexible by setting the display property to flex
+```
+.flex-container {
+  display: flex;
+}
+```
+
+### **The flex container properties are**
+
+<details>
+  <summary>See more</summary>
+
+* flex-direction
+Defines in which direction the container wants to stack the flex items.
+- column
+- column-reverse
+- row
+- row-reverse
+```
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+* flex-wrap
+specifies whether the flex items should wrap or not
+- wrap
+- nowrap
+
+```
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+* flex-flow
+shorthand property for setting both the flex-direction and flex-wrap
+```
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+* justify-content
+Used to align the flex items
+- center
+- flex-start
+- flex-end
+- space-around
+- space-between
+```.flex-container {
+  display: flex;
+  justify-content: center;
+}
+```
+* align-items
+used to align the flex items vertically.
+- center
+- flex-start
+- flex-end
+- stretch
+- baseline
+```
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+```
+
+* align-content
+used to align the flex lines with the flex-wrap property.
+- space-between
+- space-around
+- stretch
+- center
+- flex-start
+- flex-end
+```
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+```
+
+* Perfect centering
+Set both the justify-content and align-items properties to center
+```
+.flex-container {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+```
+</details>
+
+### **Child Elements**
+The direct child elements of a flex container automatically becomes flexible (flex) items.
+
+<details>
+  <summary>See more</summary>
+
+  The flex item properties are:
+
+  * order
+   specifies the order of the flex items.
+   ```
+   <div class="flex-container">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div>
+  <div style="order: 1">4</div>
+  </div>
+  ```
+
+  * flex-grow
+   specifies how much a flex item will grow relative to the rest of the flex items.
+   ```
+   <div class="flex-container">
+   <div style="flex-grow: 1">1</div>
+   <div style="flex-grow: 1">2</div>
+   <div style="flex-grow: 8">3</div>
+   </div>
+   ```
+
+  * flex-shrink
+  specifies how much a flex item will shrink relative to the rest of the flex items.
+  ```
+  <div style="flex-shrink: 0">3</div>
+  ```
+
+  * flex-basis
+  specifies the initial length of a flex item.
+  ```
+  <div style="flex-basis: 200px">3</div>
+  ```
+
+  * flex
+  shorthand property for the flex-grow, flex-shrink, and flex-basis  
+  Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels
+  ```
+  <div style="flex: 0 0 200px">3</div>
+  ```
+
+  * align-self
+  specifies the alignment for the selected item inside the flexible container.  
+  ```
+  <div style="align-self: center">3</div>
+  ```
+
+</details>
+
+</details>
+
+## **Media Queries**
+The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.
+
+<details>
+  <summary>See more</summary>
+  When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.
+
+* Syntax
+```
+@media not|only mediatype and (expressions) {
+  CSS-Code;
+}
+```
+
+ * Media types
+ - all: used for all media type devices
+ - print: used for printers
+ - screen: used for computer screens, tablets, smart-phones etc
+ - speech: used for screenreaders that "reads" the page out load
+
+ * Example
+ changes the background-color to lightgreen if the viewport is 480 pixels wide or wider
+ ```
+ @media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+```
