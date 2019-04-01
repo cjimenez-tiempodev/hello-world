@@ -942,6 +942,7 @@ Using max-width, will improve the browser's handling of small windows. This is i
 
 <details>
   <summary>See more</summary>
+  Example 
   ```
   div.ex2 {
     max-width: 500px;
@@ -953,7 +954,7 @@ Using max-width, will improve the browser's handling of small windows. This is i
 </details>
 
 
-## **CSS Layout - Property**
+## **CSS Layout - Property (position)**
 The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
 
 <details>
@@ -1132,20 +1133,666 @@ li a:hover {
 
 </details>
 
-## ** **
-
-
-<details>
-  <summary>See more</summary>
-
-
-</details>
-
-## ** **
-
+## **Align**
+CSS Layout - Horizontal & Vertical Align
 
 <details>
   <summary>See more</summary>
 
+  * Center align text  
+  To just center the text inside an element, use text-align: center;
+  ```
+  .center {
+    text-align: center;
+    border: 3px solid green;
+  }
+  ```
+
+  * Center an Image
+  To center an image, set left and right margin to auto and make it into a block element:
+  ```
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    }
+  ```
+
+  * Center Vertically - Using padding
+  ```
+  .center {
+    padding: 70px 0;
+    border: 3px solid green;
+    text-align: center;
+  }
+  ```
 
 </details>
+
+## **Combinators**
+A CSS selector can contain more than one simple selector
+
+<details>
+  <summary>See more</summary>
+  There are four different combinators in CSS:
+
+  * Descendant selector (space)
+  The descendant selector matches all elements that are descendants of a specified element.
+
+  selects all <p> elements inside <div> elements
+
+  ```
+  div p {
+    background-color: yellow;
+  }
+  ```
+
+  * child selector (>)
+  The child selector selects all elements that are the immediate children of a specified element.
+
+  selects all <p> elements that are immediate children of a <div> element:
+  ```
+  div > p {
+    background-color: yellow;
+  }
+  ```
+
+  * Adjacent sibling selector (+)
+  selects all elements that are the adjacent siblings of a specified element.
+  ```
+  div + p {
+  background-color: yellow;
+  }
+  ```
+
+  * General sibling selector (~)
+  selects all elements that are siblings of a specified element.
+  ```
+  div ~ p {
+    background-color: yellow;
+  }
+  ```
+
+</details>
+
+## **Pseudo-classes**
+A pseudo-class is used to define a special state of an element.
+
+<details>
+  <summary>See more</summary>
+  it can be used to:
+
+  Style an element when a user mouses over it  
+  Style visited and unvisited links differently  
+  Style an element when it gets focus  
+
+  * syntax
+  ```
+  selector:pseudo-class {
+    property:value;
+  }
+  ```
+
+  * Hover on div
+  ```
+  div:hover {
+    background-color: blue;
+  }
+  ```
+
+  * Match the first <p> element
+  ```
+  p:first-child {
+    color: blue;
+  }
+  ```
+
+</details>
+
+## **Pseudo-Elements**
+A CSS pseudo-element is used to style specified parts of an element.
+
+<details>
+  <summary>See more</summary>
+  it can be used to:
+
+ Style the first letter, or line, of an element  
+ Insert content before, or after, the content of an element  
+
+ * Syntax
+ ```
+ selector::pseudo-element {
+   property:value;
+ }
+```
+
+* ::first-line
+The ::first-line pseudo-element is used to add a special style to the first line of a text.
+
+```
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+```
+
+* ::first-letter
+used to add a special style to the first letter of a text.
+```
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+```
+
+* ::before
+used to insert some content before the content of an element.
+```
+h1::before {
+  content: url(smiley.gif);
+}
+```
+
+* ::after
+```
+h1::after {
+  content: url(smiley.gif);
+}
+```
+
+* ::selection
+matches the portion of an element that is selected by a user
+```
+::selection {
+  color: red;
+  background: yellow;
+}
+```
+
+</details>
+
+## **Navigation Bar**
+Use position: sticky; to <li> to create a sticky navbar.
+
+<details>
+  <summary>See more</summary>
+  * Sticky Navigation
+
+```
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+```
+
+</details>
+
+## **Image Sprites**
+An image sprite is a collection of images put into a single image.
+
+<details>
+  <summary>See more</summary>
+  width, height: - Defines the portion of the image we want to use
+  background: - Defines the background image and its position (left 0px, top 0px)  
+
+  ```
+  #home {
+    width: 46px;
+    height: 44px;
+    background: url(img_navsprites.gif) 0 0;
+  }
+
+  #next {
+    width: 43px;
+    height: 44px;
+    background: url(img_navsprites.gif) -91px 0;
+  }
+  ```
+
+  * Hover
+  Tip: The :hover selector can be used on all elements, not only on links.  
+
+  ```
+  #home a:hover {
+    background: url('img_navsprites_hover.gif') 0 -45px;
+  }
+  ```
+
+</details>
+
+## **Attribute Selectors**
+It is possible to style HTML elements that have specific attributes or attribute values.
+
+<details>
+  <summary>See more</summary>
+selects all <a> elements with a target attribute  
+```
+a[target] {
+  background-color: yellow;
+}
+```
+
+* [attribute="value"]
+The [attribute="value"] selector is used to select elements with a specified attribute and value.
+```
+a[target="_blank"] {
+  background-color: yellow;
+}
+```
+
+* [attribute~="value"]
+Is used to select elements with an attribute value containing a specified word.
+```
+[title~="flower"] {
+  border: 5px solid yellow;
+}
+```
+
+* [attribute|="value"]
+used to select elements with the specified attribute starting with the specified value.
+```
+[class|="top"] {
+  background: yellow;
+}
+```
+
+* [attribute^="value"]
+is used to select elements whose attribute value begins with a specified value.
+```
+[class^="top"] {
+  background: yellow;
+}
+```
+
+* [attribute$="value"]
+used to select elements whose attribute value ends with a specified value.
+```
+[class$="test"] {
+  background: yellow;
+}
+```
+
+* [attribute*="value"]
+used to select elements whose attribute value contains a specified value.
+```
+[class*="te"] {
+  background: yellow;
+}
+```
+
+</details>
+
+## **Rounded Corners**
+The CSS border-radius property defines the radius of an element's corners.
+
+<details>
+  <summary>See more</summary>
+  The border-radius property can have from one to four values
+  top-left, top-right, bottom-right, bottom-left
+  ```
+  #corners {
+    border-radius: 15px 50px 30px 5px;
+  }
+  ```
+
+
+</details>
+
+## **Tooltips**
+A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element:
+
+<details>
+  <summary>See more</summary>
+
+  The tooltiptext class holds the actual tooltip text. It is hidden by default, and will be visible on hover.  
+  CSS: The tooltip class use position:relative, which is needed to position the tooltip text (position:absolute).
+
+  ```
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+```
+
+* Right tooltip
+```
+.tooltip .tooltiptext {
+  top: -5px;
+  left: 105%;
+}
+```
+
+* left tooltip
+```.tooltip .tooltiptext {
+  top: -5px;
+  right: 105%;
+}
+```
+
+* Top tooltip
+```
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+```
+
+</details>
+
+## **Responsive Image**
+If you want an image to scale down if it has to, but never scale up to be larger than its original size, add the following:
+
+<details>
+  <summary>See more</summary>
+```
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+</details>
+
+## **Variables**
+Variables in CSS should be declared within a CSS selector that defines its scope. For a global scope you can use either the :root or the body selector.
+
+<details>
+  <summary>See more</summary>
+  * syntax
+  ```
+  var(custom-name, value)
+  ```
+
+  ```
+  :root {
+  --main-bg-color: coral;
+}
+
+#div1 {
+  background-color: var(--main-bg-color);
+}
+
+#div2 {
+  background-color: var(--main-bg-color);
+}
+```
+
+
+</details>
+
+## **Box Sizing**
+The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+
+<details>
+  <summary>See more</summary>
+  By default, the width and height of an element is calculated like this:
+
+  width + padding + border = actual width of an element  
+  height + padding + border = actual height of an element  
+
+  If you set box-sizing: border-box; on an element padding and border are included in the width and height
+
+  ```
+  .div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+```
+
+The code below ensures that all elements are sized in this more intuitive way
+```
+* {
+  box-sizing: border-box;
+}
+```
+
+</details>
+
+## **Flex Box**
+The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+<details>
+  <summary>See more</summary>
+* Elements
+To start using the Flexbox model, you need to first define a flex container.
+```
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
+
+The flex container becomes flexible by setting the display property to flex
+```
+.flex-container {
+  display: flex;
+}
+```
+
+### **The flex container properties are**
+
+<details>
+  <summary>See more</summary>
+
+* flex-direction
+Defines in which direction the container wants to stack the flex items.
+- column
+- column-reverse
+- row
+- row-reverse
+```
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+* flex-wrap
+specifies whether the flex items should wrap or not
+- wrap
+- nowrap
+
+```
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+* flex-flow
+shorthand property for setting both the flex-direction and flex-wrap
+```
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+* justify-content
+Used to align the flex items
+- center
+- flex-start
+- flex-end
+- space-around
+- space-between
+```.flex-container {
+  display: flex;
+  justify-content: center;
+}
+```
+* align-items
+used to align the flex items vertically.
+- center
+- flex-start
+- flex-end
+- stretch
+- baseline
+```
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+```
+
+* align-content
+used to align the flex lines with the flex-wrap property.
+- space-between
+- space-around
+- stretch
+- center
+- flex-start
+- flex-end
+```
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+```
+
+* Perfect centering
+Set both the justify-content and align-items properties to center
+```
+.flex-container {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+```
+</details>
+
+### **Child Elements**
+The direct child elements of a flex container automatically becomes flexible (flex) items.
+
+<details>
+  <summary>See more</summary>
+
+  The flex item properties are:
+
+  * order
+   specifies the order of the flex items.
+   ```
+   <div class="flex-container">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div>
+  <div style="order: 1">4</div>
+  </div>
+  ```
+
+  * flex-grow
+   specifies how much a flex item will grow relative to the rest of the flex items.
+   ```
+   <div class="flex-container">
+   <div style="flex-grow: 1">1</div>
+   <div style="flex-grow: 1">2</div>
+   <div style="flex-grow: 8">3</div>
+   </div>
+   ```
+
+  * flex-shrink
+  specifies how much a flex item will shrink relative to the rest of the flex items.
+  ```
+  <div style="flex-shrink: 0">3</div>
+  ```
+
+  * flex-basis
+  specifies the initial length of a flex item.
+  ```
+  <div style="flex-basis: 200px">3</div>
+  ```
+
+  * flex
+  shorthand property for the flex-grow, flex-shrink, and flex-basis  
+  Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels
+  ```
+  <div style="flex: 0 0 200px">3</div>
+  ```
+
+  * align-self
+  specifies the alignment for the selected item inside the flexible container.  
+  ```
+  <div style="align-self: center">3</div>
+  ```
+
+</details>
+
+</details>
+
+## **Media Queries**
+The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.
+
+<details>
+  <summary>See more</summary>
+  When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.
+
+* Syntax
+```
+@media not|only mediatype and (expressions) {
+  CSS-Code;
+}
+```
+
+ * Media types
+ - all: used for all media type devices
+ - print: used for printers
+ - screen: used for computer screens, tablets, smart-phones etc
+ - speech: used for screenreaders that "reads" the page out load
+
+ * Example
+ changes the background-color to lightgreen if the viewport is 480 pixels wide or wider
+ ```
+ @media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+```
