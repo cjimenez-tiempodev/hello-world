@@ -2,6 +2,7 @@ import React from 'react';
 import html5 from './constDefinitions';
 import codeImage from './assets/docStructure.png';
 import DisplayDefinition from './general/displayDef';
+import './styles/common.css';
 
 function DocumentStructure(props) {
   return (
