@@ -27,11 +27,13 @@ const html5 = {
     bdo : 'The bi-directional override tag will identify which should text should be read opposite from the preceding text',
   },
 
-  href: 'anchor text for hyperlink',
-  mailto: 'A link used to pull up an outgoing message to a specific email addresses',
-  tel: 'A link to make phone numbers clickable, especially useful for mobiles users',
-  name: 'An anchor that´s useful for bringing users to specific document elements',
-  tagname: 'An anchor link that brings users specifically to a div element',
+  links:{
+    href: 'anchor text for hyperlink',
+    mailto: 'A link used to pull up an outgoing message to a specific email addresses',
+    tel: 'A link to make phone numbers clickable, especially useful for mobiles users',
+    name: 'An anchor that´s useful for bringing users to specific document elements',
+    tagname: 'An anchor link that brings users specifically to a div element',
+  },
 
   images: {
     img: 'An image tag to include and display image files',

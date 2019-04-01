@@ -1,0 +1,20 @@
+.example {
+  display: flex;
+}
+
+span {
+  color: red;
+}
+
+.result {
+  width: 35%;
+}
+
+.code {
+  width: 65%;
+  margin: 20px 10px;
+}
+
+img {
+  width: inherit;
+}
