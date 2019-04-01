@@ -1,55 +1,109 @@
-.App {
-  text-align: center;
-  background-color: #282c34;
-  color: white;
+    .body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    }
+
+    .header-menu, footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #272121;
+    }
+
+    .header-menu {
+    justify-content: flex-start;
+    height: 60px;
+    color: #fff;
+    border-bottom: 5px solid #a0a0a0;
+    margin-bottom: 10px;
+    }
+
+    h2 {
+    margin: 0 0 8px;
+    }
+
+    ul li {
+    padding: 0 10px;
+    list-style: none;
+    }
+
+    ul li button {
+      width: -webkit-fill-available;
+      background-color: #f1f1f1;
+      border: none;
+      padding: 4px 10px;
+      margin: 1px 0;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      outline: none;
+    }
+
+    ul li button:hover {
+      background-color: #f7f7f7;
+    }
+
+    .leftSide, .rightSide {
+      flex: 0.1;
+    }
+
+    aside {
+    flex: 0.25;
+    padding-left: 15px;
+    border-left: 1px solid #666;
+    }
+
+    section {
+    flex: 1;
+    padding-right: 15px;
+    }
+
+    footer {
+    padding: 0 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    }
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  section {
+    padding-left: 5px;
+  }
 }
 
-p, table {
-  text-align: left;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  section {
+    padding-left: 10px;
+  }
 }
 
-.example {
-  display: flex;
+@media only screen and (max-width: 768px) {
+  .leftSide, .rightSide {
+    display: none;
+  }
 }
 
-span {
-  color: red;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  section {
+    padding-left: 15px;
+  }
 }
 
-div {
-  border: solid 1px white;
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .leftSide, .rightSide {
+    flex: 0.2;
+  }
 }
 
-.result {
-  width: 35%;
-}
-
-.center {
-  padding-top: 40px;
-}
-
-.code {
-  width: 65%;
-  margin: 20px 10px;
-}
-
-.semantic {
-  width: 100%;
-}
-
-img {
-  width: inherit;
-}
-
-a:active, a:hover, a:link {
-  color: white;
-}
-
-a:visited {
-  color: gray;
-}
-
-/*To secure correct behavior in older browsers*/
-article, aside, footer, header, nav, section {
-  display:block;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .leftSide, .rightSide {
+  flex: 0.3;
+  }
 }
