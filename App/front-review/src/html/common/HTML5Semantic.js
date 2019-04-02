@@ -1,6 +1,6 @@
 import React from 'react';
 import html5 from './constDefinitions';
-import './styles/semantic.css';
+//import './styles/semantic.css';
 import DisplayDefinition from './general/displayDef';
 
 function HTML5Semantic(props) {

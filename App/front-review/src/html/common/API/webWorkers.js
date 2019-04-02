@@ -88,7 +88,7 @@ class WebWorkers extends Component {
       <div>
         <table>
           <tbody>
-          <DisplayDefinition data={html5.api.web_workers} />
+          <DisplayDefinition data={html5.api.webWorkers} />
           </tbody>
         </table>
       </div>

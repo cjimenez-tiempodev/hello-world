@@ -40,10 +40,14 @@ class App extends Component {
       </section>
 
       <aside>
-        <h2>Topics</h2>
+        <h2>Menu</h2>
         <ul>
           <CreateMenu
             data={html}
+            handleClick={this.handleClick}
+          />
+          <CreateMenu
+            data={html.api}
             handleClick={this.handleClick}
           />
         </ul>

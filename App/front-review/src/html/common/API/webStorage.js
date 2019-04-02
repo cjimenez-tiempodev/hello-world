@@ -76,7 +76,7 @@ class WebStorage extends Component {
       <div>
         <table>
           <tbody>
-          <DisplayDefinition data={html5.api.web_Storage} />
+          <DisplayDefinition data={html5.api.webStorage} />
           </tbody>
         </table>
       </div>

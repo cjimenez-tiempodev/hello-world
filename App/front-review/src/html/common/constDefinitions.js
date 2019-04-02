@@ -114,13 +114,13 @@ const html5 = {
       drop: 'The drop event is fired on the element where the drop was occurred at the end of the drag operation.',
       dragend: 'Fires when the user releases the mouse button while dragging an object.',
     },
-    web_Storage: {
+    webStorage: {
       localStorage: 'stores data with no expiration date',
       remove: 'localStorage.removeItem(key) where key is the key of the value you want to remove',
       clear: 'If you want to clear all settings, you need to call localStorage.clear() method',
       sessionStorage: 'stores data for one session (data is lost when the browser tab is closed)',
     },
-    web_workers: {
+    webWorkers: {
       webWorkers: 'Web Workers are a way of running web scripts in background threads without blocking the main thread.',
       Worker: 'Represents a running worker thread, allowing you to pass messages to the running worker code.',
       Buttons: 'fetch users with web workers will display the data without stoping the counter, meanwhile fetch users directly will stop the counter for a moment'
