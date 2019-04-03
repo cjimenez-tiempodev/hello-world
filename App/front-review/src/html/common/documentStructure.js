@@ -11,7 +11,13 @@ function DocumentStructure(props) {
     A generic container used to denote a page section
     */
     <div className = "document" id="structure">
-    <h1>Document Structure</h1>
+    <h2>Document Structure</h2>
+    <hr />
+
+    <h3>Introduction</h3>
+    <hr />
+
+    <h3>Result and Code Example</h3>
     <hr />
 
     <div className="example">
@@ -36,7 +42,9 @@ function DocumentStructure(props) {
 
     </div>
 
-    <div>
+      <hr />
+
+    <div className="displayDefinition">
       <table>
       <tbody>
         <DisplayDefinition data={html5.structure}/>

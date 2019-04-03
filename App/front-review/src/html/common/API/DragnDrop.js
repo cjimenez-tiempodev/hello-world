@@ -32,9 +32,8 @@ class DnD extends Component {
         <div className="result center">
           <section>
           <span>Drop de image inside box</span>
-          <div id="div1" onDrop={this.drop} onDragOver={this.allowDrop} className="dropContainer"></div>
-
-          <img id="drag1" alt="dragImage" src={dragImage} draggable="true" onDragStart={this.drag} width="400" height="75" />
+          <div id="div1" onDrop={this.drop} onDragOver={this.allowDrop} />
+          <img id="drag1" alt="dragImage" src={dragImage} draggable="true" onDragStart={this.drag} />
           </section>
         </div>
 

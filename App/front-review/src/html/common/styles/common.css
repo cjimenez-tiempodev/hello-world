@@ -1,20 +1,22 @@
 .example {
   display: flex;
+  flex-direction: column;
 }
 
-span {
-  color: red;
+.displayDefinition span {
+  margin-right: 5px;
+  color: black;
 }
 
-.result {
-  width: 35%;
+.displayDefinition td {
+  vertical-align: baseline;
 }
 
 .code {
-  width: 65%;
   margin: 20px 10px;
+  background-color: #282d35;
 }
 
-img {
-  width: inherit;
+.code img {
+  max-width: 75%;
 }

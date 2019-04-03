@@ -39,8 +39,8 @@ class App extends Component {
         </article>
       </section>
 
-      <aside>
-        <h2>Menu</h2>
+      <aside className="menu-container">
+        <h2>HTML5</h2>
         <ul>
           <CreateMenu
             data={html}
@@ -55,7 +55,7 @@ class App extends Component {
 
       <section className="rightSide" />
 
-      <footer>
+      <footer className="footer-main">
         <small>Footer All rights reserved.</small>
       </footer>
       </div>

@@ -1,10 +1,10 @@
     .body {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
     }
 
-    .header-menu, footer {
+    .header-menu, .footer-main {
     display: flex;
     align-items: center;
     width: 100%;
@@ -15,12 +15,16 @@
     justify-content: flex-start;
     height: 60px;
     color: #fff;
-    border-bottom: 5px solid #a0a0a0;
+    border-bottom: 3px solid #13beff;
     margin-bottom: 10px;
     }
 
     h2 {
     margin: 0 0 8px;
+    }
+
+    ul {
+      padding-inline-start: 0;
     }
 
     ul li {
@@ -30,7 +34,7 @@
 
     ul li button {
       width: -webkit-fill-available;
-      background-color: #f1f1f1;
+      background-color: #f9f9f9;
       border: none;
       padding: 4px 10px;
       margin: 1px 0;
@@ -41,17 +45,18 @@
     }
 
     ul li button:hover {
-      background-color: #f7f7f7;
+      background-color: #fff;
     }
 
     .leftSide, .rightSide {
       flex: 0.1;
+      background-color: #f9f9f9;
     }
 
-    aside {
-    flex: 0.25;
-    padding-left: 15px;
-    border-left: 1px solid #666;
+    .menu-container {
+      flex: 0.25;
+      padding-left: 15px;
+      border-left: 1px solid #717171;
     }
 
     section {
@@ -59,12 +64,23 @@
     padding-right: 15px;
     }
 
-    footer {
+   hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0;
+      border-color:  #e6e6e6;
+    }
+
+    .footer-main {
     padding: 0 10px;
     color: white;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    border-top: 2px solid #13beff;
     height: -webkit-fill-available;
     }
 
