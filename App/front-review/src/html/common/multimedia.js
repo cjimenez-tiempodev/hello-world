@@ -9,6 +9,12 @@ function Multimedia(props) {
     <h1>Multimedia - Audio & Video</h1>
     <hr />
 
+    <h3>Introduction</h3>
+    <hr />
+
+    <h3>Result and Code Example</h3>
+    <hr />
+
     <div className="example">
 
       <div className="result center">
@@ -42,7 +48,9 @@ function Multimedia(props) {
 
     </div>
 
-    <div>
+    <hr/>
+
+    <div className="displayDefinition">
       <table>
         <tbody>
         <DisplayDefinition data={html5.multimedia} />

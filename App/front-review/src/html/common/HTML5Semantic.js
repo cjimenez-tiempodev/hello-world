@@ -6,7 +6,15 @@ import DisplayDefinition from './general/displayDef';
 function HTML5Semantic(props) {
   return (
     <div className = "document">
-    <h1>HTML5 Semantic tags</h1>
+    <h2>HTML5 Semantic tags</h2>
+    <hr />
+
+    <h3>Introduction</h3>
+    <hr />
+
+    <h3>Result and Code Example</h3>
+    <hr />
+
     <div className="body">
     <header className="header-menu">
       <nav>
@@ -45,7 +53,9 @@ function HTML5Semantic(props) {
     </footer>
     </div>
 
-      <div>
+    <hr/>
+
+      <div className="displayDefinition">
         <table>
         <tbody>
           <DisplayDefinition data={html5.semantic}/>

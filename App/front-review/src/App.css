@@ -19,6 +19,13 @@
     margin-bottom: 10px;
     }
 
+    .icon {
+      display: block;
+      width: 100%;
+      text-align: initial;
+      padding-right: 20px;
+    }
+
     h2 {
     margin: 0 0 8px;
     }
@@ -42,6 +49,7 @@
       text-decoration: none;
       font-size: 14px;
       outline: none;
+      cursor:pointer;
     }
 
     ul li button:hover {

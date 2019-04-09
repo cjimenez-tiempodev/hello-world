@@ -8,6 +8,12 @@ function InputTypes(props) {
       <h1>HTML5 Input Types</h1>
       <hr />
 
+      <h3>Introduction</h3>
+      <hr />
+
+      <h3>Result and Code Example</h3>
+      <hr />
+
       <section className="example">
         <table>
         <tbody>

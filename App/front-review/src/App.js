@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CreateMenu from './html/common/general/createMenu';
 import html from './html/common/constDefinitions';
 import RouteContent from './html/common/general/routeContent';
+import htmlImage from './html/common/assets/HTML5_Logo.png';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +30,11 @@ class App extends Component {
             <li>HTML5 Review</li>
           </ul>
         </nav>
+
+        <div className="icon">
+          <img src={htmlImage}  width="50px" height="50px" alt="html5"/>
+        </div>
+
       </header>
 
       <section className="leftSide" />

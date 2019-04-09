@@ -6,7 +6,13 @@ import DisplayDefinition from './general/displayDef';
 function TextFormat(props) {
   return (
     <div className = "document">
-    <h1>Text + formatting</h1>
+    <h2>Text + formatting</h2>
+    <hr />
+
+    <h3>Introduction</h3>
+    <hr />
+
+    <h3>Result and Code Example</h3>
     <hr />
 
     <div className="example">
@@ -34,7 +40,9 @@ function TextFormat(props) {
 
     </div>
 
-    <div>
+    <hr />
+
+    <div className="displayDefinition">
       <table>
         <tbody>
         <DisplayDefinition data={html5.text} />

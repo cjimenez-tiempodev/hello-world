@@ -5,7 +5,13 @@ import codeImage from './assets/links.png';
 function Links(props) {
   return (
     <div className = "document">
-    <h1>Links + formatting</h1>
+    <h2>Links + formatting</h2>
+    <hr />
+
+    <h3>Introduction</h3>
+    <hr />
+
+    <h3>Result and Code Example</h3>
     <hr />
 
     <div className="example">

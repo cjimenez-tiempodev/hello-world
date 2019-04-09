@@ -1,13 +1,19 @@
 import React from 'react';
 import html5 from './constDefinitions';
 import codeImage from './assets/imageFormat.png';
-import htmlImage from './assets/html5.png';
+import htmlImage from './assets/HTML5_Logo.png';
 import DisplayDefinition from './general/displayDef';
 
 function ImagesFormat(props) {
   return (
     <div className = "document">
-    <h1>Images + formatting</h1>
+    <h2>Images + formatting</h2>
+    <hr />
+
+    <h3>Introduction</h3>
+    <hr />
+
+    <h3>Result and Code Example</h3>
     <hr />
 
     <div className="example">
@@ -22,7 +28,9 @@ function ImagesFormat(props) {
 
     </div>
 
-    <div>
+    <hr/>
+
+    <div className="displayDefinition">
       <table>
       <caption>Attributes</caption>
         <tbody>

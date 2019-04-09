@@ -59,22 +59,33 @@ class WebWorkers extends Component {
       <h1>HTML5 - Web Workers</h1>
       <hr />
 
+      <h3>Introduction</h3>
+      <hr />
+
+      <h3>Result and Code Example</h3>
+      <hr />
+
       <div className="example">
 
         <div className="result center">
 
-        <section>
-        <ReactCountdownClock
-                   seconds={this.state.counter}
-                   color="#FFF"
-                   alpha={0.9}
-                   size={300}
-        />
+        <section className="counter-container">
+        <article>
+          <ReactCountdownClock
+                     seconds={this.state.counter}
+                     color="#000"
+                     alpha={0.9}
+                     size={300}
+          />
+        </article>
 
-        <button onClick={this.fetchWebWorker}>Fetch Users with Web Worker</button>
-        <button onClick={this.fetchUsers}>Fetch Users Directly</button>
-        <button onClick={this.reloadCounter}>Reload Counter</button><br/>
-        <span>Total User Count: {this.state.count}</span>
+        <article>
+          <button onClick={this.fetchWebWorker}>Fetch Users with Web Worker</button>
+          <button onClick={this.fetchUsers}>Fetch Users Directly</button>
+          <button onClick={this.reloadCounter}>Reload Counter</button><br/>
+          <span className="count">Total User Count: {this.state.count}</span>
+        </article>
+
       </section>
 
         </div>
@@ -85,7 +96,9 @@ class WebWorkers extends Component {
 
       </div>
 
-      <div>
+      <hr/>
+
+      <div className="displayDefinition">
         <table>
           <tbody>
           <DisplayDefinition data={html5.api.webWorkers} />

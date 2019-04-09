@@ -27,10 +27,16 @@ class DnD extends Component {
       <h1>HTML5 - Drag and Drop</h1>
       <hr />
 
+      <h3>Introduction</h3>
+      <hr />
+
+      <h3>Result and Code Example</h3>
+      <hr />
+
       <div className="example">
 
         <div className="result center">
-          <section>
+          <section className="dndContainer">
           <span>Drop de image inside box</span>
           <div id="div1" onDrop={this.drop} onDragOver={this.allowDrop} />
           <img id="drag1" alt="dragImage" src={dragImage} draggable="true" onDragStart={this.drag} />
@@ -43,7 +49,9 @@ class DnD extends Component {
 
       </div>
 
-      <div>
+      <hr/>
+
+      <div className="displayDefinition">
         <table>
           <tbody>
           <DisplayDefinition data={html5.api.dragndrop} />

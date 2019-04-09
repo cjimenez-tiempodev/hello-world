@@ -49,22 +49,31 @@ class WebStorage extends Component {
       <h1> HTML5 - Web Storage</h1>
       <hr />
 
+      <h3>Introduction</h3>
+      <hr />
+
+      <h3>Result and Code Example</h3>
+      <hr />
+
       <div className="example">
 
         <div className="result center">
           <h5>Click on the button to encrease the counter</h5>
-          <section>
+
+          <section className="local-storage">
             <label htmlFor="local">local storage</label>
             <button onClick={this.setLocal} id="local">Increase One</button><br/>
             <label htmlFor="local">reset counter</label>
             <button onClick={this.clearLocal} id="local">Reset</button><br/>
-            <span>{this.state.local}</span>
+            <span>Counter: {this.state.local}</span>
           </section>
-          <section>
+
+          <section className="session-storage">
             <label htmlFor="local">session storage</label>
             <button onClick={this.setSession} id="session">Increase One</button><br/>
-            <span>{this.state.session}</span>
+            <span>Counter: {this.state.session}</span>
           </section>
+
         </div>
 
         <div className="code">
@@ -73,7 +82,9 @@ class WebStorage extends Component {
 
       </div>
 
-      <div>
+      <hr/>
+
+      <div className="displayDefinition">
         <table>
           <tbody>
           <DisplayDefinition data={html5.api.webStorage} />

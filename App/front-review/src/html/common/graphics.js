@@ -19,6 +19,12 @@ class Graphics extends Component {
       <h1>HTML5 Graphics</h1>
       <hr />
 
+      <h3>Introduction</h3>
+      <hr />
+
+      <h3>Result and Code Example</h3>
+      <hr />
+
       <div className="example">
 
         <div className="result">
@@ -59,7 +65,9 @@ class Graphics extends Component {
 
       </div>
 
-      <div>
+      <hr/>
+
+      <div className="displayDefinition">
         <table>
         <tbody>
           <DisplayDefinition data={html5.graphics} />

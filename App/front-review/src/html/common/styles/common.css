@@ -6,10 +6,13 @@
 .displayDefinition span {
   margin-right: 5px;
   color: black;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .displayDefinition td {
   vertical-align: baseline;
+  padding-left: 5%;
 }
 
 .code {
