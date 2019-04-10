@@ -40,9 +40,16 @@ class HTML5Geolocation extends Component {
       <h1> HTML5 - Geolocation</h1>
       <hr />
 
-      <h3>Introduction</h3>
-      <hr />
+      <div className="html5-introduction">
+      <section>
+        <article>
+          The HTML Geolocation API is used to locate a user´s position<br/>
+          Note: Geolocation is most accurate for devices with GPS, like smartphone.
+        </article>
+      </section>
+      </div>
 
+      <hr/>
       <h3>Result and Code Example</h3>
       <hr />
 

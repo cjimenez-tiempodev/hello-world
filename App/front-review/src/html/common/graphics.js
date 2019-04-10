@@ -19,9 +19,15 @@ class Graphics extends Component {
       <h1>HTML5 Graphics</h1>
       <hr />
 
-      <h3>Introduction</h3>
-      <hr />
+      <div className="html5-introduction">
+      <section>
+        <article>
+          HTML5 allows us to include graphics by using svg and canvas tags 
+        </article>
+      </section>
+      </div>
 
+      <hr />
       <h3>Result and Code Example</h3>
       <hr />
 

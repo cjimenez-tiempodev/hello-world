@@ -49,9 +49,18 @@ class WebStorage extends Component {
       <h1> HTML5 - Web Storage</h1>
       <hr />
 
-      <h3>Introduction</h3>
-      <hr />
+      <div className="html5-introduction">
+      <section>
+        <article>
+        With web storage, web applications can store data locally within the user´s browser.<br/>
+        Before HTML5, application data had to be stored in cookies, included in every server request. <br/>
+        Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance. <br/>
+        Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.
+        </article>
+      </section>
+      </div>
 
+      <hr/>
       <h3>Result and Code Example</h3>
       <hr />
 

@@ -10,9 +10,15 @@ function ImagesFormat(props) {
     <h2>Images + formatting</h2>
     <hr />
 
-    <h3>Introduction</h3>
-    <hr />
+    <div className="html5-introduction">
+    <section>
+      <article>
+        The “img” tag is used to add images on a webpage.The “img” tag is an empty tag, which means it can contain only a list of attributes and it has no closing tag.
+      </article>
+    </section>
+    </div>
 
+    <hr/>
     <h3>Result and Code Example</h3>
     <hr />
 

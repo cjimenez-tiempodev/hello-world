@@ -14,6 +14,8 @@ import {
   WebWorkers
 } from '../index';
 
+import StartMessage from './startMessage';
+
 function RouteContent(props) {
 
   function createList(){
@@ -43,7 +45,7 @@ function RouteContent(props) {
       case 'webWorkers':
         return <WebWorkers />;
       default:
-        return 'Not found';
+        return <StartMessage />;
     }
   }
 

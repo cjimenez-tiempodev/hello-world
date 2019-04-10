@@ -9,8 +9,13 @@ function HTML5Semantic(props) {
     <h2>HTML5 Semantic tags</h2>
     <hr />
 
-    <h3>Introduction</h3>
-    <hr />
+    <div className="html5-introduction">
+    <section>
+      <article>
+        HTML5 added new tags to define the structure and content of a web page, like section, article, header, footer and more.
+      </article>
+    </section>
+    </div>
 
     <h3>Result and Code Example</h3>
     <hr />

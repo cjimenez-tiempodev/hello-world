@@ -59,9 +59,18 @@ class WebWorkers extends Component {
       <h1>HTML5 - Web Workers</h1>
       <hr />
 
-      <h3>Introduction</h3>
-      <hr />
+      <div className="html5-introduction">
+      <section>
+        <article>
+          A web worker is a JavaScript running in the background, without affecting the performance of the page.<br/>
+          When executing scripts in an HTML page, the page becomes unresponsive until the script is finished. <br/>
+          A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page.<br/> 
+          You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+        </article>
+      </section>
+      </div>
 
+      <hr/>
       <h3>Result and Code Example</h3>
       <hr />
 

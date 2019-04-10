@@ -61,6 +61,8 @@ class App extends Component {
 
       <section className="rightSide" />
 
+      <div className="fit-space" />
+
       <footer className="footer-main">
         <small>Footer All rights reserved.</small>
       </footer>

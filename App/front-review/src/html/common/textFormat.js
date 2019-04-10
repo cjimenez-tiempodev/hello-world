@@ -6,12 +6,18 @@ import DisplayDefinition from './general/displayDef';
 function TextFormat(props) {
   return (
     <div className = "document">
-    <h2>Text + formatting</h2>
+    <h2>Text formatting</h2>
     <hr />
 
-    <h3>Introduction</h3>
-    <hr />
+    <div className="html5-introduction">
+    <section>
+      <article>
+        HTML provides us with the ability for formatting text addding tags to make text, bold, italic, a quote notation and more.
+      </article>
+    </section>
+    </div>
 
+    <hr />
     <h3>Result and Code Example</h3>
     <hr />
 

@@ -43,7 +43,8 @@
       width: -webkit-fill-available;
       background-color: #f9f9f9;
       border: none;
-      padding: 4px 10px;
+      border-left: 1px solid #15beff;
+      padding: 6px 10px;
       margin: 1px 0;
       text-align: center;
       text-decoration: none;
@@ -64,7 +65,7 @@
     .menu-container {
       flex: 0.25;
       padding-left: 15px;
-      border-left: 1px solid #717171;
+      border-left: 1px solid #e6e6e6;
     }
 
     section {
@@ -89,8 +90,13 @@
     flex-direction: column;
     margin-top: 10px;
     border-top: 2px solid #13beff;
-    height: -webkit-fill-available;
+    height: 200px;
     }
+
+  .fit-space {
+    height:  -webkit-fill-available;
+  }
+
 
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

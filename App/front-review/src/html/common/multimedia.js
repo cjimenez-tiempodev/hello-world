@@ -9,10 +9,18 @@ function Multimedia(props) {
     <h1>Multimedia - Audio & Video</h1>
     <hr />
 
-    <h3>Introduction</h3>
-    <hr />
+    <div className="html5-introduction">
+    <section>
+      <article>
+        Multimedia on the web is sound, music, videos, movies, and animations.<br/>
+        HTML5 multimedia promises an easier future for multimedia by using audio and video tags.<br/>
+        Note:<br/>
+        Only MP4, WebM, and Ogg video are supported by the HTML5 standard.<br/>
+        Only MP3, WAV, and Ogg audio are supported by the HTML5 standard.<br/>
+      </article>
+    </section>
+    </div>
 
-    <h3>Result and Code Example</h3>
     <hr />
 
     <div className="example">

@@ -6,17 +6,19 @@ import './styles/common.css';
 
 function DocumentStructure(props) {
   return (
-    /*
-    <div> ... </div>
-    A generic container used to denote a page section
-    */
     <div className = "document" id="structure">
     <h2>Document Structure</h2>
     <hr />
 
-    <h3>Introduction</h3>
-    <hr />
+    <div className="html5-introduction">
+    <section>
+      <article>
+        Basic tags that can be used to create the structure of an HTML document.
+      </article>
+    </section>
+    </div>
 
+    <hr />
     <h3>Result and Code Example</h3>
     <hr />
 
