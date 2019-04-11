@@ -26,6 +26,10 @@
       padding-right: 20px;
     }
 
+    .initial-message{
+      margin-bottom: 20px;
+    }
+
     h2 {
     margin: 0 0 8px;
     }
@@ -48,7 +52,7 @@
       margin: 1px 0;
       text-align: center;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 16px;
       outline: none;
       cursor:pointer;
     }
@@ -71,6 +75,7 @@
     section {
     flex: 1;
     padding-right: 15px;
+    padding-left: 15px;
     }
 
    hr {
@@ -84,31 +89,42 @@
     }
 
     .footer-main {
-    padding: 0 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    border-top: 2px solid #13beff;
-    height: 200px;
+      padding: 0 10px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      border-top: 2px solid #13beff;
+      height: 150px;
     }
 
   .fit-space {
     height:  -webkit-fill-available;
   }
 
+  .video{
+    max-width: 100%;
+  }
+
 
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   section {
-    padding-left: 5px;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  section {
     padding-left: 10px;
+    order: 1;
+  }
+  .body {
+    flex-direction: column;
+  }
+  .footer-main{
+    order: 2;
+  }
+  .fit-space{
+    display: none;
+  }
+  ul li button {
+    padding: 10px 5px;
+    border-left: 2px solid #15beff;
   }
 }
 
@@ -116,12 +132,21 @@
   .leftSide, .rightSide {
     display: none;
   }
+  .footer-main {
+    height: 100px;
+  }
+  section, .menu-container {
+    padding-left: 30px;
+  }
+  .counter-container {
+    flex-direction: column;
+  }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  section {
-    padding-left: 15px;
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  video {
+    max-width: 350px;
   }
 }
 
@@ -135,6 +160,6 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .leftSide, .rightSide {
-  flex: 0.3;
+    flex: 0.3;
   }
 }
