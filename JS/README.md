@@ -1,5 +1,7 @@
 # JavaScript Review
 
+[Link](#const-declaration)
+
 ## let declaration
 
 The let statement declares a block scope local variable, optionally initializing it to a value.
