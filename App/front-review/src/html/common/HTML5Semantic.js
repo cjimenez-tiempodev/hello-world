@@ -1,12 +1,25 @@
 import React from 'react';
 import html5 from './constDefinitions';
-import './styles/semantic.css';
+//import './styles/semantic.css';
 import DisplayDefinition from './general/displayDef';
 
 function HTML5Semantic(props) {
   return (
     <div className = "document">
-    <h1>HTML5 Semantic tags</h1>
+    <h2>HTML5 Semantic tags</h2>
+    <hr />
+
+    <div className="html5-introduction">
+    <section>
+      <article>
+        HTML5 added new tags to define the structure and content of a web page, like section, article, header, footer and more.
+      </article>
+    </section>
+    </div>
+
+    <h3>Result and Code Example</h3>
+    <hr />
+
     <div className="body">
     <header className="header-menu">
       <nav>
@@ -45,7 +58,9 @@ function HTML5Semantic(props) {
     </footer>
     </div>
 
-      <div>
+    <hr/>
+
+      <div className="displayDefinition">
         <table>
         <tbody>
           <DisplayDefinition data={html5.semantic}/>

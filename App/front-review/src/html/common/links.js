@@ -5,7 +5,23 @@ import codeImage from './assets/links.png';
 function Links(props) {
   return (
     <div className = "document">
-    <h1>Links + formatting</h1>
+    <h2>Links + formatting</h2>
+    <hr />
+
+    <div className="html5-introduction">
+    <section>
+      <article>
+      It is a connection from one web resource to another
+      <br/>
+      Syntax:<br/>
+      href : The href attribute is used to specify the destination address of the link used.<br/>
+      Text link : The text link is the visible part of the link.
+      </article>
+    </section>
+    </div>
+
+    <hr />
+    <h3>Result and Code Example</h3>
     <hr />
 
     <div className="example">

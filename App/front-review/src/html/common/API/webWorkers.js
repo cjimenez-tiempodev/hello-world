@@ -59,22 +59,42 @@ class WebWorkers extends Component {
       <h1>HTML5 - Web Workers</h1>
       <hr />
 
+      <div className="html5-introduction">
+      <section>
+        <article>
+          A web worker is a JavaScript running in the background, without affecting the performance of the page.<br/>
+          When executing scripts in an HTML page, the page becomes unresponsive until the script is finished. <br/>
+          A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page.<br/> 
+          You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+        </article>
+      </section>
+      </div>
+
+      <hr/>
+      <h3>Result and Code Example</h3>
+      <hr />
+
       <div className="example">
 
         <div className="result center">
 
-        <section>
-        <ReactCountdownClock
-                   seconds={this.state.counter}
-                   color="#FFF"
-                   alpha={0.9}
-                   size={300}
-        />
+        <section className="counter-container">
+        <article>
+          <ReactCountdownClock
+                     seconds={this.state.counter}
+                     color="#000"
+                     alpha={0.9}
+                     size={300}
+          />
+        </article>
 
-        <button onClick={this.fetchWebWorker}>Fetch Users with Web Worker</button>
-        <button onClick={this.fetchUsers}>Fetch Users Directly</button>
-        <button onClick={this.reloadCounter}>Reload Counter</button><br/>
-        <span>Total User Count: {this.state.count}</span>
+        <article>
+          <button onClick={this.fetchWebWorker}>Fetch Users with Web Worker</button>
+          <button onClick={this.fetchUsers}>Fetch Users Directly</button>
+          <button onClick={this.reloadCounter}>Reload Counter</button><br/>
+          <span className="count">Total User Count: {this.state.count}</span>
+        </article>
+
       </section>
 
         </div>
@@ -85,10 +105,12 @@ class WebWorkers extends Component {
 
       </div>
 
-      <div>
+      <hr/>
+
+      <div className="displayDefinition">
         <table>
           <tbody>
-          <DisplayDefinition data={html5.api.web_workers} />
+          <DisplayDefinition data={html5.api.webWorkers} />
           </tbody>
         </table>
       </div>

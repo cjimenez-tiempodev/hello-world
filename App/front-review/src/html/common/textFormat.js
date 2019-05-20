@@ -6,7 +6,19 @@ import DisplayDefinition from './general/displayDef';
 function TextFormat(props) {
   return (
     <div className = "document">
-    <h1>Text + formatting</h1>
+    <h2>Text formatting</h2>
+    <hr />
+
+    <div className="html5-introduction">
+    <section>
+      <article>
+        HTML provides us with the ability for formatting text addding tags to make text, bold, italic, a quote notation and more.
+      </article>
+    </section>
+    </div>
+
+    <hr />
+    <h3>Result and Code Example</h3>
     <hr />
 
     <div className="example">
@@ -34,7 +46,9 @@ function TextFormat(props) {
 
     </div>
 
-    <div>
+    <hr />
+
+    <div className="displayDefinition">
       <table>
         <tbody>
         <DisplayDefinition data={html5.text} />
