@@ -1,33 +1,59 @@
 # JavaScript Review
 
 [Let declaration](#let-declaration)
+
 [Const declaration](#const-declaration)
+
 [Block scoped functions](#Block-scoped-functions)
+
 [Spread operator (...)](#Spread-operator)
+
 [Default parameters values](#Default-parameters-values)
+
 [Default value expressions](#Default-value-expressions)
+
 [Destructuring](#Destructuring)
+
 [Object Property Assignment Pattern (renaming)](#Object-Property-Assignment-Pattern-(renaming))
+
 [Object Literal Extensions](#Object-Literal-Extensions)
+
 [Template literals](#Template-literals)
+
 [Interpolated Expressions](#Interpolated-Expressions)
+
 [Tagged Template Literals](#Tagged-Template-Literals)
+
 [Arrow functions](#Arrow-functions)
+
 [for..of loops](#for..of-loops)
+
 [Symbols](#Symbols)
+
 [Classes](#Classes)
+
 [Promises](#Promises)
+
 [Import & Export](#Import-&-Export)
+
 [Prototype inheritance](#Prototype-inheritance)
+
 [Mutable/Immutable](#Mutable/Immutable)
+
 [Datatypes](#)
+
 [Datatypes](#Datatypes)
-[Six data types that are primitives](#Six-data-types-that-are-primitives)
+
 [Closure](#Closure)
+
 [Hoisting](#Hoisting)
+
 [this](#this)
+
 [try...catch](#try...catch)
+
 [suggestion](#suggestion)
+
 
 ## let declaration
 
