@@ -1,6 +1,33 @@
 # JavaScript Review
 
-[Link](#const-declaration)
+[Let declaration](#let-declaration)
+[Const declaration](#const-declaration)
+[Block scoped functions](#Block-scoped-functions)
+[Spread operator (...)](#Spread-operator)
+[Default parameters values](#Default-parameters-values)
+[Default value expressions](#Default-value-expressions)
+[Destructuring](#Destructuring)
+[Object Property Assignment Pattern (renaming)](#Object-Property-Assignment-Pattern-(renaming))
+[Object Literal Extensions](#Object-Literal-Extensions)
+[Template literals](#Template-literals)
+[Interpolated Expressions](#Interpolated-Expressions)
+[Tagged Template Literals](#Tagged-Template-Literals)
+[Arrow functions](#Arrow-functions)
+[for..of loops](#for..of-loops)
+[Symbols](#Symbols)
+[Classes](#Classes)
+[Promises](#Promises)
+[Import & Export](#Import-&-Export)
+[Prototype inheritance](#Prototype-inheritance)
+[Mutable/Immutable](#Mutable/Immutable)
+[Datatypes](#)
+[Datatypes](#Datatypes)
+[Six data types that are primitives](#Six-data-types-that-are-primitives)
+[Closure](#Closure)
+[Hoisting](#Hoisting)
+[this](#this)
+[try...catch](#try...catch)
+[suggestion](#suggestion)
 
 ## let declaration
 
@@ -49,7 +76,7 @@ console.log(number);    // expected output: 42
 Reference: [const MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 </details>
 
-## Block-scoped functions
+## Block scoped functions
 
 The foo() function is declared inside the { .. } block, So it's not available outside that block.
 But also note that it is "hoisted" within the block, as opposed to let declarations.
@@ -70,7 +97,7 @@ foo();    // ReferenceError
 ```
 </details>
 
-## Spread operator (...)
+## Spread operator
 
 When ... is used in front of an array it acts to "spread" it out into its individual values.
 
@@ -527,7 +554,7 @@ JavaScript is a loosely typed or a dynamic language. Variables in JavaScript are
 
 The latest ECMAScript standard defines seven data types:
 
-### Six data types that are primitives:
+### Six data types that are primitives
 *  Boolean:
     Boolean represents a logical entity and can have two values: true, and false.
     ```
