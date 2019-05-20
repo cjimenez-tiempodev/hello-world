@@ -942,7 +942,7 @@ Using max-width, will improve the browser's handling of small windows. This is i
 
 <details>
   <summary>See more</summary>
-  Example 
+  Example
   ```
   div.ex2 {
     max-width: 500px;
@@ -1313,7 +1313,7 @@ matches the portion of an element that is selected by a user
 </details>
 
 ## **Navigation Bar**
-Use position: sticky; to <li> to create a sticky navbar.
+Use position: 'sticky' to 'li' to create a sticky navbar.
 
 <details>
   <summary>See more</summary>

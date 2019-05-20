@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CreateMenu from './html/common/general/createMenu';
 import html from './html/common/constDefinitions';
 import RouteContent from './html/common/general/routeContent';
+import htmlImage from './html/common/assets/HTML5_Logo.png';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +30,11 @@ class App extends Component {
             <li>HTML5 Review</li>
           </ul>
         </nav>
+
+        <div className="icon">
+          <img src={htmlImage}  width="50px" height="50px" alt="html5"/>
+        </div>
+
       </header>
 
       <section className="leftSide" />
@@ -39,11 +45,15 @@ class App extends Component {
         </article>
       </section>
 
-      <aside>
-        <h2>Topics</h2>
+      <aside className="menu-container">
+        <h2>HTML5</h2>
         <ul>
           <CreateMenu
             data={html}
+            handleClick={this.handleClick}
+          />
+          <CreateMenu
+            data={html.api}
             handleClick={this.handleClick}
           />
         </ul>
@@ -51,7 +61,9 @@ class App extends Component {
 
       <section className="rightSide" />
 
-      <footer>
+      <div className="fit-space" />
+
+      <footer className="footer-main">
         <small>Footer All rights reserved.</small>
       </footer>
       </div>
