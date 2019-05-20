@@ -20,7 +20,8 @@ The let statement declares a block scope local variable, optionally initializing
 ```
 
 Reference: [let MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
-<details>
+
+</details>
 
 ## const declaration
 
@@ -198,7 +199,7 @@ const obj = {'x': 'JavaScript', 'y': 'ES6'};
   console.log(languaje, version);   //expected output JavaScript ES6
 }
 ```
-<details>
+</details>
 
 ## Object Literal Extensions
 Define a property that is the same name as a lexical identifier, you can shorten it from x: x to x
@@ -502,7 +503,7 @@ When trying to access a property of an object, the property will not only be sou
   console.log(child.property3);   //Expected output: property3
 }
 ```
-<details/>
+</details>
 
 ## Mutable/Immutable
 
