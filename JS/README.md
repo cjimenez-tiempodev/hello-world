@@ -183,6 +183,7 @@ returning true or false as appropriate.
 
 <details>
   <summary>Example</summary>
+
 ```
 const array1 = [1, 2, 3, 4, 5 ];
 console.log(array1.includes(2)); // expected output: true
@@ -203,6 +204,7 @@ The padStart() method pads the current string with another string (multiple time
 
 <details>
   <summary>Example</summary>
+
 ```
   const fullNumber = '2034399002125581';
   const last4Digits = fullNumber.slice(-4);
@@ -218,6 +220,7 @@ The padEnd() method pads the current string with a given string (repeated, if ne
 
 <details>
   <summary>Example</summary>
+  
 ```
 const str1 = 'Breaded Mushrooms';
 
