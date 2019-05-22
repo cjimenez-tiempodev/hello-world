@@ -1,12 +1,20 @@
 # JavaScript Review
 
+[Arithmetic operator](#Arithmetic-operator)
+
 [Let declaration](#let-declaration)
 
 [Const declaration](#const-declaration)
 
 [Block scoped functions](#Block-scoped-functions)
 
+[Array includes](#Array-includes)
+
+[Padding a string](#Padding-a-string)
+
 [Spread operator (...)](#Spread-operator)
+
+[Rest parameters (...)](#Rest-parameters)
 
 [Default parameters values](#Default-parameters-values)
 
@@ -40,11 +48,11 @@
 
 [Mutable/Immutable](#Mutable/Immutable)
 
-[Datatypes](#)
-
 [Datatypes](#Datatypes)
 
 [Closure](#Closure)
+
+[Generator](#Generator)
 
 [Hoisting](#Hoisting)
 
@@ -52,8 +60,53 @@
 
 [try...catch](#try...catch)
 
+[async & await](#asyasync-&-awaitnc)
+
 [suggestion](#suggestion)
 
+
+## Arithmetic operator
+take numerical values (either literals or variables) as their operands and return a single numerical value
+
+<details>
+  <summary>Example</summary>
+
+  * Addition(+)
+    The addition operator produces the sum of numeric operands or string concatenation.
+    Operator: x + y
+
+  * Subtraction(-)
+    The subtraction operator subtracts the two operands, producing their difference.
+    Operator: x - y
+
+  * Division(/)
+    The division operator produces the quotient of its operands where the left operand is the dividend and the right operand is the divisor.
+    Operator: x / y
+
+  * Multiplication(* )
+    The multiplication operator produces the product of the operands.
+    Operator: x * y
+
+  * Remainder(%)
+    The remainder operator returns the remainder left over when one operand is divided by a second operand. It always takes the sign of the dividend.
+    Operator: var1 % var2
+
+  * Exponentiation(** )
+    The exponentiation operator returns the result of raising first operand to the power second operand.
+    Exponentiation operator is right associative. a ** b ** c is equal to a ** (b ** c).
+    Operator: var1 ** var2
+    2 ** 3 // 8
+    3 ** 2 // 9
+
+  * Increment (++)
+    The increment operator increments (adds one to) its operand and returns a value.
+    Operator: x++ or ++x
+
+  * Decrement (--)
+    The decrement operator decrements (subtracts one from) its operand and returns a value.
+    Operator: x-- or --x
+
+</details>
 
 ## let declaration
 
@@ -123,6 +176,79 @@ foo();    // ReferenceError
 ```
 </details>
 
+## Array includes
+
+The includes() method determines whether an array includes a certain value among its entries,
+returning true or false as appropriate.
+
+<details>
+  <summary>Example</summary>
+```
+const array1 = [1, 2, 3, 4, 5 ];
+console.log(array1.includes(2)); // expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+console.log(pets.includes('cat')); // expected output: true
+console.log(pets.includes('spider'));// expected output: false
+
+const text = "Array.prototype.includes()";
+console.log(text.includes('proto')); // expected output: true
+```
+
+</details>
+
+## Padding a string
+
+The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start (left) of the current string.
+
+<details>
+  <summary>Example</summary>
+```
+  const fullNumber = '2034399002125581';
+  const last4Digits = fullNumber.slice(-4);
+  const maskedNumber = last4Digits.padStart(fullNumber.length, '*');
+
+  console.log(maskedNumber);
+  // expected output: "************5581"
+```
+
+</details>
+
+The padEnd() method pads the current string with a given string (repeated, if needed) so that the resulting string reaches a given length. The padding is applied from the end (right) of the current string.
+
+<details>
+  <summary>Example</summary>
+```
+const str1 = 'Breaded Mushrooms';
+
+console.log(str1.padEnd(25, '.'));
+// expected output: "Breaded Mushrooms........"
+```
+
+</details>
+
+## Object entries
+
+The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs
+
+<details>
+  <summary>Example</summary>
+
+```
+// array like object
+const obj = { 0: 'a', 1: 'b', 2: 'c' };
+console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+
+// iterate through key-value gracefully
+const obj = { a: 5, b: 7, c: 9 };
+for (const [key, value] of Object.entries(obj)) {
+  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+}
+```
+
+</details>
+
+
 ## Spread operator
 
 When ... is used in front of an array it acts to "spread" it out into its individual values.
@@ -144,14 +270,24 @@ When ... is used in front of an array it acts to "spread" it out into its indivi
   }
 
   foo( 1, 2, 3, 4, 5 );
-
-  //rest parameters
-  function foo(x, y, ...z) {
-	  console.log( x, y, z );
-  }
-  //The ...z argument "gather the rest of the values (if any) into an array called z."
-  foo( 1, 2, 3, 4, 5 );			// 1 2 [3,4,5]
 }
+```
+</details>
+
+## Rest parameters
+
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+
+<details>
+  <summary>Example</summary>
+
+```
+//rest parameters
+function foo(x, y, ...z) {
+  console.log( x, y, z );
+}
+//The ...z argument "gather the rest of the values (if any) into an array called z."
+foo( 1, 2, 3, 4, 5 );			// 1 2 [3,4,5]
 ```
 </details>
 
@@ -692,6 +828,35 @@ Counter can't be used from outside of the add scope
 
 </details>
 
+## Generator
+Functions in JavaScript, as we all know, “run until return/end”.  
+Generator Functions on the other hand, “run until yield/return/end”.  
+Generator Functions once called, returns the Generator Object,  
+which holds the entire Generator Iterable that can be iterated using next() method or for…of loop.
+
+<details>
+  <summary>Example</summary>
+
+```
+
+//generator.next() returns a value yielded by the yield expression.
+
+function* idMaker() {
+    var index = 0;
+    while(true)
+        yield index++;
+}
+
+var idGenerator = idMaker(); // "Generator { }"
+
+console.log(idGenerator.next().value); //expected output: 0
+console.log(idGenerator.next().value); //expected output: 1
+console.log(idGenerator.next().value); //expected output: 2
+
+```
+
+</details>
+
 ## Hoisting
 
 A strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the compile phase, but stay exactly where you typed them in your code.
@@ -776,6 +941,45 @@ The try...catch statement marks a block of statements to try, and specifies a re
   console.log(`continuing`);    //expected output: continuing
 }
 ```
+
+</details>
+
+## async & await
+
+The async function declaration defines an asynchronous function.
+An asynchronous function is a function which operates asynchronously via the event loop,  
+using an implicit Promise to return its result.
+
+return value:
+A Promise which will be resolved with the value returned by the async function,  
+or rejected with an uncaught exception thrown from within the async function.
+
+An async function can contain an await expression that pauses the execution of the async function and waits for the passed Promise's resolution, and then resumes the async function's execution and returns the resolved value.
+
+<details>
+  <summary>Example</summary>
+
+  ```
+  //create promise
+  function resolveAfter2Seconds() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('resolved');
+      }, 2000);
+    });
+  }
+
+  //create async function
+  async function asyncCall() {
+    console.log('calling');
+    return result = await resolveAfter2Seconds();
+  }
+
+  //handle asyncCall as a Promise
+  asyncCall().then(result => console.log(`result: ${result}`));
+  // expected output: 'resolved'
+
+  ```
 
 </details>
 
