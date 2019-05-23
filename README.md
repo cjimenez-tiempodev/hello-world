@@ -38,6 +38,44 @@ JavaScript: Quick review focused on ES6 for React
 
 ### CSS3
 
+* syntax
+* Selectors
+* Comments
+* Insert CSS
+* Colors
+* CSS Background
+* Borders
+* Margins
+* Paddings
+* Height / Width
+* Box Model
+* Outline
+* Text
+* Fonts
+* links
+* Lists
+* Tables
+* Display
+* Max-Width
+* CSS Layout - Property (position)
+* Overflow
+* Float
+* Inline Block
+* Align
+* Combinators
+* Pseudo-classes
+* Pseudo-Elements
+* Navigation Bar
+* Image Sprites
+* Attribute Selectors
+* Rounded Corners
+* Tooltips
+* Responsive Image
+* Variables
+* Box Sizing
+* Flex Box
+* Media Queries
+
 ### HTML5
 
 * Document summary
