@@ -2,32 +2,39 @@
 
 ### JS Documentation
 JavaScript: Quick review focused on ES6 for React
-* let
-* const
-* Block scope functions
-* Spread operator
-* Default parameter value
-* Default value expression
+
+* Arithmetic operator
+* Let declaration
+* Const declaration
+* Block scoped functions
+* Array includes
+* Padding a string
+* Spread operator (...)
+* Rest parameters (...)
+* Default parameters values
+* Default value expressions
 * Destructuring
-* Renaming
-* Object literal extension
+* Object Property Assignment Pattern (renaming)
+* Object Literal Extensions
 * Template literals
-* Interpolated expressions
-* Tagged template literals
+* Interpolated Expressions
+* Tagged Template Literals
 * Arrow functions
 * for..of loops
 * Symbols
 * Classes
 * Promises
-* Import
-* Export
+* Import & Export
 * Prototype inheritance
-* Mutability/Immutability
+* Mutable/Immutable
 * Datatypes
 * Closure
+* Generator
 * Hoisting
 * this
 * try...catch
+* async & await
+* suggestion
 
 ### CSS3
 
