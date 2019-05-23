@@ -5,41 +5,77 @@ CSS: stands for Cascading Style Sheets.
 Describes how HTML elements are displayed on screen, is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
 
 [syntax](#syntax)
+
 [Selectors](#Selectors)
+
 [Comments](#Comments)
-[Insert CSS](#Insert CSS)
+
+[Insert CSS](#Insert-CSS)
+
 [Colors](#Colors)
-[CSS Background](#CSS Background)
+
+[CSS Background](#CSS-Background)
+
 [Borders](#Borders)
+
 [Margins](#Margins)
+
 [Paddings](#Paddings)
+
 [Height / Width](#Height-/-Width)
+
 [Box Model](#Box-Model)
+
 [Outline](#Outline)
+
 [Text](#Text)
+
 [Fonts](#Fonts)
+
 [links](#links)
+
 [Lists](#Lists)
+
 [Tables](#Tables)
+
 [Display](#Display)
+
 [Max-Width](#Max-Width)
+
 [CSS Layout - Property (position)](#CSS-Layout-Property-(position))
+
 [Overflow](#Overflow)
+
 [Float](#Float)
-[Inline Block](#Inline Block)
+
+[Inline Block](#Inline-Block)
+
 [Align](#Align)
+
 [Combinators](#Combinators)
+
 [Pseudo-classes](#Pseudo-classes)
+
 [Pseudo-Elements](#Pseudo-Elements)
+
 [Navigation Bar](#Navigation-Bar)
+
 [Image Sprites](#Image-Sprites)
+
 [Attribute Selectors](#Attribute-Selectors)
+
 [Rounded Corners](#Rounded-Corners)
+
 [Tooltips](#Tooltips)
+
 [Responsive Image](#Responsive-Image)
+
 [Variables](#Variables)
+
 [Box Sizing](#Box-Sizing)
+
 [Flex Box](#Flex-Box)
+
 [Media Queries](#Media-Queries)
 
 ## **syntax**
