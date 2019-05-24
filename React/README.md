@@ -1,16 +1,23 @@
 React
 
 [General](#General)
+
 [Component](#Component)
+
 [Redux](#Redux)
+
 [Router](#Router)
 
 ## General
 <details>
   <summary>More</summary>
+
 [React](#React)
+
 [Virtual DOM](#Virtual-DOM)
+
 [Features](#Features)
+
 [JSX](#JSX)
 
 ## React
@@ -79,22 +86,32 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
   <summary>More</summary>
 
 [Components](#Components)
+
 [render()](#render())
+
 [Elements](#Elements)
+
 [Props](#Props)
+
 [state](#state)
+
 [stateless component](#stateless-component)
+
 [stateful component](#statefull-component)
+
 [Presentational components](#Presentational-components)
+
 [Container component](#Container-component)
+
 [Pure component](#Pure-component)
+
 [Lifecycle](#Lifecycle)
+
 [events](#events)
+
 [Refs](#Refs)
+
 [Higher Order Components(HOC)](#Higher-Order-Components(HOC))
-[](#)
-[](#)
-[](#)
 
 ## Components
 

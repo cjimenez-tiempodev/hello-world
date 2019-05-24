@@ -94,10 +94,18 @@ JavaScript: Quick review focused on ES6 for React
 
 ### React
 
-## General
-## Component
-## Redux
-## Router
+ **General**
+  * React
+  * More
+  * Virtual DOM
+  * More
+  * Features
+  * More
+  * JSX
+
+ **Component**
+ **Redux**
+ **Router**
 
 ### Git
 
