@@ -1,12 +1,4 @@
-React
-
-[General](#General)
-
-[Component](#Component)
-
-[Redux](#Redux)
-
-[Router](#Router)
+## React
 
 ## General
 <details>
