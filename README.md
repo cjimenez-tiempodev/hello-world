@@ -104,8 +104,28 @@ JavaScript: Quick review focused on ES6 for React
   * JSX
 
  **Component**
+* Components
+* render
+* Elements
+* Props
+* state
+* stateless component
+* stateful component
+* Presentational components
+* Container component
+* Pure component
+* Lifecycle
+* events
+* Refs
+* Higher Order Components(HOC)
+
  **Redux**
+   * Definition
+   * Components
+   * Flow
+
  **Router**
+  * Definition
 
 ### Git
 
