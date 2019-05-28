@@ -362,25 +362,183 @@ import Image from './presentational/Image';
   * HOC are custom components which wrap another component within it.
   * They are a pattern that emerges from React’s compositional nature.
   * Concretely, a higher-order component is a function that takes a component and returns a new component.
+  * Refs are not passed through.
+
+  ```
+  import React from 'react';
+
+  const higherOrderComponent = (WrappedComponent) => {
+  class HOC extends React.Component {
+    render() {
+      return <WrappedComponent />;
+    }
+  }
+
+  return HOC;
+  };
+
+  export default higherOrderComponent;
+  ```
 
 </details>
 
 </details>
 
 ## Redux
+
+[Definition](#Definition)
+[Components](#components)
+[Flow](#Flox)
+
 <details>
   <summary>More</summary>
 
-##
+## Definition
 
 <details>
   <summary>More</summary>
+  It is a predictable state container for JavaScript applications and is used for the entire applications state management.
+
+  * The state of the entire application is stored in an object/ state tree within a single store.
+  * The only way to change the state is to trigger an action
+
+
+</details>
+
+## components
+
+<details>
+  <summary>More</summary>
+
+  * Action – It’s an object that describes what happened.  
+  Actions in React must have a type property that indicates the type of ACTION being performed.  
+
+  ```
+  export function addTodo(text) {
+    return { type: ADD_TODO, text }
+  }
+  ```
+
+  * Reducer –  Reducers are pure functions which specify how the application’s state changes in response to an ACTION.  
+  The reducer is a pure function that takes the previous state and an action, and returns the next state.
+
+  ```
+  import { VisibilityFilters } from './actions'
+
+  const initialState = {
+    visibilityFilter: VisibilityFilters.SHOW_ALL,
+    todos: []
+  }
+
+  function todoApp(state = initialState, action) {
+    switch (action.type) {
+      case SET_VISIBILITY_FILTER:
+        return Object.assign({}, state, {
+          visibilityFilter: action.filter
+        })
+      default:
+        return state
+    }
+  }
+  ```
+
+  * Store – State/ Object tree of the entire application is saved in the Store.
+    + Holds application state;  
+    + Allows access to state via getState();  
+    + Allows state to be updated via dispatch(action);  
+    + Registers listeners via subscribe(listener);  
+
+    ```
+    import { createStore } from 'redux'
+    import todoApp from './reducers'
+    const store = createStore(todoApp)
+    ```
+
+  * View – Simply displays the data provided by the Store.
+
+</details>
+
+## Flow
+
+<details>
+  <summary>More</summary>
+
+  1. You call store.dispatch(action).  
+  An action is a plain object describing what happened. For example:  
+
+  ```
+  { type: 'LIKE_ARTICLE', articleId: 42 }
+  { type: 'FETCH_USER_SUCCESS', response: { id: 3, name: 'Mary' } }
+  { type: 'ADD_TODO', text: 'Read the Redux docs.' }
+  ```
+
+  2. The Redux store calls the reducer function you gave it.  
+  The store will pass two arguments to the reducer: the current state tree and the action.
+
+  ```
+  // The current application state (list of todos and chosen filter)
+  let previousState = {
+    visibleTodoFilter: 'SHOW_ALL',
+    todos: [
+      {
+        text: 'Read the docs.',
+        complete: false
+      }
+    ]
+  }
+
+  // The action being performed (adding a todo)
+  let action = {
+    type: 'ADD_TODO',
+    text: 'Understand the flow.'
+  }
+
+  // Your reducer returns the next application state
+  let nextState = todoApp(previousState, action)
+  ```
+
+  3. The root reducer may combine the output of multiple reducers into a single state tree.
+
+  ```
+  function todos(state = [], action) {
+    // Somehow calculate it...
+    return nextState
+  }
+
+  function visibleTodoFilter(state = 'SHOW_ALL', action) {
+    // Somehow calculate it...
+    return nextState
+  }
+
+  let todoApp = combineReducers({
+    todos,
+    visibleTodoFilter
+  })
+  ```
+
+  4. The Redux store saves the complete state tree returned by the root reducer.
+
+  This new tree is now the next state of your app! Every listener registered with store.subscribe(listener) will now be invoked; listeners may call store.getState() to get the current state.
+
+  Now, the UI can be updated to reflect the new state. If you use bindings like React Redux, this is the point at which component.setState(newState) is called.
 
 </details>
 
 </details>
 
 ## Router
+
 <details>
   <summary>More</summary>
+
+  A Router is used to define multiple routes and when a user types a specific URL, if this URL matches the path of any ‘route’ defined inside the router, then the user is redirected to that particular route.
+
+  ```
+  <switch>
+    <route exact path=’/’ component={Home}/>
+    <route path=’/posts/:id’ component={Newpost}/>
+    <route path=’/posts’   component={Post}/>
+  </switch>
+  ```
+  
 </details>
