@@ -12,11 +12,12 @@
     }
 
     .header-menu {
-    justify-content: flex-start;
-    height: 60px;
-    color: #fff;
-    border-bottom: 3px solid #13beff;
-    margin-bottom: 10px;
+      justify-content: flex-start;
+      height: 60px;
+      color: #fff;
+      border-bottom: 3px solid #13beff;
+      margin-bottom: 10px;
+      padding: 0 20px;
     }
 
     .icon {
@@ -43,7 +44,22 @@
     list-style: none;
     }
 
-    ul li button {
+    .top-menu-container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .top-menu-container ul li {
+      background-color: #00435d;
+      display: inline-block;
+      margin: 0 5px;
+      min-width: 90px;
+      border-left: 1px solid white;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-container ul li button {
       width: -webkit-fill-available;
       background-color: #f9f9f9;
       border: none;
