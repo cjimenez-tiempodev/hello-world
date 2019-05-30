@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import CreateMenu from './html/common/general/createMenu';
-import html from './html/common/constDefinitions';
+import frontEnd from './html/common/constDefinitions';
 import RouteContent from './html/common/general/routeContent';
-import TopMenu from './html/structure/TopMenu';
+import HeaderComponent from './html/structure/HeaderComponent';
+import getEntries from './html/common/dataStructure/getEntries';
 import './App.css';
 
 class App extends Component {
@@ -18,16 +19,14 @@ class App extends Component {
      this.setState({display: e.target.id});
    }
 
+
   render() {
     return (
       <div className = "document">
 
       <div className="body">
-      <header className="header-menu">
 
-        <TopMenu options={['HTML5', 'React', 'CSS3', 'JS']} />
-
-      </header>
+      <HeaderComponent options={getEntries(frontEnd)}/>
 
       <section className="leftSide" />
 
@@ -41,11 +40,7 @@ class App extends Component {
         <h2>HTML5</h2>
         <ul>
           <CreateMenu
-            data={html}
-            handleClick={this.handleClick}
-          />
-          <CreateMenu
-            data={html.api}
+            data={frontEnd.HTML5}
             handleClick={this.handleClick}
           />
         </ul>

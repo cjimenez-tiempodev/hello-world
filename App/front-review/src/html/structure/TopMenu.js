@@ -1,11 +1,10 @@
 import React from 'react';
-import TopMenuOptions from './TopMenuOptions';
 
 function TopMenu(props){
  return (
    <nav className="top-menu-container">
      <ul>
-       <TopMenuOptions options={props.options}/>
+       {props.options.map( (option, i) => <li key={i}>{option}</li>)}
      </ul>
    </nav>
  );
