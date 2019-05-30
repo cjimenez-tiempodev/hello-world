@@ -105,6 +105,16 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
 
 [Higher Order Components(HOC)](#Higher-Order-Components(HOC))
 
+[Function Component](#Function-Component)
+
+[Destructuring props](#Destructuring-props)
+
+[Conditional rendering](#Conditional-rendering)
+
+[Array as children](#Array-as-children)
+
+[Proxy component](#Proxy-component)
+
 ## Components
 
 <details>
@@ -382,6 +392,124 @@ import Image from './presentational/Image';
 
 </details>
 
+## Function Component
+
+  <details>
+    <summary>More</summary>
+
+    * They're just functions.
+    * Collect props from the first argument of your function.
+    * Define any number of local variables
+    * Set defaults for any required props using defaultProps.
+
+    ```
+    function Greeting(props) {
+      return <div>Hi {props.name}!</div>;
+    }
+    Greeting.defaultProps = {
+      name: "Guest"
+    };
+    ```
+
+  </details>
+
+## Destructuring props
+
+  <details>
+    <summary>More</summary>
+
+    * works with arrays and Objects
+    * Use rest parameters (...) for the remaining values
+
+    ```
+    /*
+    props:
+    let person = {
+      name: "Carlos",
+      age: 26,
+      location: 'Mexico'
+    };
+    */
+
+    function Greeting({ name, ...restProps }) {
+      return <div>Hi {name}!</div>;
+    }
+    ```
+
+  </details>
+
+
+## Conditional rendering
+
+  <details>
+      <summary>More</summary>
+
+      ```
+      //if example
+      {
+        condition && <span>Rendered when `truthy`</span>;
+      }
+
+      //if-else example
+      {
+        condition ? (
+          <span>Rendered when `truthy`</span>
+        ) : (
+          <span>Rendered when `falsy`</span>
+        );
+      }
+      ```
+
+  </details>  
+
+## Array as children
+
+<details>
+    <summary>More</summary>
+
+    * We use map() to create an array of React Elements for every value in the array.
+
+    ```
+    <ul>
+      {["first", "second"].map(item => (
+        <li>{item}</li>
+      ))}
+    </ul>
+    ```
+
+    * This pattern can be combined with destructuring, JSX Spread
+
+    ```
+    <ul>
+      {arrayOfMessageObjects.map(({ id, ...message }) => (
+        <Message key={id} {...message} />
+      ))}
+    </ul>
+    ```
+
+</details>
+
+## Proxy component
+
+<details>
+    <summary>More</summary>
+
+    * Writing this attribute hundreds of times is error prone.
+    * We can write a higher level component to proxy props to a lower-level button component.
+
+    ```
+    <button type="button">
+    ```
+
+    * We can use Button in place of button and ensure that the type attribute is consistently applied everywhere.
+
+    ```
+    const Button = props =>
+    <button type="button" {...props}>
+    ```
+
+</details>
+
 </details>
 
 ## Redux
@@ -540,5 +668,5 @@ import Image from './presentational/Image';
     <route path=’/posts’   component={Post}/>
   </switch>
   ```
-  
+
 </details>
