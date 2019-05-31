@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import html5 from '../constDefinitions';
+import frontEnd from '../constDefinitions';
 import codeImage from './assets/dragDropCode.png';
 import dragImage from './assets/dragImage.png';
 import DisplayDefinition from '../general/displayDef';
@@ -61,7 +61,7 @@ class DnD extends Component {
       <div className="displayDefinition">
         <table>
           <tbody>
-          <DisplayDefinition data={html5.api.dragndrop} />
+          <DisplayDefinition data={frontEnd.HTML5.dragndrop} />
           </tbody>
         </table>
       </div>

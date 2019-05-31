@@ -1,5 +1,5 @@
 import React from 'react';
-import html5 from './constDefinitions';
+import frontEnd from './constDefinitions';
 //import './styles/semantic.css';
 import DisplayDefinition from './general/displayDef';
 
@@ -63,7 +63,7 @@ function HTML5Semantic(props) {
       <div className="displayDefinition">
         <table>
         <tbody>
-          <DisplayDefinition data={html5.semantic}/>
+          <DisplayDefinition data={frontEnd.HTML5.semantic}/>
         </tbody>
         </table>
       </div>

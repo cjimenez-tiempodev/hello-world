@@ -1,5 +1,5 @@
 /*
-Takes an object and return and array with the object's keys
+Takes an object and return an array with the object's keys
   object: object type
   return: array
 */

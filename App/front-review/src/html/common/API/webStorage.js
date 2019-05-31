@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import html5 from '../constDefinitions';
+import frontEnd from '../constDefinitions';
 import codeImage from './assets/webStorageCode.png';
 import DisplayDefinition from '../general/displayDef';
 
@@ -96,7 +96,7 @@ class WebStorage extends Component {
       <div className="displayDefinition">
         <table>
           <tbody>
-          <DisplayDefinition data={html5.api.webStorage} />
+          <DisplayDefinition data={frontEnd.HTML5.webStorage} />
           </tbody>
         </table>
       </div>

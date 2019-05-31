@@ -14,10 +14,14 @@
     .header-menu {
       justify-content: flex-start;
       height: 60px;
-      color: #fff;
       border-bottom: 3px solid #13beff;
       margin-bottom: 10px;
       padding: 0 20px;
+    }
+
+    .header-menu a {
+      color: white;
+      text-decoration: none;
     }
 
     .icon {

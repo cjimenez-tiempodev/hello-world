@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import html5 from '../constDefinitions';
+import frontEnd from '../constDefinitions';
 import codeImage from './assets/geolocationCode.png';
 import DisplayDefinition from '../general/displayDef';
 
@@ -74,7 +74,7 @@ class HTML5Geolocation extends Component {
       <div className="displayDefinition">
         <table>
           <tbody>
-          <DisplayDefinition data={html5.api.geolocation} />
+          <DisplayDefinition data={frontEnd.HTML5.geolocation} />
           </tbody>
         </table>
       </div>

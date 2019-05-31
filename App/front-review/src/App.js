@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import CreateMenu from './html/common/general/createMenu';
 import frontEnd from './html/common/constDefinitions';
-import RouteContent from './html/common/general/routeContent';
 import HeaderComponent from './html/structure/HeaderComponent';
 import getEntries from './html/common/dataStructure/getEntries';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import HtmlComponent from './html/structure/HtmlComponent';
 import './App.css';
 
 class App extends Component {
@@ -12,50 +12,32 @@ class App extends Component {
     super(props);
     this.state = {
       display: 'default',
-    }
+    };
   }
-
-  handleClick = (e) => {
-     this.setState({display: e.target.id});
-   }
-
 
   render() {
     return (
-      <div className = "document">
+      <Router>
+        <div className = "document">
 
-      <div className="body">
+        <div className="body">
 
-      <HeaderComponent options={getEntries(frontEnd)}/>
+          <HeaderComponent options={getEntries(frontEnd)}/>
+          <section className="leftSide" />
 
-      <section className="leftSide" />
+          <Route path="/HTML5" component={HtmlComponent} />
 
-      <section>
-        <article>
-          <RouteContent display={this.state.display}/>
-        </article>
-      </section>
+          <section className="rightSide" />
+          <div className="fit-space" />
 
-      <aside className="menu-container">
-        <h2>HTML5</h2>
-        <ul>
-          <CreateMenu
-            data={frontEnd.HTML5}
-            handleClick={this.handleClick}
-          />
-        </ul>
-      </aside>
+          <footer className="footer-main">
+            <small>Footer All rights reserved.</small>
+          </footer>
 
-      <section className="rightSide" />
+        </div>
 
-      <div className="fit-space" />
-
-      <footer className="footer-main">
-        <small>Footer All rights reserved.</small>
-      </footer>
-      </div>
-
-      </div>
+        </div>
+      </Router>
     );
   }
 }

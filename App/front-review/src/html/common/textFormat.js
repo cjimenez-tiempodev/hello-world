@@ -1,5 +1,5 @@
 import React from 'react';
-import html5 from './constDefinitions';
+import frontEnd from './constDefinitions';
 import codeImage from './assets/textFormat.png';
 import DisplayDefinition from './general/displayDef';
 
@@ -51,7 +51,7 @@ function TextFormat(props) {
     <div className="displayDefinition">
       <table>
         <tbody>
-        <DisplayDefinition data={html5.text} />
+        <DisplayDefinition data={frontEnd.HTML5.text} />
         </tbody>
       </table>
     </div>

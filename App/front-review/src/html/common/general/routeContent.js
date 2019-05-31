@@ -17,7 +17,6 @@ import {
 import StartMessage from './startMessage';
 
 function RouteContent(props) {
-
   function createList(){
     switch (props.display) {
       case 'structure':
