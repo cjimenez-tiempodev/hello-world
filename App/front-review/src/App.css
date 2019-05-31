@@ -14,10 +14,14 @@
     .header-menu {
       justify-content: flex-start;
       height: 60px;
-      color: #fff;
       border-bottom: 3px solid #13beff;
       margin-bottom: 10px;
       padding: 0 20px;
+    }
+
+    .header-menu a {
+      color: white;
+      text-decoration: none;
     }
 
     .icon {
@@ -49,14 +53,16 @@
       margin: 0 auto;
     }
 
+    .top-menu-container ul li:hover {
+      background-color: #284561;
+    }
+
     .top-menu-container ul li {
-      background-color: #00435d;
       display: inline-block;
       margin: 0 5px;
-      min-width: 90px;
+      min-width: 50px;
       border-left: 1px solid white;
       cursor: pointer;
-      padding: 4px;
     }
 
     .menu-container ul li button {

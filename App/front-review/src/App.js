@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import CreateMenu from './html/common/general/createMenu';
-import html from './html/common/constDefinitions';
-import RouteContent from './html/common/general/routeContent';
-import TopMenu from './html/structure/TopMenu';
+import frontEnd from './html/common/constDefinitions';
+import HeaderComponent from './html/structure/HeaderComponent';
+import getEntries from './html/common/dataStructure/getEntries';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import HtmlComponent from './html/structure/HtmlComponent';
 import './App.css';
 
 class App extends Component {
@@ -11,56 +12,32 @@ class App extends Component {
     super(props);
     this.state = {
       display: 'default',
-    }
+    };
   }
-
-  handleClick = (e) => {
-     this.setState({display: e.target.id});
-   }
 
   render() {
     return (
-      <div className = "document">
+      <Router>
+        <div className = "document">
 
-      <div className="body">
-      <header className="header-menu">
+        <div className="body">
 
-        <TopMenu options={['HTML5', 'React', 'CSS3', 'JS']} />
+          <HeaderComponent options={getEntries(frontEnd)}/>
+          <section className="leftSide" />
 
-      </header>
+          <Route path="/HTML5" component={HtmlComponent} />
 
-      <section className="leftSide" />
+          <section className="rightSide" />
+          <div className="fit-space" />
 
-      <section>
-        <article>
-          <RouteContent display={this.state.display}/>
-        </article>
-      </section>
+          <footer className="footer-main">
+            <small>Footer All rights reserved.</small>
+          </footer>
 
-      <aside className="menu-container">
-        <h2>HTML5</h2>
-        <ul>
-          <CreateMenu
-            data={html}
-            handleClick={this.handleClick}
-          />
-          <CreateMenu
-            data={html.api}
-            handleClick={this.handleClick}
-          />
-        </ul>
-      </aside>
+        </div>
 
-      <section className="rightSide" />
-
-      <div className="fit-space" />
-
-      <footer className="footer-main">
-        <small>Footer All rights reserved.</small>
-      </footer>
-      </div>
-
-      </div>
+        </div>
+      </Router>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import html5 from './constDefinitions';
+import frontEnd from './constDefinitions';
 import codeImage from './assets/imageFormat.png';
 import htmlImage from './assets/HTML5_Logo.png';
 import DisplayDefinition from './general/displayDef';
@@ -40,7 +40,7 @@ function ImagesFormat(props) {
       <table>
       <caption>Attributes</caption>
         <tbody>
-        <DisplayDefinition data={html5.images}/>
+        <DisplayDefinition data={frontEnd.HTML5.images}/>
         </tbody>
       </table>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import html5 from './constDefinitions';
+import frontEnd from './constDefinitions';
 import codeImage from './assets/videoCode.png';
 import DisplayDefinition from './general/displayDef';
 
@@ -61,7 +61,7 @@ function Multimedia(props) {
     <div className="displayDefinition">
       <table>
         <tbody>
-        <DisplayDefinition data={html5.multimedia} />
+        <DisplayDefinition data={frontEnd.HTML5.multimedia} />
         </tbody>
       </table>
     </div>

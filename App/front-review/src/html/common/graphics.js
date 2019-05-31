@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import html5 from './constDefinitions';
+import frontEnd from './constDefinitions';
 import DisplayDefinition from './general/displayDef';
 import codeImage from './assets/canvasCode.png';
 
@@ -22,7 +22,7 @@ class Graphics extends Component {
       <div className="html5-introduction">
       <section>
         <article>
-          HTML5 allows us to include graphics by using svg and canvas tags 
+          HTML5 allows us to include graphics by using svg and canvas tags
         </article>
       </section>
       </div>
@@ -76,7 +76,7 @@ class Graphics extends Component {
       <div className="displayDefinition">
         <table>
         <tbody>
-          <DisplayDefinition data={html5.graphics} />
+          <DisplayDefinition data={frontEnd.HTML5.graphics} />
         </tbody>
         </table>
       </div>

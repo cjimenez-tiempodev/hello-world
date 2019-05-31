@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactCountdownClock from 'react-countdown-clock';
-import html5 from '../constDefinitions';
+import frontEnd from '../constDefinitions';
 import codeImage from './assets/webWorkersCode.png';
 import DisplayDefinition from '../general/displayDef';
 import WebWorker from './general/workerSetup';
@@ -64,7 +64,7 @@ class WebWorkers extends Component {
         <article>
           A web worker is a JavaScript running in the background, without affecting the performance of the page.<br/>
           When executing scripts in an HTML page, the page becomes unresponsive until the script is finished. <br/>
-          A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page.<br/> 
+          A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page.<br/>
           You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
         </article>
       </section>
@@ -110,7 +110,7 @@ class WebWorkers extends Component {
       <div className="displayDefinition">
         <table>
           <tbody>
-          <DisplayDefinition data={html5.api.webWorkers} />
+          <DisplayDefinition data={frontEnd.HTML5.webWorkers} />
           </tbody>
         </table>
       </div>

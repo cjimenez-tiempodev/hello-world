@@ -1,5 +1,5 @@
 import React from 'react';
-import html5 from './constDefinitions';
+import frontEnd from './constDefinitions';
 import codeImage from './assets/docStructure.png';
 import DisplayDefinition from './general/displayDef';
 import './styles/common.css';
@@ -49,7 +49,7 @@ function DocumentStructure(props) {
     <div className="displayDefinition">
       <table>
       <tbody>
-        <DisplayDefinition data={html5.structure}/>
+        <DisplayDefinition data={frontEnd.HTML5.structure}/>
       </tbody>
       </table>
     </div>
