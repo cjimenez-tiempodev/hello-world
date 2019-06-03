@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import frontEnd from './html/common/constDefinitions';
-import HeaderComponent from './html/structure/HeaderComponent';
-import getEntries from './html/common/dataStructure/getEntries';
+import frontEnd from './components/common/constDefinitions';
+import HeaderComponent from './components/structure/HeaderComponent';
+import getEntries from './components/common/dataStructure/getEntries';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import {HtmlComponent, HomeComponent} from './html/structure/index';
+import {HtmlComponent, HomeComponent} from './components/structure/index';
 import './App.css';
 
 class App extends Component {
@@ -27,6 +27,9 @@ class App extends Component {
 
           <Route exact path="/" component={HomeComponent} />
           <Route path="/HTML5" component={HtmlComponent} />
+          <Route path="/ReactJs" component={HomeComponent} />
+          <Route path="/JS" component={HomeComponent} />
+          <Route path="/CSS3" component={HomeComponent} />
 
           <section className="rightSide" />
           <div className="fit-space" />

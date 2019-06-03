@@ -1,7 +1,7 @@
 import React from 'react';
-import frontEnd from './constDefinitions';
-import codeImage from './assets/imageFormat.png';
-import htmlImage from './assets/HTML5_Logo.png';
+import frontEnd from '../../common/constDefinitions';
+import codeImage from '../../common/assets/imageFormat.png';
+import htmlImage from '../../common/assets/HTML5_Logo.png';
 import DisplayDefinition from './general/displayDef';
 
 function ImagesFormat(props) {

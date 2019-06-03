@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import RouteContent from '../common/general/routeContent';
-import CreateMenu from '../common/general/createMenu_';
+import RouteContent from './html/general/routeContent';
+import CreateMenu from './html/general/createMenu';
 import frontEnd from '../common/constDefinitions';
 
 class HtmlComponent extends Component {

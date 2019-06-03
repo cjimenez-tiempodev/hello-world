@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import frontEnd from '../constDefinitions';
+import frontEnd from '../../../common/constDefinitions';
 import codeImage from './assets/webStorageCode.png';
 import DisplayDefinition from '../general/displayDef';
 

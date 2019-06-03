@@ -13,8 +13,6 @@ class HomeComponent extends Component {
           <img src={frontLogos} alt="front-end"/>
         </article>
       </section>
-
-      <aside className="menu-container" />
       </React.Fragment>
     );
   }

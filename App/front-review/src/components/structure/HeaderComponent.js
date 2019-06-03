@@ -1,5 +1,5 @@
 import React from 'react';
-import TopMenu from '../common/general/TopMenu';
+import TopMenu from './html/general/TopMenu';
 
 function HeaderComponent(props){
  return (

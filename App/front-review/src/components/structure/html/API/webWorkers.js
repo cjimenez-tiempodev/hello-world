@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactCountdownClock from 'react-countdown-clock';
-import frontEnd from '../constDefinitions';
+import frontEnd from '../../../common/constDefinitions';
 import codeImage from './assets/webWorkersCode.png';
 import DisplayDefinition from '../general/displayDef';
 import WebWorker from './general/workerSetup';
