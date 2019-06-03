@@ -1,8 +1,6 @@
 ## React
 
 ## General
-<details>
-  <summary>More</summary>
 
 [React](#React)
 
@@ -71,11 +69,9 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
 
 </details>
 
-</details>
 
 ## Component
-<details>
-  <summary>More</summary>
+
 
 [Components](#Components)
 
@@ -510,16 +506,13 @@ import Image from './presentational/Image';
 
 </details>
 
-</details>
-
 ## Redux
 
 [Definition](#Definition)
-[Components](#components)
-[Flow](#Flox)
 
-<details>
-  <summary>More</summary>
+[Components](#components)
+
+[Flow](#Flow)
 
 ## Definition
 

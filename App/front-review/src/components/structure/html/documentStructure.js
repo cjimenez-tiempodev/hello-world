@@ -1,6 +1,6 @@
 import React from 'react';
-import frontEnd from './constDefinitions';
-import codeImage from './assets/docStructure.png';
+import frontEnd from '../../common/constDefinitions';
+import codeImage from '../../common/assets/docStructure.png';
 import DisplayDefinition from './general/displayDef';
 import './styles/common.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import html5 from './constDefinitions';
-import codeImage from './assets/inputCode.png';
+import html5 from '../../common/constDefinitions';
+import codeImage from '../../common/assets/inputCode.png';
 import CreateRows from './general/createRows';
 
 function InputTypes(props) {

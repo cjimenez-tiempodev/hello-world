@@ -1,5 +1,5 @@
 import React from 'react';
-import frontEnd from './constDefinitions';
+import frontEnd from '../../common/constDefinitions';
 //import './styles/semantic.css';
 import DisplayDefinition from './general/displayDef';
 

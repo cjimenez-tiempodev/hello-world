@@ -1,6 +1,6 @@
 import React from 'react';
-import frontEnd from './constDefinitions';
-import codeImage from './assets/textFormat.png';
+import frontEnd from '../../common/constDefinitions';
+import codeImage from '../../common/assets/textFormat.png';
 import DisplayDefinition from './general/displayDef';
 
 function TextFormat(props) {

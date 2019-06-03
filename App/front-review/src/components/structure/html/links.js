@@ -1,6 +1,6 @@
 import React from 'react';
-import html5 from './constDefinitions';
-import codeImage from './assets/links.png';
+import html5 from '../../common/constDefinitions';
+import codeImage from '../../common/assets/links.png';
 
 function Links(props) {
   return (

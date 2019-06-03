@@ -1,6 +1,6 @@
 import React from 'react';
-import frontEnd from './constDefinitions';
-import codeImage from './assets/videoCode.png';
+import frontEnd from '../../common/constDefinitions';
+import codeImage from '../../common/assets/videoCode.png';
 import DisplayDefinition from './general/displayDef';
 
 function Multimedia(props) {

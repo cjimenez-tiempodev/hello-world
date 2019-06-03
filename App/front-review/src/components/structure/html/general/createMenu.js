@@ -1,5 +1,5 @@
 import React from 'react';
-import getEntries from '../dataStructure/getEntries';
+import getEntries from '../../../common/dataStructure/getEntries';
 
 /*
 Takes an object and return a <li> list array with the object's keys

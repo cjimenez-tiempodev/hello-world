@@ -1,5 +1,5 @@
 import React from 'react';
-import htmlImage from '../assets/HTML5_Logo.png';
+import htmlImage from '../../../common/assets/HTML5_Logo.png';
 import './style/style.css';
 
 function StartMessage(props) {
