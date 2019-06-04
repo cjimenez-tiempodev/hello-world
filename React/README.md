@@ -10,65 +10,6 @@
 
 [JSX](#JSX)
 
-## React
-
-<details>
-  <summary>More</summary>
-
-  * React is a front-end JavaScript library developed by Facebook in 2011.
-  * It follows the component based approach which helps in building reusable UI components.
-  * It is used for developing complex and interactive web and mobile UI.
-  * Even though it was open-sourced only in 2015, it has one of the largest communities supporting it.
-
-</details>
-
-## Virtual DOM
-
-<details>
-  <summary>More</summary>
-
-  The virtual DOM is only a virtual representation of the DOM. Everytime the state of our application changes, the virtual DOM gets updated instead of the real DOM.
-
-  When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
-
-  Once React knows which virtual DOM objects have changed, then React updates only those objects, in the real DOM.
-
-</details>
-
-## Features
-
-<details>
-  <summary>More</summary>
-
-  * It uses the virtual DOM instead of the real DOM.
-  * It uses server-side rendering.
-  * It follows uni-directional data flow or data binding.
-
-</details>
-
-## JSX
-
-<details>
-  <summary>More</summary>
-
-  * It is a syntax extension to JavaScript.
-  * JSX produces React “elements”.
-  * This is a type of file used by React which utilizes the expressiveness of JavaScript along with HTML like template syntax.
-  Example:
-  ```
-  render(){
-    return(        
-      <div>
-        <h1> Hello World from Edureka!!</h1>
-      </div>
-    );
-  }
-```
-
-Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser.
-
-</details>
-
 
 ## Component
 
@@ -111,6 +52,15 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
 
 [Proxy component](#Proxy-component)
 
+## Redux
+
+[Definition](#Definition)
+
+[Components](#components)
+
+[Flow](#Flow)
+
+
 ## Components
 
 <details>
@@ -122,51 +72,30 @@ Components are small independent and reusable pieces of a React application’s 
 
 ## render()
 
-<details>
-  <summary>More</summary>
-
   * Each React component must have a render() mandatorily.
   * It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as <form>, <group>,<div>
 
-</details>
-
 ## Elements
 
-<details>
-  <summary>More</summary>
 * An element describes what you want to see on the screen
 ```
 const element = <h1>Hello, world</h1>;
 ```
 * Elements are what components are “made of”
 
-</details>
-
 ## Props
-
-<details>
-  <summary>More</summary>
 
 * Props is the shorthand for Properties
 * They are always passed down from the parent to the child components throughout the application.
 * A child component can never send a prop back to the parent component.
 
-</details>
-
 ## state
-<details>
-  <summary>More</summary>
 
 * states are the objects which determine components rendering and behavior
 * They are mutable unlike the props and create dynamic and interactive components
 * They are accessed via this.state().
 
-</details>
-
 ## stateless component
-
-<details>
-  <summary>More</summary>
 
   * A functional(stateless) component is just a plain javascript function which takes props as an argument and returns a react element.
   * It also has no lifecycle so you can’t use componentDidMount and other hooks.
@@ -177,11 +106,7 @@ const element = <h1>Hello, world</h1>;
   }
   ```
 
-</details>
-
 ## stateful component
-<details>
-  <summary>More</summary>
 
  * Stateful components are always class components.
  * Stateful components have a state that gets initialized in the constructor.
@@ -201,12 +126,7 @@ const element = <h1>Hello, world</h1>;
 }
 ```
 
-</details>
-
 ## Presentational components
-
-<details>
-  <summary>More</summary>
 
   * Are coupled with the view or how things look
   * These components accept props from their container and render them.
@@ -227,8 +147,6 @@ const element = <h1>Hello, world</h1>;
   export default Image
 ```
 * You have the option to define them like regular react components or as constants.
-
-</details>
 
 ## Container component
 
@@ -272,9 +190,6 @@ import Image from './presentational/Image';
 
 ## Pure component
 
-<details>
-  <summary>More</summary>
-
   * A component is said to be pure if it is guaranteed to return the same result given the same props and state.
   A functional component is a good example of a pure component because, given an input, you know what will be rendered.
 
@@ -283,8 +198,6 @@ import Image from './presentational/Image';
     <div>{`Hi ${name}`}</div>
   );
   ```
-
-</details>
 
 ## Lifecycle
 
@@ -318,9 +231,6 @@ import Image from './presentational/Image';
 
 ## events
 
-<details>
-  <summary>More</summary>
-
   * In React, events are the triggered reactions to specific actions like mouse hover, mouse click, key press, etc.
   * Events are named using camel case instead of just using the lowercase.
   * Events are passed as functions instead of strings.
@@ -335,12 +245,7 @@ import Image from './presentational/Image';
   }
   ```
 
-</details>
-
 ## Refs
-
-<details>
-  <summary>More</summary>
 
   * It is an attribute which helps to store a reference to a particular React element or component,
   * Use when you need to manage focus, select text or media playback.
@@ -356,8 +261,6 @@ import Image from './presentational/Image';
     }
   }
   ```
-
-</details>
 
 ##Higher Order Components(HOC)
 
@@ -437,9 +340,6 @@ import Image from './presentational/Image';
 
 ## Conditional rendering
 
-  <details>
-      <summary>More</summary>
-
       ```
       //if example
       {
@@ -456,12 +356,7 @@ import Image from './presentational/Image';
       }
       ```
 
-  </details>  
-
 ## Array as children
-
-<details>
-    <summary>More</summary>
 
     * We use map() to create an array of React Elements for every value in the array.
 
@@ -483,12 +378,7 @@ import Image from './presentational/Image';
     </ul>
     ```
 
-</details>
-
 ## Proxy component
-
-<details>
-    <summary>More</summary>
 
     * Writing this attribute hundreds of times is error prone.
     * We can write a higher level component to proxy props to a lower-level button component.
@@ -504,27 +394,52 @@ import Image from './presentational/Image';
     <button type="button" {...props}>
     ```
 
-</details>
+## React
 
-## Redux
+  * React is a front-end JavaScript library developed by Facebook in 2011.
+  * It follows the component based approach which helps in building reusable UI components.
+  * It is used for developing complex and interactive web and mobile UI.
+  * Even though it was open-sourced only in 2015, it has one of the largest communities supporting it.
 
-[Definition](#Definition)
+## Virtual DOM
 
-[Components](#components)
+  The virtual DOM is only a virtual representation of the DOM. Everytime the state of our application changes, the virtual DOM gets updated instead of the real DOM.
 
-[Flow](#Flow)
+  When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
+
+  Once React knows which virtual DOM objects have changed, then React updates only those objects, in the real DOM.
+
+## Features
+
+  * It uses the virtual DOM instead of the real DOM.
+  * It uses server-side rendering.
+  * It follows uni-directional data flow or data binding.
+
+
+## JSX
+
+  * It is a syntax extension to JavaScript.
+  * JSX produces React “elements”.
+  * This is a type of file used by React which utilizes the expressiveness of JavaScript along with HTML like template syntax.
+  Example:
+  ```
+  render(){
+    return(        
+      <div>
+        <h1> Hello World from Edureka!!</h1>
+      </div>
+    );
+  }
+```
+
+Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser.
 
 ## Definition
 
-<details>
-  <summary>More</summary>
   It is a predictable state container for JavaScript applications and is used for the entire applications state management.
 
   * The state of the entire application is stored in an object/ state tree within a single store.
   * The only way to change the state is to trigger an action
-
-
-</details>
 
 ## components
 
