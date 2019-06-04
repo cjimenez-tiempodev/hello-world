@@ -63,12 +63,7 @@
 
 ## Components
 
-<details>
-  <summary>More</summary>
-
 Components are small independent and reusable pieces of a React application’s UI. It renders each of these components independent of each other without affecting the rest of the UI.
-
-</details>
 
 ## render()
 
@@ -150,9 +145,6 @@ const element = <h1>Hello, world</h1>;
 
 ## Container component
 
-<details>
-  <summary>More</summary>
-
   * They rarely have any HTML tags of their
   * They are often stateful
   * Container components will deal with the behavioral part.
@@ -186,8 +178,6 @@ import Image from './presentational/Image';
  }
 ```
 
-</details>
-
 ## Pure component
 
   * A component is said to be pure if it is guaranteed to return the same result given the same props and state.
@@ -200,9 +190,6 @@ import Image from './presentational/Image';
   ```
 
 ## Lifecycle
-
-<details>
-  <summary>More</summary>
 
   **Mounting**
   * constructor()
@@ -225,9 +212,6 @@ import Image from './presentational/Image';
 
   * static getDerivedStateFromError()
   * componentDidCatch()
-
-
-</details>
 
 ## events
 
@@ -264,9 +248,6 @@ import Image from './presentational/Image';
 
 ##Higher Order Components(HOC)
 
-<details>
-  <summary>More</summary>
-
   * Higher Order Component is an advanced way of reusing the component logic.
   * HOC are custom components which wrap another component within it.
   * They are a pattern that emerges from React’s compositional nature.
@@ -289,12 +270,7 @@ import Image from './presentational/Image';
   export default higherOrderComponent;
   ```
 
-</details>
-
 ## Function Component
-
-  <details>
-    <summary>More</summary>
 
     * They're just functions.
     * Collect props from the first argument of your function.
@@ -310,12 +286,7 @@ import Image from './presentational/Image';
     };
     ```
 
-  </details>
-
 ## Destructuring props
-
-  <details>
-    <summary>More</summary>
 
     * works with arrays and Objects
     * Use rest parameters (...) for the remaining values
@@ -334,9 +305,6 @@ import Image from './presentational/Image';
       return <div>Hi {name}!</div>;
     }
     ```
-
-  </details>
-
 
 ## Conditional rendering
 
@@ -443,9 +411,6 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
 
 ## components
 
-<details>
-  <summary>More</summary>
-
   * Action – It’s an object that describes what happened.  
   Actions in React must have a type property that indicates the type of ACTION being performed.  
 
@@ -492,12 +457,7 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
 
   * View – Simply displays the data provided by the Store.
 
-</details>
-
 ## Flow
-
-<details>
-  <summary>More</summary>
 
   1. You call store.dispatch(action).  
   An action is a plain object describing what happened. For example:  
@@ -558,14 +518,7 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
 
   Now, the UI can be updated to reflect the new state. If you use bindings like React Redux, this is the point at which component.setState(newState) is called.
 
-</details>
-
-</details>
-
 ## Router
-
-<details>
-  <summary>More</summary>
 
   A Router is used to define multiple routes and when a user types a specific URL, if this URL matches the path of any ‘route’ defined inside the router, then the user is redirected to that particular route.
 
@@ -576,5 +529,3 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
     <route path=’/posts’   component={Post}/>
   </switch>
   ```
-
-</details>
