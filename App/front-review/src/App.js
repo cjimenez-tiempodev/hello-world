@@ -4,7 +4,8 @@ import HeaderComponent from './components/structure/HeaderComponent';
 import getEntries from './components/common/dataStructure/getEntries';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import {HtmlComponent, HomeComponent} from './components/structure/index';
-import './App.css';
+import ErrorBoundary from './components/common/error/ErrorBoundary';
+import './App.scss';
 
 class App extends Component {
 
@@ -18,20 +19,23 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className = "document">
 
-        <div className="body">
+        <div className="main-container">
 
           <HeaderComponent options={getEntries(frontEnd)}/>
-          <section className="leftSide" />
+          <section className="left-side" />
 
-          <Route exact path="/" component={HomeComponent} />
-          <Route path="/HTML5" component={HtmlComponent} />
-          <Route path="/ReactJs" component={HomeComponent} />
-          <Route path="/JS" component={HomeComponent} />
-          <Route path="/CSS3" component={HomeComponent} />
 
-          <section className="rightSide" />
+          <ErrorBoundary>
+            <Route exact path="/" component={HomeComponent} />
+            <Route path="/HTML5" component={HtmlComponent} />
+            <Route path="/ReactJs" component={HomeComponent} />
+            <Route path="/JS" component={HomeComponent} />
+            <Route path="/CSS3" component={HomeComponent} />
+          </ErrorBoundary>
+
+
+          <section className="right-side" />
           <div className="fit-space" />
 
           <footer className="footer-main">
@@ -40,7 +44,6 @@ class App extends Component {
 
         </div>
 
-        </div>
       </Router>
     );
   }

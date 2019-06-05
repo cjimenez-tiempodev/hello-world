@@ -4,10 +4,10 @@ import './style/style.css';
 
 function StartMessage(props) {
   return (
-    <div className = "initial-container">
+    <div className = "message-container">
       <hr />
 
-      <div className="initial-message">
+      <div>
         <img src={htmlImage} alt="html5"/>
       </div>
 

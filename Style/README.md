@@ -1,5 +1,8 @@
 # CSS3 - Review
 
+<details>
+  <summary>See more</summary>
+
 ## **Introduction**
 CSS: stands for Cascading Style Sheets.
 Describes how HTML elements are displayed on screen, is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
@@ -1870,3 +1873,144 @@ The @media rule, introduced in CSS2, made it possible to define different style 
   }
 }
 ```
+
+</details>
+
+# SASS - Review
+
+<details>
+  <summary>See more</summary>
+
+## **Introduction**
+
+CSS on its own can be fun, but stylesheets are getting larger, more complex, and harder to maintain. This is where a preprocessor can help.
+
+Sass lets you use features that don't exist in CSS yet like variables, nesting, mixins, inheritance and other nifty goodies that make writing CSS fun again.
+
+[Variables](#Variables)
+[Nesting](#Nesting)
+[Partials](#Partials)
+[Import](#Import)
+[Mixins](#Mixins)
+[Extend/Inheritance](#Extend/Inheritance)
+[Operators](#Operators)
+
+## Variables
+
+You can store things like colors, font stacks, or any CSS value you think you'll want to reuse. Sass uses the $ symbol to make something a variable.
+
+```
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
+
+## Nesting
+
+Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML
+
+**SASS**
+
+```
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+```
+
+**CSS3**
+
+```
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
+
+You'll notice that the ul, li, and a selectors are nested inside the nav selector. This is a great way to organize your CSS and make it more readable.
+
+## Partials
+
+You can create partial Sass files that contain little snippets of CSS that you can include in other Sass files.
+
+ A partial is simply a Sass file named with a leading underscore. The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. Sass partials are used with the @import directive.
+
+## Import
+
+Sass will take the file that you want to import and combine it with the file you're importing into so you can serve a single CSS file to the web browser.
+
+Let's say you have a couple of Sass files, reset.scss and base.scss. We want to import reset.scss into base.scs
+
+
+```
+// _reset.scss
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+```
+
+```
+// base.scss
+@import 'reset';
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+```
+
+Notice we're using @import 'reset'; in the base.scss file. When you import a file you don't need to include the file extension .scss. Sass is smart and will figure it out for you.
+
+## Mixins
+
+A mixin lets you make groups of CSS declarations that you want to reuse throughout your site.
+
+You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes.
+
+```
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box { @include transform(rotate(30deg)); }
+```
+
+* To create a mixin you use the @mixin directive and give it a name.
+* We're also using the variable $property inside the parentheses so we can pass in a transform of whatever we want.
+* After you create your mixin, you can then use it as a CSS declaration starting with @include followed by the name of the mixin
+
+## Extend/Inheritance
+
+
+
+## Operators
+
+</details>

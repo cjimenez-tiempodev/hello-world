@@ -24,4 +24,8 @@ function CreateMenu(props) {
   );
 }
 
+CreateMenu.defaultProps = {
+  data: []
+};
+
 export default CreateMenu;
