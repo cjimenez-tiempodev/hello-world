@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import CreateMenu from './html/common/general/createMenu';
-import html from './html/common/constDefinitions';
-import RouteContent from './html/common/general/routeContent';
-import TopMenu from './html/structure/TopMenu';
-import './App.css';
+import frontEnd from './components/common/constDefinitions';
+import HeaderComponent from './components/structure/HeaderComponent';
+import getEntries from './components/common/dataStructure/getEntries';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import {HtmlComponent, HomeComponent} from './components/structure/index';
+import ErrorBoundary from './components/common/error/ErrorBoundary';
+import './App.scss';
 
 class App extends Component {
 
@@ -11,56 +13,38 @@ class App extends Component {
     super(props);
     this.state = {
       display: 'default',
-    }
+    };
   }
-
-  handleClick = (e) => {
-     this.setState({display: e.target.id});
-   }
 
   render() {
     return (
-      <div className = "document">
+      <Router>
 
-      <div className="body">
-      <header className="header-menu">
+        <div className="main-container">
 
-        <TopMenu options={['HTML5', 'React', 'CSS3', 'JS']} />
+          <HeaderComponent options={getEntries(frontEnd)}/>
+          <section className="left-side" />
 
-      </header>
 
-      <section className="leftSide" />
+          <ErrorBoundary>
+            <Route exact path="/" component={HomeComponent} />
+            <Route path="/HTML5" component={HtmlComponent} />
+            <Route path="/ReactJs" component={HomeComponent} />
+            <Route path="/JS" component={HomeComponent} />
+            <Route path="/CSS3" component={HomeComponent} />
+          </ErrorBoundary>
 
-      <section>
-        <article>
-          <RouteContent display={this.state.display}/>
-        </article>
-      </section>
 
-      <aside className="menu-container">
-        <h2>HTML5</h2>
-        <ul>
-          <CreateMenu
-            data={html}
-            handleClick={this.handleClick}
-          />
-          <CreateMenu
-            data={html.api}
-            handleClick={this.handleClick}
-          />
-        </ul>
-      </aside>
+          <section className="right-side" />
+          <div className="fit-space" />
 
-      <section className="rightSide" />
+          <footer className="footer-main">
+            <small>Footer All rights reserved.</small>
+          </footer>
 
-      <div className="fit-space" />
+        </div>
 
-      <footer className="footer-main">
-        <small>Footer All rights reserved.</small>
-      </footer>
-      </div>
-
-      </div>
+      </Router>
     );
   }
 }
