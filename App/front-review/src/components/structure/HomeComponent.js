@@ -7,8 +7,8 @@ class HomeComponent extends Component {
   render(){
     return(
       <React.Fragment>
-      <section>
-        <article className="initial-message">
+      <section className="home-container">
+        <article>
           <img src={reactLogo} alt="reactLogo"/>
           <img src={frontLogos} alt="front-end"/>
           {this.props.message && <span>{this.props.message}</span>}

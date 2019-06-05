@@ -19,12 +19,12 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className = "document">
 
-        <div className="body">
+        <div className="main-container">
 
           <HeaderComponent options={getEntries(frontEnd)}/>
-          <section className="leftSide" />
+          <section className="left-side" />
+
 
           <ErrorBoundary>
             <Route exact path="/" component={HomeComponent} />
@@ -34,7 +34,8 @@ class App extends Component {
             <Route path="/CSS3" component={HomeComponent} />
           </ErrorBoundary>
 
-          <section className="rightSide" />
+
+          <section className="right-side" />
           <div className="fit-space" />
 
           <footer className="footer-main">
@@ -43,7 +44,6 @@ class App extends Component {
 
         </div>
 
-        </div>
       </Router>
     );
   }
