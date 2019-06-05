@@ -52,6 +52,8 @@
 
 [Proxy component](#Proxy-component)
 
+[Error Boundaries](#Error-Boundaries)
+
 ## Redux
 
 [Definition](#Definition)
@@ -60,6 +62,12 @@
 
 [Flow](#Flow)
 
+## React
+
+  * React is a front-end JavaScript library developed by Facebook in 2011.
+  * It follows the component based approach which helps in building reusable UI components.
+  * It is used for developing complex and interactive web and mobile UI.
+  * Even though it was open-sourced only in 2015, it has one of the largest communities supporting it.
 
 ## Components
 
@@ -362,12 +370,73 @@ import Image from './presentational/Image';
     <button type="button" {...props}>
     ```
 
-## React
+## Error Boundaries
 
-  * React is a front-end JavaScript library developed by Facebook in 2011.
-  * It follows the component based approach which helps in building reusable UI components.
-  * It is used for developing complex and interactive web and mobile UI.
-  * Even though it was open-sourced only in 2015, it has one of the largest communities supporting it.
+  Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed
+
+  * static getDerivedStateFromError(error)
+
+  This lifecycle is invoked after an error has been thrown by a descendant component. It receives the error that was thrown as a parameter and should return a value to update state.
+
+  * componentDidCatch(error, info)
+
+  This lifecycle is invoked after an error has been thrown by a descendant component. It receives two parameters:
+
+  error - The error that was thrown.  
+
+  info - An object with a componentStack key containing information about which component threw the error.
+
+  * Use static getDerivedStateFromError() to render a fallback UI after an error has been thrown.
+  * Use componentDidCatch() to log error information.
+
+  ```
+  class ErrorBoundary extends React.Component {
+
+    constructor(props) {
+      super(props);
+      this.state = { hasError: false };
+    }
+
+    static getDerivedStateFromError(error) {
+      // Update state so the next render will show the fallback UI.
+      return { hasError: true };
+    }
+
+    componentDidCatch(error, info) {
+      // Example "componentStack":
+      //   in ComponentThatThrows (created by App)
+      //   in ErrorBoundary (created by App)
+      //   in div (created by App)
+      //   in App
+      logComponentStackToMyService(info.componentStack);
+    }
+
+    render() {
+     if (this.state.hasError) {
+       // You can render any custom fallback UI
+       return <h1>Something went wrong.</h1>;
+     }
+
+     return this.props.children;
+    }
+  }
+  ```
+
+  Then you can use it as a regular component:  
+
+  ```
+  <ErrorBoundary>
+    <MyWidget />
+  </ErrorBoundary>
+  ```
+
+  * Note
+
+  Error boundaries do not catch errors for:  
+  * Event handlers (learn more)
+  * Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
+  * Server side rendering
+  * Errors thrown in the error boundary itself (rather than its children)
 
 ## Virtual DOM
 
