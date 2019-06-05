@@ -5,7 +5,7 @@ import getEntries from './components/common/dataStructure/getEntries';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import {HtmlComponent, HomeComponent} from './components/structure/index';
 import ErrorBoundary from './components/common/error/ErrorBoundary';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
 
