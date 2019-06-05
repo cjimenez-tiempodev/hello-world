@@ -11,6 +11,7 @@ class HomeComponent extends Component {
         <article className="initial-message">
           <img src={reactLogo} alt="reactLogo"/>
           <img src={frontLogos} alt="front-end"/>
+          {this.props.message && <span>{this.props.message}</span>}
         </article>
       </section>
       </React.Fragment>

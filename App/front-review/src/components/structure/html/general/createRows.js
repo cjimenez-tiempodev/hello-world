@@ -19,4 +19,8 @@ function CreateRows(props) {
   );
 }
 
+CreateRows.defaultProps = {
+  data: []
+};
+
 export default CreateRows;

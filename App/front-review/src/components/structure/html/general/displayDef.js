@@ -20,4 +20,8 @@ function DisplayDefinition(props) {
   );
 }
 
+DisplayDefinition.defaultProps = {
+  data: []
+};
+
 export default DisplayDefinition;
