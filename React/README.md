@@ -254,7 +254,7 @@ import Image from './presentational/Image';
   }
   ```
 
-##Higher Order Components(HOC)
+## Higher Order Components(HOC)
 
   * Higher Order Component is an advanced way of reusing the component logic.
   * HOC are custom components which wrap another component within it.
